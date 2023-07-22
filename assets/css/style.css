@@ -8,3 +8,8 @@
     background-color: lightgrey;
     margin: 5px;
   }
+
+  .on {
+    background-color: #ffc0cb; /* Pink color for "on" state */
+    box-shadow: 0 0 7px 1px #ff69b4; /* Hot pink color for "on" state - adds a glow */
+  }
