@@ -54,6 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function toggleLights(light) {
         // Using toggle method to add or remove the class on, as necessary
         light.classList.toggle('on');
+    }
       
 
 });
