@@ -40,7 +40,9 @@ document.addEventListener('DOMContentLoaded', function() {
             gameGridHtml += '<div class="row">';
             // Inner loop: Create lights for each row of the game grid using the gridSize variable.
             for (var j = 0; j < gridSize; j++) {
-                gameGridHtml += '<div class="light"></div>';
+                // // Give the light the correct corresponding number
+                var lightNumber = i * gridSize + j + 1;
+                gameGridHtml += '<div class="light" id="'+ lightNumber +'"></div>';
         }
         // After creating all the lights for the row, add a closing </div> tag to close the row
         gameGridHtml += '</div>';
@@ -54,8 +56,31 @@ document.addEventListener('DOMContentLoaded', function() {
     function toggleLights(light) {
         // Using toggle method to add or remove the class on, as necessary
         light.classList.toggle('on');
+        // Get the light number from the id attribute
+        var lightNumber = parseInt(light.getAttribute('id'));
+        // Get the row and column of the clicked light
+        var row = Math.floor((lightNumber - 1) / gridSize);
+        var column = (lightNumber - 1) % gridSize;
 
+        // Toggle adjacent lights
+        toggleAdjacentLight(row, column - 1); // Left
+        toggleAdjacentLight(row, column + 1); // Right
+        toggleAdjacentLight(row - 1, column); // Up
+        toggleAdjacentLight(row + 1, column); // Down
     }
+    //Toggle the adjacent lights to the one pressed on and off
+    function toggleAdjacentLight(row, column) {
+        // Check if the specified row and column are within the bounds of the game grid
+        if (row => 0 && row < gridSize && column >= 0 && column < gridSize) {
+          // Get the adjacent light using its id (light number)
+          var light = document.getElementById((row * gridSize + column + 1).toString());
+      
+          // Toggle the adjacent light
+          light.classList.toggle('on');
+          light.classList.toggle('off');
+        }
+      }
+    
       
 
 });
