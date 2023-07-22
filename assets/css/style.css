@@ -1,0 +1,10 @@
+
+/* --- Game styling --- */
+
+/* Light styling */
+.light {
+    width: 40px;
+    height: 40px;
+    background-color: lightgrey;
+    margin: 5px;
+  }
