@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
     //Toggle the adjacent lights to the one pressed on and off
     function toggleAdjacentLight(row, column) {
         // Check if the specified row and column are within the bounds of the game grid
-        if (row => 0 && row < gridSize && column >= 0 && column < gridSize) {
+        if (row >= 0 && row < gridSize && column >= 0 && column < gridSize) {
           // Get the adjacent light using its id (light number)
           var light = document.getElementById((row * gridSize + column + 1).toString());
       
