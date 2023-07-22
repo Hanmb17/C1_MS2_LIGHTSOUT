@@ -16,6 +16,19 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialise the Lights Out game when the page loads
     initLightsOutGame();
 
+    // Add an event listener to respond to button clicks on the game page
+    document.addEventListener('click', function(event) {
+        // Get the target element that triggered the click event
+        var target = event.target;
+        if (target.classList.contains('light')) {
+          // If the clicked element is a light, toggle its state and adjacent lights
+          toggleLights(target);
+          
+        
+        }
+      });
+      
+
 
     // function to initialize the Lights Out game
     function initLightsOutGame() {
@@ -36,6 +49,11 @@ document.addEventListener('DOMContentLoaded', function() {
         // Append the generated game grid HTML to the game-grid element
         document.getElementById('game-grid').innerHTML = gameGridHtml;
     }
+
+    // function to turn the lights on and off by
+    function toggleLights(light) {
+        // Using toggle method to add or remove the class on, as necessary
+        light.classList.toggle('on');
       
 
 });
