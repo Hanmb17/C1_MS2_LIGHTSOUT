@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var gridSize = 3;
     var hintLight;
     var moveCount = 0;
+    var startingLights;
    
 
     // Initialise the Lights Out game when the page loads
@@ -31,6 +32,10 @@ document.addEventListener('DOMContentLoaded', function() {
         checkWin();
       });
       
+    // Add event listern to the restart button
+    document.getElementById('reset-button').addEventListener('click', function() {
+        resetGame();
+      });
 
 
     // function to initialize the Lights Out game
@@ -101,21 +106,21 @@ document.addEventListener('DOMContentLoaded', function() {
           uniqueNumbersSet.add(randomNumber);
         }
       
-        var uniqueNumbersArray = Array.from(uniqueNumbersSet); // Convert the Set to an array.
-        console.log(uniqueNumbersArray);
+        startingLights = Array.from(uniqueNumbersSet); // Convert the Set to an array.
+        console.log(startingLights);
       
         // Add the remaining random numbers (may repeat)
         var remainingCount = numLightsToPress - gridSize;
       
         for (var i = 0; i < remainingCount; i++) {
           var randomNumber = Math.floor(Math.random() * totalLights) + 1;
-          uniqueNumbersArray.push(randomNumber);
+          startingLights.push(randomNumber);
         }
 
-        console.log(uniqueNumbersArray);
+        console.log(startingLights);
 
-        // Loop through the uniqueNumbersArray and press the buttons one by one
-        uniqueNumbersArray.forEach(function(lightNumber) {
+        // Loop through the startingLights and press the buttons one by one
+        startingLights.forEach(function(lightNumber) {
             // Get the light element based on its ID (lightNumber)
             var light = document.getElementById(lightNumber.toString());
 
@@ -133,7 +138,22 @@ document.addEventListener('DOMContentLoaded', function() {
         initLightsOutGame();
       }
     }
-
+    function resetGame() {
+        var allLights = document.querySelectorAll('.light');
+        allLights.forEach(function(light) {
+          light.classList.remove('on');
+          light.classList.add('off');
+        });
+      
+        moveCount = 0;
+        document.getElementById('move-counter').textContent = moveCount;
+      
+        // Use startingArray to reset the lights to their initial pattern
+        startingLights.forEach(function(lightNumber) {
+          var light = document.getElementById(lightNumber.toString());
+          toggleLights(light);
+        });
+      }
 
 });
 
