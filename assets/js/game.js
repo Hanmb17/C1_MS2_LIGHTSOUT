@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var hintLight;
     var moveCount = 0;
     var startingLights;
+    var clickedLights = [];
    
 
     // Initialise the Lights Out game when the page loads
@@ -24,6 +25,10 @@ document.addEventListener('DOMContentLoaded', function() {
         if (target.classList.contains('light')) {
           // If the clicked element is a light, toggle its state and adjacent lights
           toggleLights(target);
+          // Add the light number to the array of clickedLights
+          var lightNumber = parseInt(target.getAttribute('id'));
+          clickedLights.push(lightNumber);
+          console.log(clickedLights);
         }
         // Update the move counter
         moveCount++;
@@ -118,17 +123,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         console.log(startingLights);
-
-        // Loop through the startingLights and press the buttons one by one
-        startingLights.forEach(function(lightNumber) {
-            // Get the light element based on its ID (lightNumber)
-            var light = document.getElementById(lightNumber.toString());
-
-            // Toggle the light
-            toggleLights(light);
-            console.log('Light toggled:', lightNumber);
-        });
-      }
+        // Turn the lights on function
+        LightsToBeTurnedOn(startingLights);
+      } 
       // See if all lights are off to see if there is a win?
     function checkWin() {
         // count how many on classes are presents if 0 = win
@@ -142,14 +139,19 @@ document.addEventListener('DOMContentLoaded', function() {
         var allLights = document.querySelectorAll('.light');
         allLights.forEach(function(light) {
           light.classList.remove('on');
-          light.classList.add('off');
         });
       
         moveCount = 0;
         document.getElementById('move-counter').textContent = moveCount;
       
         // Use startingArray to reset the lights to their initial pattern
-        startingLights.forEach(function(lightNumber) {
+        LightsToBeTurnedOn(startingLights);
+        
+      }
+
+      function LightsToBeTurnedOn(LightsToTurnOn) {
+        // Loop through the startingLights and press the buttons one by one
+        LightsToTurnOn.forEach(function(lightNumber) {
           var light = document.getElementById(lightNumber.toString());
           toggleLights(light);
         });
