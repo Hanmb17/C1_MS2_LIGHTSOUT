@@ -37,14 +37,32 @@ document.addEventListener('DOMContentLoaded', function() {
         checkWin();
       });
       
-    // Add event listerner to the restart button
+    // Add event listener to the restart button
     document.getElementById('reset-button').addEventListener('click', function() {
         resetGame();
       });
 
-    // Add event listerner to the restart button
+    // Add event listener to the hint button
     document.getElementById('hint-button').addEventListener('click', function() {
-        solution();
+        // get solution for current grid pattern
+        var currentSolution = solution();
+
+        // Check if the currentSolutionon is not empty
+        if (currentSolution.length > 0) {
+            // Randomly select a number from the currentSolution
+            var randomIndex = Math.floor(Math.random() * currentSolution.length);
+            var selectedNumber = currentSolution[randomIndex];
+
+            // Get the corresponding light element using its ID (selectedNumber)
+            var light = document.getElementById(selectedNumber.toString());
+
+            // Add the flashing class to the selected light
+                light.classList.add('flashing');
+                console.log("hint light: ", light);
+                } else {
+            // If the currentSolution is empty, show a message
+            console.log('No hint available.');
+        }
       });  
 
     // function to initialize the Lights Out game
@@ -71,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
         randomStart();
     }
 
-    // function to turn the lights on and off by
+    // function to turn the lights on and off
     function toggleLights(light) {
         // Using toggle method to add or remove the class on, as necessary
         light.classList.toggle('on');
@@ -160,11 +178,10 @@ document.addEventListener('DOMContentLoaded', function() {
           toggleLights(light);
         });
     }
+    // Get a hint to solve the game
 
-    // Create function to find solution for current pattern 
-
+    // Finds solution for current pattern 
     function solution(){
-        
         
         // Create an array of all lights pressed
         var allLightsPressed = startingLights.concat(clickedLights);
@@ -200,11 +217,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         console.log(solution);
-           
-
+        return(solution);
+        
     }
-
-
 
 });
 
