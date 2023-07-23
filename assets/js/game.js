@@ -50,6 +50,8 @@ document.addEventListener('DOMContentLoaded', function() {
         // At this point, the variable "gameGridHtml" contains the complete HTML code for the game grid.
         // Append the generated game grid HTML to the game-grid element
         document.getElementById('game-grid').innerHTML = gameGridHtml;
+        // call starting state
+        randomStart();
     }
 
     // function to turn the lights on and off by
@@ -82,12 +84,44 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       // Randomly creates a starting pattern for the game
       function randomStart() {
-        /* Decided randomly how many lights will be pressed at the start.
+        /* Decide randomly how many lights will be pressed at the start.
         Minium number of buttons to be pressed of gridSize and max to be total lights*/
         var totalLights = Math.pow(gridSize,2);
-        var numLightsToPress = Math.floor(Math.random() * (totalLights - gridSize)) + gridSize;
-      }
+        var numLightsToPress = Math.floor(Math.random() * (totalLights - gridSize + 1)) + gridSize;
+        console.log(numLightsToPress);
+        // Pick which lights to press
+        // I want to ensure the first few selected are unique 
+        // For the first amount of number needed to be unqiue
+        var uniqueNumbersSet = new Set(); // Create a Set to store unique numbers.
+        while (uniqueNumbersSet.size < gridSize) {
+          var randomNumber = Math.floor(Math.random() * totalLights) + 1;
+          uniqueNumbersSet.add(randomNumber);
+        }
       
+        var uniqueNumbersArray = Array.from(uniqueNumbersSet); // Convert the Set to an array.
+        console.log(uniqueNumbersArray);
+      
+        // Add the remaining random numbers (may repeat)
+        var remainingCount = numLightsToPress - gridSize;
+      
+        for (var i = 0; i < remainingCount; i++) {
+          var randomNumber = Math.floor(Math.random() * totalLights) + 1;
+          uniqueNumbersArray.push(randomNumber);
+        }
+      
+        console.log(uniqueNumbersArray);
+
+        // Loop through the uniqueNumbersArray and press the buttons one by one
+        uniqueNumbersArray.forEach(function(lightNumber) {
+            // Get the light element based on its ID (lightNumber)
+            var light = document.getElementById(lightNumber.toString());
+
+            // Toggle the light
+            toggleLights(light);
+            console.log('Light toggled:', lightNumber);
+        });
+      }
+    
 
 });
 
