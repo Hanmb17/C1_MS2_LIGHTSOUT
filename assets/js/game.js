@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
           // If the clicked element is a light, toggle its state and adjacent lights
           toggleLights(target);
         }
-        // Create a move counter
+        // Update the move counter
         moveCount++;
         document.getElementById('move-counter').textContent = moveCount;
         // Check if all lights are out
