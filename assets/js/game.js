@@ -42,6 +42,10 @@ document.addEventListener('DOMContentLoaded', function() {
         resetGame();
       });
 
+    // Add event listern to the restart button
+    document.getElementById('hint-button').addEventListener('click', function() {
+        solution();
+      });  
 
     // function to initialize the Lights Out game
     function initLightsOutGame() {
@@ -124,7 +128,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         console.log(startingLights);
         // Turn the lights on function
-        LightsToBeTurnedOn(startingLights);
+        lightsToBeTurnedOn(startingLights);
       } 
       // See if all lights are off to see if there is a win?
     function checkWin() {
@@ -145,17 +149,26 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('move-counter').textContent = moveCount;
       
         // Use startingArray to reset the lights to their initial pattern
-        LightsToBeTurnedOn(startingLights);
+        lightsToBeTurnedOn(startingLights);
         
       }
 
-      function LightsToBeTurnedOn(LightsToTurnOn) {
+    function lightsToBeTurnedOn(LightsToTurnOn) {
         // Loop through the startingLights and press the buttons one by one
         LightsToTurnOn.forEach(function(lightNumber) {
           var light = document.getElementById(lightNumber.toString());
           toggleLights(light);
         });
-      }
+    }
+
+    // Create function to find solution for current pattern 
+
+    function solution(){
+        var allLightsPressed = startingLights.concat(clickedLights);
+        console.log(allLightsPressed);
+    }
+
+
 
 });
 
