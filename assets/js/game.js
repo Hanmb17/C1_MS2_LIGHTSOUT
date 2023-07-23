@@ -37,12 +37,12 @@ document.addEventListener('DOMContentLoaded', function() {
         checkWin();
       });
       
-    // Add event listern to the restart button
+    // Add event listerner to the restart button
     document.getElementById('reset-button').addEventListener('click', function() {
         resetGame();
       });
 
-    // Add event listern to the restart button
+    // Add event listerner to the restart button
     document.getElementById('hint-button').addEventListener('click', function() {
         solution();
       });  
@@ -164,8 +164,44 @@ document.addEventListener('DOMContentLoaded', function() {
     // Create function to find solution for current pattern 
 
     function solution(){
+        
+        
+        // Create an array of all lights pressed
         var allLightsPressed = startingLights.concat(clickedLights);
         console.log(allLightsPressed);
+
+        // // Count how many times each number appears
+        // Initialize an empty object to store the counts of each number
+        const count = {};
+
+        // Loop through the allLightsPressed array
+        allLightsPressed.forEach(function(number) {
+        // If the number is already a key in the count object, increment its count
+            if (count[number]) {
+                count[number]++;
+            } else {
+                // If the number is not a key in the count object, initialize its count to 1
+                count[number] = 1;
+            }
+        });
+
+        console.log(count);
+
+        // Initialize an empty array to store the solution
+        const solution = [];
+
+        // Loop through the allLightsPressed array again to find numbers with odd counts
+        allLightsPressed.forEach(function(number) {
+        // Check if the count of the number is odd
+            if (count[number] % 2 === 1) {
+                // Add the number to the solution array if it's odd
+                solution.push(number);
+            }
+        });
+
+        console.log(solution);
+           
+
     }
 
 
