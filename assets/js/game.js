@@ -23,9 +23,8 @@ document.addEventListener('DOMContentLoaded', function() {
         if (target.classList.contains('light')) {
           // If the clicked element is a light, toggle its state and adjacent lights
           toggleLights(target);
-          
-        
         }
+        checkWin();
       });
       
 
@@ -121,7 +120,12 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log('Light toggled:', lightNumber);
         });
       }
-    
-
+      // See if all lights are off to see if there is a win?
+    function checkWin() {
+      if (document.querySelectorAll('.on').length === 0) {
+        alert('Congratulations! You won the level!');
+        initLightsOutGame();
+      }
+    }
 });
 
