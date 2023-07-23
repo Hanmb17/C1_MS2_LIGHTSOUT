@@ -80,7 +80,13 @@ document.addEventListener('DOMContentLoaded', function() {
           light.classList.toggle('off');
         }
       }
-    
+      // Randomly creates a starting pattern for the game
+      function randomStart() {
+        /* Decided randomly how many lights will be pressed at the start.
+        Minium number of buttons to be pressed of gridSize and max to be total lights*/
+        var totalLights = Math.pow(gridSize,2);
+        var numLightsToPress = Math.floor(Math.random() * (totalLights - gridSize)) + gridSize;
+      }
       
 
 });
