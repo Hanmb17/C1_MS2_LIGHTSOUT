@@ -114,7 +114,6 @@ document.addEventListener('DOMContentLoaded', function() {
       
           // Toggle the adjacent light
           light.classList.toggle('on');
-          light.classList.toggle('off');
         }
       }
       // Randomly creates a starting pattern for the game
