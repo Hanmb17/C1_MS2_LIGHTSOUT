@@ -10,6 +10,19 @@
   }
 
   .on {
-    background-color: #ffc0cb; /* Pink color for "on" state */
-    box-shadow: 0 0 7px 1px #ff69b4; /* Hot pink color for "on" state - adds a glow */
+    background-color: #ffc0cb; /* Pink colour for "on" state */
+    box-shadow: 0 0 7px 1px #ff69b4; /* Hot pink colour for "on" state - adds a glow */
+  }
+
+  .flashing {
+    animation: flash 1s infinite;
+  }
+  
+  @keyframes flash {
+    0%, 50% {
+      background-color: #f1c40f; /* Yellow colour for flashing */
+    }
+    25%, 75% {
+      background-color: #ffde59; /* Lighter yellow colour for flashing */
+    }
   }
