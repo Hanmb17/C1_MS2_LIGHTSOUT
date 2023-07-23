@@ -44,10 +44,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add event listener to the hint button
     document.getElementById('hint-button').addEventListener('click', function() {
-        // get solution for current grid pattern
+        
+        // Get solution for current grid pattern
         var currentSolution = solution();
 
-        // Check if the currentSolutionon is not empty
+        // Check if the currentSolution is not empty
         if (currentSolution.length > 0) {
             // Randomly select a number from the currentSolution
             var randomIndex = Math.floor(Math.random() * currentSolution.length);
@@ -59,16 +60,18 @@ document.addEventListener('DOMContentLoaded', function() {
             // Add the flashing class to the selected light
                 light.classList.add('flashing');
                 console.log("hint light: ", light);
+                // Disable the hint button to prevent the user cicking it again
+                document.getElementById('hint-button').disabled = true;
                 } else {
             // If the currentSolution is empty, show a message
             console.log('No hint available.');
         }
       });  
 
-    // function to initialize the Lights Out game
+    // function to initialise the Lights Out game
     function initLightsOutGame() {
         // Generate the game grid HTML based on the specified gridSize
-        //This varibbe will store the HTML for the game grid.
+        //This variable will store the HTML for the game grid.
         var gameGridHtml = ''; 
         //This outer loop creates the rows for the game grid using the gridSize variable.
         for (var i = 0; i < gridSize; i++) {
@@ -78,14 +81,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 // // Give the light the correct corresponding number
                 var lightNumber = i * gridSize + j + 1;
                 gameGridHtml += '<div class="light" id="'+ lightNumber +'"></div>';
-        }
-        // After creating all the lights for the row, add a closing </div> tag to close the row
-        gameGridHtml += '</div>';
+            }
+            // After creating all the lights for the row, add a closing </div> tag to close the row
+            gameGridHtml += '</div>';
         }
         // At this point, the variable "gameGridHtml" contains the complete HTML code for the game grid.
         // Append the generated game grid HTML to the game-grid element
         document.getElementById('game-grid').innerHTML = gameGridHtml;
-        // call starting state
+        // call starting s
         randomStart();
     }
 
@@ -177,7 +180,6 @@ document.addEventListener('DOMContentLoaded', function() {
           toggleLights(light);
         });
     }
-    // Get a hint to solve the game
 
     // Finds solution for current pattern 
     function solution(){
@@ -186,8 +188,8 @@ document.addEventListener('DOMContentLoaded', function() {
         var allLightsPressed = startingLights.concat(clickedLights);
         console.log(allLightsPressed);
 
-        // // Count how many times each number appears
-        // Initialize an empty object to store the counts of each number
+        // Count how many times each number appears
+        // Initialise an empty object to store the counts of each number
         const count = {};
 
         // Loop through the allLightsPressed array
@@ -196,14 +198,14 @@ document.addEventListener('DOMContentLoaded', function() {
             if (count[number]) {
                 count[number]++;
             } else {
-                // If the number is not a key in the count object, initialize its count to 1
+                // If the number is not a key in the count object, initialise its count to 1
                 count[number] = 1;
             }
         });
 
         console.log(count);
 
-        // Initialize an empty array to store the solution
+        // Initialise an empty array to store the solution
         const solution = [];
 
         // Loop through the allLightsPressed array again to find numbers with odd counts
