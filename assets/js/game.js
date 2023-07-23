@@ -24,6 +24,10 @@ document.addEventListener('DOMContentLoaded', function() {
           // If the clicked element is a light, toggle its state and adjacent lights
           toggleLights(target);
         }
+        // Create a move counter
+        moveCount++;
+        document.getElementById('move-counter').textContent = moveCount;
+        // Check if all lights are out
         checkWin();
       });
       
@@ -107,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
           var randomNumber = Math.floor(Math.random() * totalLights) + 1;
           uniqueNumbersArray.push(randomNumber);
         }
-      
+
         console.log(uniqueNumbersArray);
 
         // Loop through the uniqueNumbersArray and press the buttons one by one
@@ -122,10 +126,14 @@ document.addEventListener('DOMContentLoaded', function() {
       }
       // See if all lights are off to see if there is a win?
     function checkWin() {
+        // count how many on classes are presents if 0 = win
       if (document.querySelectorAll('.on').length === 0) {
         alert('Congratulations! You won the level!');
+        // start a new game
         initLightsOutGame();
       }
     }
+
+
 });
 
