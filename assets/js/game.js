@@ -176,6 +176,8 @@ document.addEventListener('DOMContentLoaded', function() {
         var allLights = document.querySelectorAll('.light');
         allLights.forEach(function(light) {
           light.classList.remove('on');
+          light.classList.remove('flashing'); // Remove flashing light if ther is any.
+          removeEventListener('click', stopFlashing);
         });
         // Reset move counter
         moveCount = 0;
