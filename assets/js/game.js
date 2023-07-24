@@ -177,9 +177,12 @@ document.addEventListener('DOMContentLoaded', function() {
         allLights.forEach(function(light) {
           light.classList.remove('on');
         });
-      
+        // Reset move counter
         moveCount = 0;
         document.getElementById('move-counter').textContent = moveCount;
+
+        //Reset clicked buttons
+        clickedLights = [];
       
         // Use startingArray to reset the lights to their initial pattern
         lightsToBeTurnedOn(startingLights);
