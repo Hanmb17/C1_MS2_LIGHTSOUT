@@ -182,9 +182,6 @@ document.addEventListener('DOMContentLoaded', function() {
         // Reset move counter
         moveCount = 0;
         document.getElementById('move-counter').textContent = moveCount;
-
-        //Reset clicked buttons
-        clickedLights = [];
       
         // Use startingArray to reset the lights to their initial pattern
         lightsToBeTurnedOn(startingLights);
@@ -197,6 +194,8 @@ document.addEventListener('DOMContentLoaded', function() {
           var light = document.getElementById(lightNumber.toString());
           toggleLights(light);
         });
+        //Reset clicked buttons
+        clickedLights = [];
     }
 
     // Finds solution for current pattern 
