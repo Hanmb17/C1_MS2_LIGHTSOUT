@@ -62,11 +62,24 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log("hint light: ", light);
                 // Disable the hint button to prevent the user cicking it again
                 document.getElementById('hint-button').disabled = true;
+                // Add eventListner to stop Flashing
+                light.addEventListener('click', stopFlashing);
                 } else {
             // If the currentSolution is empty, show a message
             console.log('No hint available.');
         }
-      });  
+      }); 
+      
+    // Function to stop the flashing effect when the light is clicked
+    function stopFlashing() {
+        // Remove the flashing class and event listener from the light
+        this.classList.remove('flashing');
+        this.removeEventListener('click', stopFlashing);
+
+        //  Enable the hint button to allow the user cicking it again
+        document.getElementById('hint-button').disabled = false;
+    }
+
 
     // function to initialise the Lights Out game
     function initLightsOutGame() {
