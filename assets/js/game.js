@@ -31,10 +31,13 @@ document.addEventListener('DOMContentLoaded', function() {
           console.log(clickedLights);
           if (target.classList.contains('flashing')) {
             stopFlashing(target);
-        }}
+        }
+        
         // Update the move counter
         moveCount++;
         document.getElementById('move-counter').textContent = moveCount;
+    }
+        
         // Check if all lights are out
         checkWin();
       });
