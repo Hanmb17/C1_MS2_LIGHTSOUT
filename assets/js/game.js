@@ -13,6 +13,13 @@ document.addEventListener('DOMContentLoaded', function() {
     var moveCount = 0;
     var startingLights;
     var clickedLights = [];
+    var gameMode; // To store game mode
+
+     // Get the game mode from the URL parameter
+     const queryString = window.location.search;
+     const urlParams = new URLSearchParams(queryString);
+     gameMode = urlParams.get('mode');
+     console.log(gameMode);
    
 
     // Initialise the Lights Out game when the page loads
@@ -32,14 +39,14 @@ document.addEventListener('DOMContentLoaded', function() {
           if (target.classList.contains('flashing')) {
             stopFlashing(target);
         }
-        
+
         // Update the move counter
         moveCount++;
         document.getElementById('move-counter').textContent = moveCount;
-    }
-        
+
         // Check if all lights are out
         checkWin();
+    }
       });
       
     // Add event listener to the restart button
@@ -104,8 +111,9 @@ document.addEventListener('DOMContentLoaded', function() {
         // At this point, the variable "gameGridHtml" contains the complete HTML code for the game grid.
         // Append the generated game grid HTML to the game-grid element
         document.getElementById('game-grid').innerHTML = gameGridHtml;
-        // call starting s
-        randomStart();
+        // call starting pattern
+        if (gameMode === "play"){}else{
+        randomStart();}
     }
 
     // function to turn the lights on and off
