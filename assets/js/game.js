@@ -29,7 +29,9 @@ document.addEventListener('DOMContentLoaded', function() {
           var lightNumber = parseInt(target.getAttribute('id'));
           clickedLights.push(lightNumber);
           console.log(clickedLights);
-        }
+          if (target.classList.contains('flashing')) {
+            stopFlashing(target);
+        }}
         // Update the move counter
         moveCount++;
         document.getElementById('move-counter').textContent = moveCount;
@@ -57,13 +59,13 @@ document.addEventListener('DOMContentLoaded', function() {
             // Get the corresponding light element using its ID (selectedNumber)
             var light = document.getElementById(selectedNumber.toString());
 
-            // Add the flashing class to the selected light
+                 // Add the flashing class to the selected light
                 light.classList.add('flashing');
                 console.log("hint light: ", light);
                 // Disable the hint button to prevent the user cicking it again
                 document.getElementById('hint-button').disabled = true;
-                // Add eventListner to stop Flashing
-                light.addEventListener('click', stopFlashing);
+                // Update the flashingLight variable to the current flashing light
+                flashingLight = light;
                 } else {
             // If the currentSolution is empty, show a message
             console.log('No hint available.');
@@ -71,15 +73,13 @@ document.addEventListener('DOMContentLoaded', function() {
       }); 
       
     // Function to stop the flashing effect when the light is clicked
-    function stopFlashing() {
+    function stopFlashing(light) {
+        console.log(light);
         // Remove the flashing class and event listener from the light
-        this.classList.remove('flashing');
-        this.removeEventListener('click', stopFlashing);
-
-        //  Enable the hint button to allow the user cicking it again
+        light.classList.remove('flashing');
+        // Enable the hint button to allow the user clicking it again
         document.getElementById('hint-button').disabled = false;
     }
-
 
     // function to initialise the Lights Out game
     function initLightsOutGame() {
@@ -172,21 +172,23 @@ document.addEventListener('DOMContentLoaded', function() {
         initLightsOutGame();
       }
     }
+    // reset game function
     function resetGame() {
         var allLights = document.querySelectorAll('.light');
         allLights.forEach(function(light) {
-          light.classList.remove('on');
-          light.classList.remove('flashing'); // Remove flashing light if ther is any.
-          removeEventListener('click', stopFlashing);
+            light.classList.remove('on');
+            stopFlashing(light); // Pass the light element to stopFlashing()
         });
+
         // Reset move counter
         moveCount = 0;
         document.getElementById('move-counter').textContent = moveCount;
-      
+    
         // Use startingArray to reset the lights to their initial pattern
         lightsToBeTurnedOn(startingLights);
-        
-      }
+        // Reset clicked buttons
+        clickedLights = [];
+    }
 
     function lightsToBeTurnedOn(LightsToTurnOn) {
         // Loop through the startingLights and press the buttons one by one
