@@ -13,6 +13,7 @@ move counter, and hints. The goal is to turn off all the lights on the grid in t
  var clickedLights = [];
  var gameMode; // To store game mode
  var loadedLevels = []; // Array to keep track of loaded levels
+ var currentLevel = 1;
 
  // Function to stop the flashing effect when the light is clicked
  function stopFlashing(light) {
@@ -27,7 +28,7 @@ move counter, and hints. The goal is to turn off all the lights on the grid in t
 function initLightsOutGame() {
     // call starting mode
     if (gameMode === "play"){
-        loadCurrentLevel(2);
+        loadCurrentLevel(currentLevel);
     }else{
     setUpGrid();
 }
@@ -153,6 +154,11 @@ function checkWin() {
     // count how many on classes are presents if 0 = win
   if (document.querySelectorAll('.on').length === 0) {
     alert('Congratulations! You won the level!');
+    if (gameMode==="play"){
+        currentLevel ++
+        console.log(currentLevel);
+
+    }
     // start a new game
     initLightsOutGame();
   }
