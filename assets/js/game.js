@@ -14,6 +14,7 @@ move counter, and hints. The goal is to turn off all the lights on the grid in t
  var gameMode; // To store game mode
  var loadedLevels = []; // Array to keep track of loaded levels
  var currentLevel = 1;
+ const maxLevel = 4;
 
  // Function to stop the flashing effect when the light is clicked
  function stopFlashing(light) {
@@ -156,11 +157,17 @@ function checkWin() {
     alert('Congratulations! You won the level!');
     if (gameMode==="play"){
         currentLevel ++
-        console.log(currentLevel);
-
-    }
-    // start a new game
-    initLightsOutGame();
+        if (currentLevel >= 5){
+            alert('Congratulations! You completed all the levels!');
+        } 
+            else {
+                // start the next level
+                initLightsOutGame();
+            }
+        } else {
+            // start a new game
+            initLightsOutGame();
+        }
   }
 }
 // reset game function
