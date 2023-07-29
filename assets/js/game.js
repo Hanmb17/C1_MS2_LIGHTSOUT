@@ -27,7 +27,7 @@ move counter, and hints. The goal is to turn off all the lights on the grid in t
 function initLightsOutGame() {
     // call starting mode
     if (gameMode === "play"){
-        loadCurrentLevel(1);
+        loadCurrentLevel(2);
     }else{
     setUpGrid();
 }
