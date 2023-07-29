@@ -25,7 +25,15 @@ move counter, and hints. The goal is to turn off all the lights on the grid in t
 
 // function to initialise the Lights Out game
 function initLightsOutGame() {
-    // Generate the game grid HTML based on the specified gridSize
+    // call starting mode
+    if (gameMode === "play"){
+        loadCurrentLevel(1);
+    }else{
+    setUpGrid();
+}
+}
+// Set up the game grid
+function setUpGrid(){// Generate the game grid HTML based on the specified gridSize
     //This variable will store the HTML for the game grid.
     var gameGridHtml = ''; 
     //This outer loop creates the rows for the game grid using the gridSize variable.
@@ -43,11 +51,10 @@ function initLightsOutGame() {
     // At this point, the variable "gameGridHtml" contains the complete HTML code for the game grid.
     // Append the generated game grid HTML to the game-grid element
     document.getElementById('game-grid').innerHTML = gameGridHtml;
-    // call starting pattern
-    if (gameMode === "play"){
-        loadCurrentLevel(1);
-    }else{
-    randomStart();}
+
+    if (gameMode === "freeplay"){
+        randomStart();
+    }
 }
 
 // function to turn the lights on and off
