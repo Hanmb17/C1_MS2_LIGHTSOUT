@@ -29,6 +29,8 @@ move counter, and hints. The goal is to turn off all the lights on the grid in t
 
 // function to initialise the Lights Out game
 function initLightsOutGame() {
+    moveCount = 0;
+    document.getElementById('move-counter').textContent = moveCount;
     // call starting mode
     if (gameMode === "play"){
         loadCurrentLevel(currentLevel);
