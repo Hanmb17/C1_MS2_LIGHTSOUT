@@ -13,4 +13,7 @@ export function loadLevel() {
     allLights.forEach(function(light) {
         light.classList.add('air');
     });
+    // Add count donw time in seconds
+    countDownTime = 240;
+    startCountdownTimer();
 }
