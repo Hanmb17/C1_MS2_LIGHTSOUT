@@ -13,4 +13,7 @@ export function loadLevel() {
     allLights.forEach(function(light) {
         light.classList.add('fire');
     });
+
+    countDownTime = 150;
+    startCountdownTimer();
 }

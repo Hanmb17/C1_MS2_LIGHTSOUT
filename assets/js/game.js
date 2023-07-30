@@ -15,6 +15,7 @@ move counter, and hints. The goal is to turn off all the lights on the grid in t
  var loadedLevels = []; // Array to keep track of loaded levels
  var currentLevel = 1;
  const maxLevel = 4;
+ var countDownTime;
 
  // Function to stop the flashing effect when the light is clicked
  function stopFlashing(light) {
@@ -156,7 +157,7 @@ function checkWin() {
   if (document.querySelectorAll('.on').length === 0) {
     alert('Congratulations! You won the level!');
     if (gameMode==="play"){
-        currentLevel ++
+        currentLevel++;
         if (currentLevel >= 5){
             alert('Congratulations! You completed all the levels!');
         } 
@@ -170,6 +171,7 @@ function checkWin() {
         }
   }
 }
+
 // reset game function
 function resetGame() {
     var allLights = document.querySelectorAll('.light');
@@ -237,6 +239,44 @@ function solution(){
     console.log(solution);
     return(solution);
     
+}
+
+// Create countdown timer
+function startCountdownTimer() {
+    // Get the countdown display element from the HTML document
+    const countdownElement = document.getElementById('timer');
+    // Display the initial countdown value
+    displayTime(countDownTime);
+  
+    // Start the countdown using setInterval
+    var countDown = setInterval(() => {
+      // Decrease the remaining time by 1 second
+      countDownTime--;
+  
+      // Update the countdown display with the updated time
+      displayTime(countDownTime);
+  
+      // Check if the countdown has reached 0 or below
+      if (countDownTime <= 0) {
+        // If the countdown has ended, display "Time out"
+        endCount();
+      }
+    }, 1000);
+
+    // Function to display the remaining time in the format (MM:SS)
+  function displayTime(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = seconds % 60;
+    // Ternary operator to display time
+    countdownElement.innerHTML = `
+      ${minutes < 10 ? "0" : ""}${minutes}:${remainingSeconds < 10 ? "0" : ""}${remainingSeconds}
+    `;
+  }
+
+  // Function to display "Time out" when the countdown ends
+  function endCount() {
+    countdownElement.innerHTML = "Time out";
+  }
 }
 
 
