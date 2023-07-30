@@ -16,6 +16,7 @@ move counter, and hints. The goal is to turn off all the lights on the grid in t
  var currentLevel = 1;
  const maxLevel = 4;
  var countDownTime;
+ var timerStartTime;
 
  // Function to stop the flashing effect when the light is clicked
  function stopFlashing(light) {
@@ -188,6 +189,7 @@ function resetGame() {
     lightsToBeTurnedOn(startingLights);
     // Reset clicked buttons
     clickedLights = [];
+    resetCountDownTimer();
 }
 
 function lightsToBeTurnedOn(LightsToTurnOn) {
@@ -243,6 +245,7 @@ function solution(){
 
 // Create countdown timer
 function startCountdownTimer() {
+    timerStartTime = countDownTime;
     // Get the countdown display element from the HTML document
     const countdownElement = document.getElementById('timer');
     // Display the initial countdown value
@@ -253,11 +256,11 @@ function startCountdownTimer() {
       // Decrease the remaining time by 1 second
       countDownTime--;
   
-      // Update the countdown display with the updated time
+      // Update the countdown displaTimey with the updated time
       displayTime(countDownTime);
   
       // Check if the countdown has reached 0 or below
-      if (countDownTime <= 0) {
+      if (countDownTime<= 0) {
         // If the countdown has ended, display "Time out"
         endCount();
       }
@@ -278,6 +281,12 @@ function startCountdownTimer() {
     countdownElement.innerHTML = "Time out";
   }
 }
+
+// reset the timer
+function resetCountDownTimer(){
+    countDownTime = timerStartTime;
+    startCountdownTimer();
+} 
 
 
 // Wait for the DOM content to be fully loaded before executing JavaScript code - as I'm making changes to them
