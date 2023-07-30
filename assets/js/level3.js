@@ -12,4 +12,7 @@ export function loadLevel() {
     allLights.forEach(function(light) {
         light.classList.add('earth');
     });
+    // Add count donw time in seconds
+    countDownTime = 210;
+    startCountdownTimer();
 }
