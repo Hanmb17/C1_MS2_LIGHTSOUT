@@ -1,12 +1,25 @@
 
 /* --- Game styling --- */
 
+#game-grid {
+    display: grid;
+    gap: 5px;
+    max-height: 50vh;
+    aspect-ratio: 1; 
+    margin: auto;
+}
+
+#game-grid .row {
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
+
 /* Light styling */
 .light {
-    width: 40px;
-    height: 40px;
+    width: 100%;
+    aspect-ratio: 1;
     background-color: lightgrey;
-    margin: 5px;
   }
 
   .on:not(.fire, .water, .earth, .air) {

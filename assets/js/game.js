@@ -49,7 +49,7 @@ function setUpGrid(){// Generate the game grid HTML based on the specified gridS
         for (var j = 0; j < gridSize; j++) {
             // // Give the light the correct corresponding number
             var lightNumber = i * gridSize + j + 1;
-            gameGridHtml += '<div class="light" id="'+ lightNumber +'"></div>';
+            gameGridHtml += '<div class="light col" id="'+ lightNumber +'"></div>';
         }
         // After creating all the lights for the row, add a closing </div> tag to close the row
         gameGridHtml += '</div>';
