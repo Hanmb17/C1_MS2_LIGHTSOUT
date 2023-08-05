@@ -3,9 +3,12 @@
 export function loadLevel() {
     // Set up starting modal
     const levelInfo = {
+        // levelPicURL:,
         levelTitle: "Eternal Luminous Blaze",
         levelNo:"1",
-        description: "Level 1 information"
+        // orbPic:,
+        element:"fire",
+        description: "Explore Lumaria's eternal flames. Solve this puzzle to align the Fire Lumia's orbs to restore a Fire Lumia. Ignite orbs to awaken Lumian power. Can you solve the Luminous Blaze's enigma? Your Lumian journey begins."
     };
     startingModalForCurrentLevel(levelInfo);
 
@@ -24,5 +27,5 @@ export function loadLevel() {
     });
 
     countDownTime = 150;
-    startCountdownTimer();
+    //startCountdownTimer();
 }

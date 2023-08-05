@@ -47,7 +47,10 @@ function startingModalForCurrentLevel(levelInfo){
     // Update modal body information
     // modalBody.querySelector("#levelPic").src = levelInfo.levelPicURL;
     modalBody.querySelector("#levelTitle").textContent = levelInfo.levelTitle;
-    modalBody.querySelector("#levelNo").textContent = levelInfo.levelNumber;
+    modalBody.querySelector("#levelNo").textContent = levelInfo.levelNo;
+    // modalBody.querySelector('#orbPic').src = levelInfo.orbPic;
+    modalBody.querySelector('#orbElement').textContent = levelInfo.element;
+    modalBody.querySelector('#levelDescription').textContent = levelInfo.description;
 
 
 
@@ -327,7 +330,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialise the Lights Out game when the page loads
     initLightsOutGame();
 
-    // Add event listener to modal close and play btuoon to close modal
+    // Add event listener to for when modal closes to start timer
+    var modal = document.getElementById('staticBackdrop');
+    modal.addEventListener('hidden.bs.modal', function() {
+        // Call the startCountdownTimer() function
+        startCountdownTimer();
+    });
 
 
 
