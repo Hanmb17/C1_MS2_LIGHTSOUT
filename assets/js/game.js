@@ -39,7 +39,7 @@ function initLightsOutGame() {
     // Show the modal on page load
     modal.classList.add('show');
     modal.style.display = 'block';
-    //document.body.classList.add('modal-open');
+    document.body.classList.add('modal-open');
     }else{
     setUpGrid();
 }
