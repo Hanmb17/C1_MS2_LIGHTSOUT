@@ -17,6 +17,7 @@ move counter, and hints. The goal is to turn off all the lights on the grid in t
  const maxLevel = 4;
  var countDownTime;
  var timerStartTime;
+ var countDown;
 
  // Function to stop the flashing effect when the light is clicked
  function stopFlashing(light) {
@@ -248,13 +249,18 @@ function solution(){
 // Create countdown timer
 function startCountdownTimer() {
     timerStartTime = countDownTime;
+    if (countDown) {
+        console.log("Current countDown", countDown);
+        clearInterval(countDown);
+        console.log(countDown);
+    }
     // Get the countdown display element from the HTML document
     const countdownElement = document.getElementById('timer');
     // Display the initial countdown value
     displayTime(countDownTime);
   
     // Start the countdown using setInterval
-    var countDown = setInterval(() => {
+    countDown = setInterval(() => {
       // Decrease the remaining time by 1 second
       countDownTime--;
   
