@@ -40,7 +40,17 @@ function initLightsOutGame() {
 }
 }
 // Set Up level Modal start
-function startingModalForCurrentLevel(){
+function startingModalForCurrentLevel(levelInfo){
+    // Get modal body 
+    const modalBody = document.querySelector('.modal-body');
+
+    // Update modal body information
+    // modalBody.querySelector("#levelPic").src = levelInfo.levelPicURL;
+    modalBody.querySelector("#levelTitle").textContent = levelInfo.levelTitle;
+    modalBody.querySelector("#levelNo").textContent = levelInfo.levelNumber;
+
+
+
     console.log("Modal loading");
     // Create a new Bootstrap Modal instance using the modal element
     const myModal = new bootstrap.Modal(document.getElementById('staticBackdrop'));

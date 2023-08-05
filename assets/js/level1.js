@@ -2,7 +2,12 @@
 // Export function to add level 1 detail to the game
 export function loadLevel() {
     // Set up starting modal
-    startingModalForCurrentLevel();
+    const levelInfo = {
+        levelTitle: "Eternal Luminous Blaze",
+        levelNo:"1",
+        description: "Level 1 information"
+    };
+    startingModalForCurrentLevel(levelInfo);
 
 
     // Set the starting lights for level 1
