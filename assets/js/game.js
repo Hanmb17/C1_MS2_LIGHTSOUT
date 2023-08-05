@@ -35,6 +35,11 @@ function initLightsOutGame() {
     // call starting mode
     if (gameMode === "play"){
         loadCurrentLevel(currentLevel);
+        var modal = document.getElementById('staticBackdrop');
+    // Show the modal on page load
+    modal.classList.add('show');
+    modal.style.display = 'block';
+    //document.body.classList.add('modal-open');
     }else{
     setUpGrid();
 }
@@ -250,9 +255,7 @@ function solution(){
 function startCountdownTimer() {
     timerStartTime = countDownTime;
     if (countDown) {
-        console.log("Current countDown", countDown);
         clearInterval(countDown);
-        console.log(countDown);
     }
     // Get the countdown display element from the HTML document
     const countdownElement = document.getElementById('timer');
@@ -305,10 +308,12 @@ document.addEventListener('DOMContentLoaded', function() {
      const urlParams = new URLSearchParams(queryString);
      gameMode = urlParams.get('mode');
      console.log(gameMode);
-   
-
+     
+    
     // Initialise the Lights Out game when the page loads
     initLightsOutGame();
+
+
 
     // Add an event listener to respond to button clicks on the game page
     document.addEventListener('click', function(event) {
