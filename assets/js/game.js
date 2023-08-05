@@ -35,11 +35,10 @@ function initLightsOutGame() {
     // call starting mode
     if (gameMode === "play"){
         loadCurrentLevel(currentLevel);
-        var modal = document.getElementById('staticBackdrop');
-    // Show the modal on page load
-    modal.classList.add('show');
-    modal.style.display = 'block';
-    document.body.classList.add('modal-open');
+        // Create a new Bootstrap Modal instance using the modal element
+        const myModal = new bootstrap.Modal(document.getElementById('staticBackdrop'));
+        myModal.show();
+
     }else{
     setUpGrid();
 }
@@ -312,6 +311,9 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Initialise the Lights Out game when the page loads
     initLightsOutGame();
+
+    // Add event listener to modal close and play btuoon to close modal
+
 
 
 
