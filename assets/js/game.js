@@ -35,14 +35,19 @@ function initLightsOutGame() {
     // call starting mode
     if (gameMode === "play"){
         loadCurrentLevel(currentLevel);
-        // Create a new Bootstrap Modal instance using the modal element
-        const myModal = new bootstrap.Modal(document.getElementById('staticBackdrop'));
-        myModal.show();
-
     }else{
     setUpGrid();
 }
 }
+// Set Up level Modal start
+function startingModalForCurrentLevel(){
+    console.log("Modal loading");
+    // Create a new Bootstrap Modal instance using the modal element
+    const myModal = new bootstrap.Modal(document.getElementById('staticBackdrop'));
+    myModal.show();
+    
+}
+
 // Set up the game grid
 function setUpGrid(){// Generate the game grid HTML based on the specified gridSize
     //This variable will store the HTML for the game grid.

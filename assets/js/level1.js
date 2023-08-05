@@ -1,6 +1,10 @@
 // level1.js
 // Export function to add level 1 detail to the game
 export function loadLevel() {
+    // Set up starting modal
+    startingModalForCurrentLevel();
+
+
     // Set the starting lights for level 1
     gridSize === 3;
     setUpGrid();
