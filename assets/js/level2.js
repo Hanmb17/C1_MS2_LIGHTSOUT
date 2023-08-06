@@ -1,6 +1,7 @@
 // level2.js
 // Export function to add level 1 detail to the game
 export function loadLevel() {
+    
     // Set the starting lights for level 2
     gridSize = 4;
     setUpGrid();
@@ -14,5 +15,5 @@ export function loadLevel() {
     });
     // Add count donw time in seconds
     countDownTime = 180;
-    startCountdownTimer();
+    //startCountdownTimer();
 }

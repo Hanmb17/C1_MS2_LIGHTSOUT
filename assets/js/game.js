@@ -18,6 +18,8 @@ move counter, and hints. The goal is to turn off all the lights on the grid in t
  var countDownTime;
  var timerStartTime;
  var countDown;
+ var winningInfo;
+ let myModal = new bootstrap.Modal(document.getElementById('staticBackdrop'));
 
  // Function to stop the flashing effect when the light is clicked
  function stopFlashing(light) {
@@ -59,6 +61,21 @@ function startingModalForCurrentLevel(levelInfo){
     const myModal = new bootstrap.Modal(document.getElementById('staticBackdrop'));
     myModal.show();
     
+}
+// Update modal for winning message
+function winningModal(winningInfo) {
+    const modalBody = document.querySelector('.modal-body');
+    
+    // Update modal body information
+    modalBody.querySelector('#timeFreed').textContent = ("In " + winningInfo.time);
+    modalBody.querySelector('#timeFreed').classList.remove('d-none'); // Show the timeFreed element
+    modalBody.querySelectorAll('.winning').forEach(element => element.classList.remove('d-none')); // Show other winning elements
+
+     // Show the modal and update content that is changed after a delay
+     setTimeout(() => {
+        modalBody.querySelector('#levelDescription').textContent = ("Your freed the " + winningInfo.description); // Set the updated text content after a short delay
+         myModal.show(); // Show the modal with updated content after a short delay
+     }, 200);
 }
 
 // Set up the game grid
@@ -181,9 +198,10 @@ if (loadedLevels.includes(levelScript)) {
 function checkWin() {
     // count how many on classes are presents if 0 = win
   if (document.querySelectorAll('.on').length === 0) {
-    alert('Congratulations! You won the level!');
+    // alert('Congratulations! You won the level!');
     if (gameMode==="play"){
-        currentLevel++;
+        //currentLevel++;
+       winningModal(winningInfo);
         if (currentLevel >= 5){
             alert('Congratulations! You completed all the levels!');
         } 

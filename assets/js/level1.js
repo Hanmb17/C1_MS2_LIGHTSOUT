@@ -4,6 +4,7 @@ export function loadLevel() {
     // Set up starting modal
     const levelInfo = {
         // levelPicURL:,
+        type: 'level',
         levelTitle: "Eternal Luminous Blaze",
         levelNo:"1",
         // orbPic:,
@@ -28,4 +29,11 @@ export function loadLevel() {
 
     countDownTime = 150;
     //startCountdownTimer();
+
+    // Set up winning modal
+    winningInfo = {
+        type: 'winning',
+        description: "Fire Lumia",
+        time: "30 seconds"
+    };
 }
