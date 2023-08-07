@@ -204,6 +204,7 @@ function checkWin() {
   if (document.querySelectorAll('.on').length === 0) {
     // alert('Congratulations! You won the level!');
     if (gameMode==="play"){
+        timeSolvedIn();
         currentLevel++;
        // winningModal(winningInfo);
         if (currentLevel >= 5){
@@ -307,7 +308,7 @@ function startCountdownTimer() {
       // Decrease the remaining time by 1 second
       countDownTime--;
   
-      // Update the countdown displaTimey with the updated time
+      // Update the countdown displayTime with the updated time
       displayTime(countDownTime);
   
       // Check if the countdown has reached 0 or below
@@ -317,6 +318,7 @@ function startCountdownTimer() {
       }
     }, 1000);
 
+    displayTime(seconds)
     // Function to display the remaining time in the format (MM:SS)
   function displayTime(seconds) {
     const minutes = Math.floor(seconds / 60);
@@ -333,11 +335,36 @@ function startCountdownTimer() {
   }
 }
 
+
+
 // reset the timer
 function resetCountDownTimer(){
     countDownTime = timerStartTime;
     startCountdownTimer();
 } 
+
+function timeSolvedIn(){
+    clearInterval(countDown);
+    const elaspedTime = timerStartTime - countDownTime;
+    console.log("timesolved in", elaspedTime);
+
+     // Function to display the remaining time in the format (MM:SS)
+    function setTimeSolvedIn(seconds) {
+
+        if (seconds >= 60){
+        const minutes = Math.floor(seconds / 60);
+        const remainingSeconds = seconds % 60;
+        const formattedTime = `${minutes} minutes ${remainingSeconds} seconds`;
+        console.log(formattedTime);
+
+        }else{
+            const formattedTime = `${seconds} seconds`;
+            console.log(formattedTime);
+        }
+  }
+
+    console.log(setTimeSolvedIn(elaspedTime));
+}
 
 
 // Wait for the DOM content to be fully loaded before executing JavaScript code - as I'm making changes to them
