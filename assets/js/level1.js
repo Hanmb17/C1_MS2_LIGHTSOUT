@@ -21,6 +21,9 @@ export function loadLevel() {
     startingLights = [1, 3, 4, 5, 6];
     lightsToBeTurnedOn(startingLights);
 
+    // Starting number of hints
+    availableHints = 3;
+
     // Add the "fire" class to all the lights
     var allLights = document.querySelectorAll('.light');
     allLights.forEach(function(light) {

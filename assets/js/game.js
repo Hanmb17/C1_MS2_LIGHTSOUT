@@ -19,6 +19,7 @@ move counter, and hints. The goal is to turn off all the lights on the grid in t
  var timerStartTime;
  var countDown;
  var winningInfo;
+ var availableHints;
  let myModal = new bootstrap.Modal(document.getElementById('staticBackdrop'));
 
  // Function to stop the flashing effect when the light is clicked
@@ -437,7 +438,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add event listener to the hint button
     document.getElementById('hint-button').addEventListener('click', function() {
-        
+        if (availableHints > 0) {
+            // Decrement the available hints count
+            availableHints--;
         // Get solution for current grid pattern
         var currentSolution = solution();
 
@@ -457,9 +460,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 document.getElementById('hint-button').disabled = true;
                 // Update the flashingLight variable to the current flashing light
                 flashingLight = light;
-                } else {
-            // If the currentSolution is empty, show a message
-            console.log('No hint available.');
+            } else {
+                // If the currentSolution is empty, show a message
+                console.log('No hint available.');
+            }
+        } else {
+            console.log('No more hints available.');
         }
       }); 
 });
