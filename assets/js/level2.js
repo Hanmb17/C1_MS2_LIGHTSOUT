@@ -26,4 +26,9 @@ export function loadLevel() {
     // Add count donw time in seconds
     countDownTime = 180;
     //startCountdownTimer();
+    winningInfo = {
+        type: 'winning',
+        description: "Water Lumia",
+        time: "30 seconds"
+    };
 }

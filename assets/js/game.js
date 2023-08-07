@@ -65,6 +65,7 @@ function startingModalForCurrentLevel(levelInfo){
 }
 // Update modal for winning message
 function winningModal(winningInfo) {
+    console.log(winningInfo)
     const modalBody = document.querySelector('.modal-body');
     
     // Update modal body information
@@ -76,7 +77,8 @@ function winningModal(winningInfo) {
      setTimeout(() => {
         modalBody.querySelector("#buttonLabel").textContent = "Next Level ";
         modalBody.querySelector('#levelDescription').textContent = ("Your freed the " + winningInfo.description); // Set the updated text content after a short delay
-         myModal.show(); // Show the modal with updated content after a short delay
+        const myModal = new bootstrap.Modal(document.getElementById('staticBackdrop'));
+        myModal.show(); // Show the modal with updated content after a short delay
      }, 200);
 }
 
@@ -202,14 +204,15 @@ function checkWin() {
   if (document.querySelectorAll('.on').length === 0) {
     // alert('Congratulations! You won the level!');
     if (gameMode==="play"){
-        //currentLevel++;
-       winningModal(winningInfo);
+        currentLevel++;
+       // winningModal(winningInfo);
         if (currentLevel >= 5){
             alert('Congratulations! You completed all the levels!');
         } 
             else {
                 // start the next level
-                initLightsOutGame();
+                winningModal(winningInfo);
+                //initLightsOutGame();
             }
         } else {
             // start a new game
@@ -352,28 +355,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add event listener to for when modal closes to start timer
     var modal = document.getElementById('staticBackdrop');
-    modal.addEventListener('hidden.bs.modal', function() {
+    modal.addEventListener('hidden.bs.modal', async function() {
         console.log('Modal hidden event triggered');
-    // Get the button element
-    var button = modal.querySelector('.btn-primary');
-    // Get the text content of the button
-    var buttonText = button.textContent;
     
-    if(buttonText.includes("Next Level ")){
-      console.log("Next Level to start");
-        myModal.hide(); // close Modale
-       currentLevel++;
-       initLightsOutGame();
+        var button = modal.querySelector('.btn-primary');
+        var buttonText = button.textContent;
+    
+        if (buttonText.includes("Next Level ")) {
+            console.log("Next Level to start");
+            await new Promise(resolve => setTimeout(resolve, 200)); // Delay for demonstration
+    
+            myModal.hide();
+            //currentLevel++;
+            initLightsOutGame();
+        } else {
+            // Call the startCountdownTimer() function
+            await startCountdownTimer();
 
-    }else{
-        // Call the startCountdownTimer() function
-        startCountdownTimer();
-
-
-    }
-    // Log the button text content
-    console.log('Button Text:', buttonText);
-});
+            myModal.hide();
+        }
+    
+        console.log('Button Text:', buttonText);
+    });
 
     // Add an event listener to respond to button clicks on the game page
     document.addEventListener('click', function(event) {

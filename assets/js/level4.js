@@ -1,6 +1,16 @@
 // level4.js
 // Export function to add level 4 detail to the game
 export function loadLevel() {
+    const levelInfo = {
+        // levelPicURL:,
+        type: 'level',
+        levelTitle: "Eternal Luminous Swirl",
+        levelNo:"4",
+        // orbPic:,
+        element:"Air",
+        description: "Explore Lumaria's eternal flames. Solve this puzzle to align the Fire Lumia's orbs to restore a Fire Lumia. Ignite orbs to awaken Lumian power. Can you solve the Luminous Blaze's enigma? Your Lumian journey begins."
+    };
+    startingModalForCurrentLevel(levelInfo);
     // Set grid size for level 4
     gridSize = 5;
     setUpGrid();
@@ -15,5 +25,10 @@ export function loadLevel() {
     });
     // Add count donw time in seconds
     countDownTime = 240;
-    startCountdownTimer();
+    //startCountdownTimer();
+    winningInfo = {
+        type: 'winning',
+        description: "Air Lumia",
+        time: "30 seconds"
+    };
 }
