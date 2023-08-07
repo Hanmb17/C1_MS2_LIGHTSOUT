@@ -73,6 +73,7 @@ function winningModal(winningInfo) {
 
      // Show the modal and update content that is changed after a delay
      setTimeout(() => {
+        modalBody.querySelector("#buttonLabel").textContent = "Next Level ";
         modalBody.querySelector('#levelDescription').textContent = ("Your freed the " + winningInfo.description); // Set the updated text content after a short delay
          myModal.show(); // Show the modal with updated content after a short delay
      }, 200);
@@ -351,6 +352,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add event listener to for when modal closes to start timer
     var modal = document.getElementById('staticBackdrop');
     modal.addEventListener('hidden.bs.modal', function() {
+
+         // Get the button element
+    var button = modal.querySelector('.btn-primary');
+
+    // Get the text content of the button
+    var buttonText = button.textContent;
+
+    // Log the button text content
+    console.log('Button Text:', buttonText);
         // Call the startCountdownTimer() function
         startCountdownTimer();
     });
