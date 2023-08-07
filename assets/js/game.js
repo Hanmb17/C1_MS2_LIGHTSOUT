@@ -76,7 +76,7 @@ function winningModal(winningInfo) {
      // Show the modal and update content that is changed after a delay
      setTimeout(() => {
         modalBody.querySelector("#buttonLabel").textContent = "Next Level ";
-        modalBody.querySelector('#levelDescription').textContent = ("Your freed the " + winningInfo.description); // Set the updated text content after a short delay
+        modalBody.querySelector('#levelDescription').textContent = `You freed the ${winningInfo.description} in ${moveCount} moves.`; // Set the updated text content after a short delay
         const myModal = new bootstrap.Modal(document.getElementById('staticBackdrop'));
         myModal.show(); // Show the modal with updated content after a short delay
      }, 200);
@@ -205,6 +205,7 @@ function checkWin() {
     // alert('Congratulations! You won the level!');
     if (gameMode==="play"){
         timeSolvedIn();
+        //winningInfo.movecount = movecount;
         currentLevel++;
        // winningModal(winningInfo);
         if (currentLevel >= 5){
