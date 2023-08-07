@@ -354,12 +354,12 @@ function timeSolvedIn(){
         if (seconds >= 60){
         const minutes = Math.floor(seconds / 60);
         const remainingSeconds = seconds % 60;
-        const formattedTime = `${minutes} minutes ${remainingSeconds} seconds`;
-        console.log(formattedTime);
+        winningInfo.time = `${minutes} minutes ${remainingSeconds} seconds`;
+        console.log(winningInfo.time);
 
         }else{
-            const formattedTime = `${seconds} seconds`;
-            console.log(formattedTime);
+            winningInfo.time = `${seconds} seconds`;
+            console.log(winningInfo.time);
         }
   }
 
