@@ -53,6 +53,7 @@ function startingModalForCurrentLevel(levelInfo){
     // modalBody.querySelector('#orbPic').src = levelInfo.orbPic;
     modalBody.querySelector('#orbElement').textContent = levelInfo.element;
     modalBody.querySelector('#levelDescription').textContent = levelInfo.description;
+    modalBody.querySelector("#buttonLabel").textContent = "Play ";
 
 
 
@@ -352,21 +353,27 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add event listener to for when modal closes to start timer
     var modal = document.getElementById('staticBackdrop');
     modal.addEventListener('hidden.bs.modal', function() {
-
-         // Get the button element
+        console.log('Modal hidden event triggered');
+    // Get the button element
     var button = modal.querySelector('.btn-primary');
-
     // Get the text content of the button
     var buttonText = button.textContent;
+    
+    if(buttonText.includes("Next Level ")){
+      console.log("Next Level to start");
+        myModal.hide(); // close Modale
+       currentLevel++;
+       initLightsOutGame();
 
-    // Log the button text content
-    console.log('Button Text:', buttonText);
+    }else{
         // Call the startCountdownTimer() function
         startCountdownTimer();
-    });
 
 
-
+    }
+    // Log the button text content
+    console.log('Button Text:', buttonText);
+});
 
     // Add an event listener to respond to button clicks on the game page
     document.addEventListener('click', function(event) {
