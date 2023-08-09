@@ -324,7 +324,7 @@ function startCountdownTimer() {
       }
     }, 1000);
 
-    displayTime(seconds)
+    //displayTime(count)
     // Function to display the remaining time in the format (MM:SS)
   function displayTime(seconds) {
     const minutes = Math.floor(seconds / 60);
