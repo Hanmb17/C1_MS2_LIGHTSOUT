@@ -28,7 +28,11 @@ move counter, and hints. The goal is to turn off all the lights on the grid in t
     // Remove the flashing class and event listener from the light
     light.classList.remove('flashing');
     // Enable the hint button to allow the user clicking it again
-    document.getElementById('hint-button').disabled = false;
+
+     // Disable the hint button if no more hints are available
+     if (availableHints > 0) {
+        document.getElementById('hint-button').disabled = false;
+        console.log('No more hints available.');}
 }
 
 // function to initialise the Lights Out game
@@ -420,7 +424,9 @@ document.addEventListener('DOMContentLoaded', function() {
           console.log(clickedLights);
           if (target.classList.contains('flashing')) {
             stopFlashing(target);
+
         }
+        
 
         // Update the move counter
         moveCount++;
@@ -464,6 +470,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // If the currentSolution is empty, show a message
                 console.log('No hint available.');
             }
+           
         } else {
             console.log('No more hints available.');
         }
