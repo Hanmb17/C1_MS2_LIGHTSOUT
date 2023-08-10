@@ -59,6 +59,8 @@ function startingModalForCurrentLevel(levelInfo){
     modalBody.querySelector('#orbElement').textContent = levelInfo.element;
     modalBody.querySelector('#levelDescription').textContent = levelInfo.description;
     modalBody.querySelector("#buttonLabel").textContent = "Play ";
+    modalBody.querySelectorAll('.winning').forEach(element => element.classList.add('d-none'));
+
 
 
 
