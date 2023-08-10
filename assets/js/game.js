@@ -41,7 +41,11 @@ function initLightsOutGame() {
     document.getElementById('move-counter').textContent = moveCount;
     // call starting mode
     if (gameMode === "play"){
+        if (currentLevel <= 4 ){
         loadCurrentLevel(currentLevel);
+    }else{
+        console.log("final modal");
+        finalModal();}
     }else{
     setUpGrid();
 }
@@ -84,6 +88,23 @@ function winningModal(winningInfo) {
      setTimeout(() => {
         modalBody.querySelector("#buttonLabel").textContent = "Next Level ";
         modalBody.querySelector('#levelDescription').textContent = `You freed the ${winningInfo.description} in ${moveCount} moves.`; // Set the updated text content after a short delay
+        const myModal = new bootstrap.Modal(document.getElementById('staticBackdrop'));
+        myModal.show(); // Show the modal with updated content after a short delay
+     }, 200);
+}
+
+// Update modal for winning message
+function finalModal() {
+    console.log('final modal loading');
+    const modalBody = document.querySelector('.modal-body');
+    
+    // Update modal body information
+    modalBody.querySelector('#winningMessage').textContent = "Congratulations, You freed all the Lumia";
+    modalBody.querySelector('#winningMessage').classList.remove('d-none'); // Show the winningMessage element
+
+     // Show the modal and update content that is changed after a delay
+     setTimeout(() => {
+        modalBody.querySelector("#buttonLabel").textContent = "Home";
         const myModal = new bootstrap.Modal(document.getElementById('staticBackdrop'));
         myModal.show(); // Show the modal with updated content after a short delay
      }, 200);
@@ -215,7 +236,8 @@ function checkWin() {
         //winningInfo.movecount = movecount;
         currentLevel++;
        // winningModal(winningInfo);
-        if (currentLevel >= 5){
+        if (currentLevel >= 6){
+            
             alert('Congratulations! You completed all the levels!');
         } 
             else {
