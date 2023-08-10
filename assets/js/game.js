@@ -19,7 +19,7 @@ move counter, and hints. The goal is to turn off all the lights on the grid in t
  var timerStartTime;
  var countDown;
  var winningInfo;
- var availableHints;
+ var availableHints = 0;
  let myModal = new bootstrap.Modal(document.getElementById('staticBackdrop'));
 
  // Function to stop the flashing effect when the light is clicked
@@ -394,6 +394,12 @@ function timeSolvedIn(){
   }
 
     console.log(setTimeSolvedIn(elaspedTime));
+}
+
+// Function to update the number of hints the user has left
+function updateNumberOfHints(startingHints){
+    let totalHints = startingHints + availableHints;
+    availableHints = totalHints;
 }
 
 

@@ -23,6 +23,10 @@ export function loadLevel() {
     allLights.forEach(function(light) {
         light.classList.add('earth');
     });
+
+    // Starting number of hints
+    let startingHints = 3;
+    updateNumberOfHints(startingHints);
     // Add count donw time in seconds
     countDownTime = 210;
     // startCountdownTimer();
