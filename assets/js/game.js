@@ -56,7 +56,8 @@ function startingModalForCurrentLevel(levelInfo){
     const modalBody = document.querySelector('.modal-body');
 
     // Update modal body information
-    // modalBody.querySelector("#levelPic").src = levelInfo.levelPicURL;
+    console.log(levelInfo.levelPicURL);
+    modalBody.querySelector("#levelPic").src = levelInfo.levelPicURL;
     modalBody.querySelector("#levelTitle").textContent = levelInfo.levelTitle;
     modalBody.querySelector("#levelNo").textContent = levelInfo.levelNo;
     // modalBody.querySelector('#orbPic').src = levelInfo.orbPic;
