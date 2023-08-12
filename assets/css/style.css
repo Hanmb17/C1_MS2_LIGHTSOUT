@@ -3,6 +3,10 @@ header {
     background-color: #1C0539;
 }
 
+.logo {
+    max-height: 50px;
+}
+
 h1{
     color:#97C9C2;
     text-align: left;
