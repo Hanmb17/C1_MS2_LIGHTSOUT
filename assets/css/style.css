@@ -47,18 +47,52 @@ body, html {
 .game-control-buttons {
     display:flex;
     align-items: center;
+    justify-content: center;
     background: url(../images/game_control_button.svg) no-repeat center;
     max-width: 60px;
     aspect-ratio: 1;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.25rem;
     color:white; 
 }
 
-#rest-icon {
+#rest-icon, #hint-text {
 transition: transform 0.3s ease-in-out; 
 }
 
 #reset-icon:hover {
     transform: rotate(45deg);   
+}
+
+#hint-text:hover {
+    font-size: 1.4rem;
+
+}
+#hint-button {
+    position: relative; /* Set the parent element as a positioning context */
+}
+
+.deactivated-button {
+    color: #666;
+    cursor: not-allowed;
+    user-select: none; 
+}
+
+.circle-overlay {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    width: 30px;
+    height: 30px;
+    background-color: rgb(153, 16, 165);
+    border-radius: 50%;
+    z-index: 1;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem; 
+    line-height: 1; 
 }
 
 #move-counter, #timer {

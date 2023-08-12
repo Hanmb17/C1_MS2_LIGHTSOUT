@@ -31,7 +31,7 @@ move counter, and hints. The goal is to turn off all the lights on the grid in t
 
      // Disable the hint button if no more hints are available
      if (availableHints > 0) {
-        document.getElementById('hint-button').disabled = false;
+        document.getElementById('hint-button').classList.remove("deactivated-button");
         console.log('No more hints available.');}
 }
 
@@ -401,6 +401,7 @@ function timeSolvedIn(){
 function updateNumberOfHints(startingHints){
     let totalHints = startingHints + availableHints;
     availableHints = totalHints;
+    document.getElementById('hints-count').textContent = availableHints;
 }
 
 
@@ -475,9 +476,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add event listener to the hint button
     document.getElementById('hint-button').addEventListener('click', function() {
+        if (!this.classList.contains('deactivated-button')) {
         if (availableHints > 0) {
             // Decrement the available hints count
             availableHints--;
+            document.getElementById('hints-count').textContent = availableHints;
         // Get solution for current grid pattern
         var currentSolution = solution();
 
@@ -494,7 +497,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 light.classList.add('flashing');
                 console.log("hint light: ", light);
                 // Disable the hint button to prevent the user cicking it again
-                document.getElementById('hint-button').disabled = true;
+                document.getElementById('hint-button').classList.add("deactivated-button");
                 // Update the flashingLight variable to the current flashing light
                 flashingLight = light;
             } else {
@@ -505,6 +508,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             console.log('No more hints available.');
         }
+    }
       }); 
 });
 
