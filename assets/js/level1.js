@@ -3,7 +3,7 @@
 export function loadLevel() {
     // Set up starting modal
     const levelInfo = {
-        levelPicURL: "../assets/images/fire_lumia.svg",
+        levelPicURL: "https://hanmb17.github.io/C1_MS2_LIGHTSOUT/assets/images/fire_lumia.svg",
         type: 'level',
         levelTitle: "Eternal Luminous Blaze",
         levelNo:"1",

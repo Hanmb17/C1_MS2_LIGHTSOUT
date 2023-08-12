@@ -2,7 +2,7 @@
 // Export function to add level 4 detail to the game
 export function loadLevel() {
     const levelInfo = {
-        levelPicURL: "../assets/images/air_lumia.svg",
+        levelPicURL: "https://hanmb17.github.io/C1_MS2_LIGHTSOUT/assets/images/air_lumia.svg",
         type: 'level',
         levelTitle: "Eternal Luminous Swirl",
         levelNo:"4",

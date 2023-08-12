@@ -3,7 +3,7 @@
 export function loadLevel() {
      // Set up starting modal
      const levelInfo = {
-        levelPicURL: "../assets/images/water_lumia.svg",
+        levelPicURL: "https://hanmb17.github.io/C1_MS2_LIGHTSOUT/assets/images/water_lumia.svg",
         type: 'level',
         levelTitle: "Eternal Luminous Oasis",
         levelNo:"2",

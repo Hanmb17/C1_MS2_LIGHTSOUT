@@ -2,7 +2,7 @@
 // Export function to add level 3 detail to the game
 export function loadLevel() {
     const levelInfo = {
-        levelPicURL: "../assets/images/earth_lumia.svg",
+        levelPicURL: "https://hanmb17.github.io/C1_MS2_LIGHTSOUT/assets/images/earth_lumia.svg",
         type: 'level',
         levelTitle: "Eternal Luminous Hill",
         levelNo:"3",
