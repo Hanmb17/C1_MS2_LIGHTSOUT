@@ -30,7 +30,7 @@ body, html {
     background-size: cover;
 }
 
-.heads-up-display {
+.heads-up-display, #game-controls {
     justify-content: space-between;
     max-width: 50vh;
     margin:auto;
@@ -40,6 +40,15 @@ body, html {
     align-items: center;
     background: url(../images/hud_background.svg) no-repeat center;
     max-width: 125px;
+    aspect-ratio: 1;
+    color:white; 
+}
+
+.game-control-buttons {
+    display:flex;
+    align-items: center;
+    background: url(../images/game_control_button.svg) no-repeat center;
+    max-width: 60px;
     aspect-ratio: 1;
     color:white; 
 }

@@ -83,15 +83,22 @@
         </header>
         <section class="container-fluid my-2">
             <div class="row heads-up-display">
-                <div class="col-4 heads-up-display-items" id="move-counter">0</div>
-                <div class="col-4 heads-up-display-items" id="timer">00:00</div>
+                <div class="col-6 heads-up-display-items" id="move-counter">0</div>
+                <div class="col-6 heads-up-display-items" id="timer">00:00</div>
             </div>
             <!-- Game board-->
             <div id="game-grid" class="p-2"></div>
 
-            <div id="game-controls">
-                <div><button id="reset-button">Reset</button></div>
-                <div><button id="hint-button">Hint</button></div>
+            <div class="row" id="game-controls">
+                <div class="col-4 game-control-buttons">
+                    <span id="reset-button">Menu</span>
+                </div>
+                <div class="col-4 game-control-buttons">
+                    <span id="reset-button">Reset</span>
+                </div>
+                <div class="col-4 game-control-buttons">
+                    <span id="hint-button">Hint</span>
+                </div>
             </div>
         </section>
         <footer class="container-fluid">
