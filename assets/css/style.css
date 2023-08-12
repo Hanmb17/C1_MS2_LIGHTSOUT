@@ -1,4 +1,18 @@
 
+header {
+    background-color: #1C0539;
+}
+
+h1{
+    color:#97C9C2;
+    text-align: left;
+}
+
+h2{
+    color: white;
+    text-align: center;
+}
+
 /* --- Game styling --- */
 
 body, html {
@@ -11,6 +25,23 @@ body, html {
     background: url(../images/game_background.svg) no-repeat 70%  bottom;
     background-size: cover;
 }
+
+.heads-up-display {
+    display:flex;
+    align-items: center;
+    background: url(../images/hud_background.svg) no-repeat center;
+    max-width: 125px;
+    aspect-ratio: 1;
+    color:white; 
+    margin:auto;
+}
+
+#move-counter, #timer {
+    font-family: 'Yusei Magic', sans-serif;
+    font-size:38px;
+    justify-content: center;
+}
+
 #game-grid {
     display: grid;
     gap: 5px;

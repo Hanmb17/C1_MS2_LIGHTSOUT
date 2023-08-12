@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Add Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Yusei+Magic&display=swap" rel="stylesheet">
     <!-- Add Bootstrap 5 link-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -70,9 +74,9 @@
    
         <header class="container-fluid">
             <div class="row">
-                <img>
-                <h1>Enchanted Elemental Lumina</h1>
-                <h2>Level 1</h2>
+                <img class="col-1">
+                <h1 class="col-11">Enchanted Elemental Lumina</h1>
+                <h2 class="col-12">Level 1</h2>
             </div>
         </header>
         <section class="container-fluid">
@@ -83,9 +87,9 @@
         </section>
 
         <section class="container-fluid">
-            <div>
-                <div>Move Counter<span id="move-counter">0</span></div>
-                <div>Timer<span id="timer">00:00</span></div>
+            <div class="row">
+                <div class="col-4 heads-up-display" id="move-counter">0</div>
+                <div class="col-4 heads-up-display" id="timer">00:00</div>
             </div>
             <!-- Game board-->
             <div id="game-grid" class="p-2"></div>
