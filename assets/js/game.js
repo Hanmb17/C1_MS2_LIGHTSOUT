@@ -117,7 +117,7 @@ function setUpGrid(){// Generate the game grid HTML based on the specified gridS
     var gameGridHtml = ''; 
     //This outer loop creates the rows for the game grid using the gridSize variable.
     for (var i = 0; i < gridSize; i++) {
-        gameGridHtml += '<div class="row">';
+        gameGridHtml += '<div class="row p-0">';
         // Inner loop: Create lights for each row of the game grid using the gridSize variable.
         for (var j = 0; j < gridSize; j++) {
             // // Give the light the correct corresponding number
