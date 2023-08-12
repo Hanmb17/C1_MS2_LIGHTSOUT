@@ -53,6 +53,14 @@ body, html {
     color:white; 
 }
 
+#rest-icon {
+transition: transform 0.3s ease-in-out; 
+}
+
+#reset-icon:hover {
+    transform: rotate(45deg);   
+}
+
 #move-counter, #timer {
     font-family: 'Yusei Magic', sans-serif;
     font-size:38px;
