@@ -1,6 +1,16 @@
 
 /* --- Game styling --- */
 
+body, html {
+    margin: 0;
+}
+
+.background-wrapper {
+    position: relative;
+    min-height: 100vh;
+    background: url(../images/game_background.svg) no-repeat 70%  bottom;
+    background-size: cover;
+}
 #game-grid {
     display: grid;
     gap: 5px;
