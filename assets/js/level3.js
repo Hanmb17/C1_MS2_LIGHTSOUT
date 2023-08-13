@@ -6,7 +6,7 @@ export function loadLevel() {
         type: 'level',
         levelTitle: "Eternal Luminous Hill",
         levelNo:"3",
-        // orbPic:,
+        orbPic:"https://hanmb17.github.io/C1_MS2_LIGHTSOUT/assets/images/earth_orb.svg",
         element:"Earth",
         description: "Explore Lumaria's eternal flames. Solve this puzzle to align the Fire Lumia's orbs to restore a Fire Lumia. Ignite orbs to awaken Lumian power. Can you solve the Luminous Blaze's enigma? Your Lumian journey begins."
     };
