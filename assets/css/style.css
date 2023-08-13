@@ -24,6 +24,10 @@ h3 {
     color: white;
 }
 
+.green-font {
+    color: #97C9C2;
+}
+
 /* --- Modal styling --- */
 .modal-body {
     color: white;
@@ -31,6 +35,25 @@ h3 {
 
 #orbPic {
     max-width: 55px;
+}
+
+.btn-primary {
+    background-color: #457D75;
+    border: none;
+    box-shadow: 0 0 5px 5px #61B0A5;
+    transition: transform 0.3s;
+}
+
+.btn-primary:hover, .btn-primary:focus, :not(.btn-check)+.btn:active{
+    background-color: #457D75;
+    border: none;
+    box-shadow: 0 0 8px 8px #61B0A5;
+}
+.btn-primary:hover .fa-play {
+    transform: translateX(4px);
+    font-size: 1.25rem;
+    vertical-align: middle;
+    transition: transform 0.3s ease; 
 }
 
 /* --- Game styling --- */
