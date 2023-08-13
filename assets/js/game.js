@@ -367,6 +367,15 @@ function startCountdownTimer() {
 }
 
 
+// Function to pause the countdown timer
+function pauseCountdownTimer() {
+    clearInterval(countDown);
+}
+
+// Function to resume the countdown timer
+function resumeCountdownTimer() {
+    startCountdownTimer();
+}
 
 // reset the timer
 function resetCountDownTimer(){
@@ -473,6 +482,14 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('menu-button').addEventListener('click', function() {
         this.classList.toggle('expanded');
         document.getElementById('toggle-menu').classList.toggle('expanded');
+
+        // Check if the menu button has the 'expanded' class to determine the menu state
+        if (this.classList.contains('expanded')) {
+         pauseCountdownTimer();
+        } else {
+            resumeCountdownTimer();
+     }
+
     });
 
     // Add event listener to the home button
