@@ -475,6 +475,11 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('toggle-menu').classList.toggle('expanded');
     });
 
+    // Add event listener to the home button
+    document.getElementById('home-button').addEventListener('click', () => {
+    window.location.href = 'index.html'; // Replace with your actual home page URL
+});
+
       
 
 
