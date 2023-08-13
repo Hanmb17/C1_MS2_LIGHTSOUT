@@ -58,7 +58,7 @@ function startingModalForCurrentLevel(levelInfo){
     // Update modal body information
     console.log(levelInfo.levelPicURL);
     modalBody.querySelector("#levelPic").src = levelInfo.levelPicURL;
-    modalBody.querySelector("#levelTitle").textContent = levelInfo.levelTitle;
+    //modalBody.querySelector("#levelTitle").textContent = levelInfo.levelTitle;
     modalBody.querySelector("#levelNo").textContent = levelInfo.levelNo;
     modalBody.querySelector('#orbPic').src = levelInfo.orbPic;
     modalBody.querySelector('#orbElement').textContent = levelInfo.element;
@@ -81,14 +81,13 @@ function winningModal(winningInfo) {
     const modalBody = document.querySelector('.modal-body');
     
     // Update modal body information
-    modalBody.querySelector('#timeFreed').textContent = ("In " + winningInfo.time);
-    modalBody.querySelector('#timeFreed').classList.remove('d-none'); // Show the timeFreed element
+    //modalBody.querySelector('#timeFreed').classList.remove('d-none'); // Show the timeFreed element
     modalBody.querySelectorAll('.winning').forEach(element => element.classList.remove('d-none')); // Show other winning elements
 
      // Show the modal and update content that is changed after a delay
      setTimeout(() => {
         modalBody.querySelector("#buttonLabel").textContent = "Next Level ";
-        modalBody.querySelector('#levelDescription').textContent = `You freed the ${winningInfo.description} in ${moveCount} moves.`; // Set the updated text content after a short delay
+        modalBody.querySelector('#levelDescription').textContent = `You freed the ${winningInfo.description} in ${moveCount} moves and ${winningInfo.time}.`; // Set the updated text content after a short delay
         const myModal = new bootstrap.Modal(document.getElementById('staticBackdrop'));
         myModal.show(); // Show the modal with updated content after a short delay
      }, 200);

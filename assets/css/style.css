@@ -1,5 +1,5 @@
 
-header {
+header, .modal-content {
     background-color: #1C0539;
 }
 
@@ -8,18 +8,35 @@ header {
 }
 
 h1{
+    font-family: 'Yusei Magic', sans-serif;
     color:#97C9C2;
     text-align: left;
 }
 
-h2{
+h2 {
+    font-family: 'Yusei Magic', sans-serif;
     color: white;
     text-align: center;
+}
+
+h3 {
+    font-family: 'Yusei Magic', sans-serif;
+    color: white;
+}
+
+/* --- Modal styling --- */
+.modal-body {
+    color: white;
+}
+
+#orbPic {
+    max-width: 55px;
 }
 
 /* --- Game styling --- */
 
 body, html {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
 }
 
