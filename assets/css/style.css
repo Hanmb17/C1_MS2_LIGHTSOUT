@@ -260,7 +260,7 @@ body, html {
   left: 50%; /* Position the orb in the horizontal middle */
   transform: translate(-50%, -50%); /* Center the orb perfectly */
   z-index: 1; /* Position the pseudo-element in front of the grey square */
-  box-shadow: 0 0 5px 5px #F9F871; /* Glowing effect for the orb */
+  box-shadow: 0 0 4px 4px #F9F871; /* Glowing effect for the orb */
 }
 
 /* Pseudo-element for the glowing orb */
@@ -268,14 +268,14 @@ body, html {
     content: '';
     width: 60%; /* Adjust the size of the orb (smaller) */
     height: 60%; /* Adjust the size of the orb (smaller) */
-    background-color: #3374a8; /* Fully blue color for the glowing orb */
+    background: #00BCD4 url(../images/water_orb.svg) no-repeat center; /* Fully blue color for the glowing orb */
     border-radius: 50%; /* Make it a circular shape */
     position: absolute;
     top: 50%; /* Position the orb in the vertical middle */
     left: 50%; /* Position the orb in the horizontal middle */
     transform: translate(-50%, -50%); /* Center the orb perfectly */
     z-index: 1; /* Position the pseudo-element in front of the grey square */
-    box-shadow: 0 0 5px 5px #3374a8; /* Glowing effect for the orb */
+    box-shadow: 0 0 4px 4px #9AFFF6; /* Glowing effect for the orb */
   }
 
   /* Pseudo-element for the glowing orb */
@@ -283,14 +283,14 @@ body, html {
     content: '';
     width: 60%; /* Adjust the size of the orb (smaller) */
     height: 60%; /* Adjust the size of the orb (smaller) */
-    background-color: #06643d; /* Fully blue color for the glowing orb */
+    background: #228B22 url(../images/earth_orb.svg) no-repeat center; /* Fully blue color for the glowing orb */
     border-radius: 50%; /* Make it a circular shape */
     position: absolute;
     top: 50%; /* Position the orb in the vertical middle */
     left: 50%; /* Position the orb in the horizontal middle */
     transform: translate(-50%, -50%); /* Center the orb perfectly */
     z-index: 1; /* Position the pseudo-element in front of the grey square */
-    box-shadow: 0 0 5px 5px #06643d; /* Glowing effect for the orb */
+    box-shadow: 0 0 4px 4px #56D656; /* Glowing effect for the orb */
   }
 
     /* Pseudo-element for the glowing orb */
@@ -298,12 +298,12 @@ body, html {
     content: '';
     width: 60%; /* Adjust the size of the orb (smaller) */
     height: 60%; /* Adjust the size of the orb (smaller) */
-    background-color: #56c7b8; /* Fully blue color for the glowing orb */
+    background: #87EAEB url(../images/air_orb.svg) no-repeat center; /* Fully blue color for the glowing orb */
     border-radius: 50%; /* Make it a circular shape */
     position: absolute;
     top: 50%; /* Position the orb in the vertical middle */
     left: 50%; /* Position the orb in the horizontal middle */
     transform: translate(-50%, -50%); /* Center the orb perfectly */
     z-index: 1; /* Position the pseudo-element in front of the grey square */
-    box-shadow: 0 0 5px 5px #56c7b8; /* Glowing effect for the orb */
+    box-shadow: 0 0 4px 4px #70C3BC; /* Glowing effect for the orb */
   }
