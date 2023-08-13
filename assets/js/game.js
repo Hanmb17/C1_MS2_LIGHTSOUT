@@ -20,6 +20,7 @@ move counter, and hints. The goal is to turn off all the lights on the grid in t
  var countDown;
  var winningInfo;
  var availableHints = 0;
+ var totalHints;
  let myModal = new bootstrap.Modal(document.getElementById('staticBackdrop'));
 
  // Function to stop the flashing effect when the light is clicked
@@ -281,6 +282,14 @@ function resetGame() {
     // Reset clicked buttons
     clickedLights = [];
     resetCountDownTimer();
+    resetHints();
+
+}
+
+function resetHints() {
+    availableHints = totalHints;
+    document.getElementById('hints-count').textContent = availableHints;
+    document.getElementById('hint-button').classList.remove("deactivated-button");
 }
 
 function lightsToBeTurnedOn(LightsToTurnOn) {
@@ -419,9 +428,10 @@ function timeSolvedIn(){
 
 // Function to update the number of hints the user has left
 function updateNumberOfHints(startingHints){
-    let totalHints = startingHints + availableHints;
+    totalHints = startingHints + availableHints;
     availableHints = totalHints;
     document.getElementById('hints-count').textContent = availableHints;
+    document.getElementById('hint-button').classList.remove("deactivated-button");
 }
 
 
