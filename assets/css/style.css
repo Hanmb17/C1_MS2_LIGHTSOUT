@@ -59,6 +59,7 @@ body, html {
 
 #menu-button {
     display: inline-block;
+    position: relative; 
 }
 
 
@@ -70,7 +71,6 @@ body, html {
     cursor: pointer;
     transition: transform 0.3s ease-in-out; 
 }
-
 
 .line {
     display: block;
@@ -110,6 +110,42 @@ body, html {
 .expanded .line:nth-child(3) {
     transform: translateY(-10px) rotate(-45deg);
 }
+
+#toggle-menu {
+    position: absolute;
+    width: 150%;
+    top: calc(-100% - 80px);
+    left: -25%;
+    background: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s, transform 0.3s; 
+    z-index: 2;
+    pointer-events: none; 
+}
+
+.expanded #menu-button {
+    transform: translateY(-100%);
+}
+
+.expanded #toggle-menu {
+    opacity: 1; /* Make the submenu visible */
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.submenu-button {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    background: url(../images/game_control_button.svg) center no-repeat ;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+
+}
+
 
 
 #reset-icon:hover {

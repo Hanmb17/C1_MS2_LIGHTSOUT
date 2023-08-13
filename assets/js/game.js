@@ -472,6 +472,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add event listener to  expand emgame menu
     document.getElementById('menu-button').addEventListener('click', function() {
         this.classList.toggle('expanded');
+        document.getElementById('toggle-menu').classList.toggle('expanded');
     });
 
       
