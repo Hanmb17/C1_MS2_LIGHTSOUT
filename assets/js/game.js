@@ -60,7 +60,7 @@ function startingModalForCurrentLevel(levelInfo){
     modalBody.querySelector("#levelPic").src = levelInfo.levelPicURL;
     modalBody.querySelector("#levelTitle").textContent = levelInfo.levelTitle;
     modalBody.querySelector("#levelNo").textContent = levelInfo.levelNo;
-    // modalBody.querySelector('#orbPic').src = levelInfo.orbPic;
+    modalBody.querySelector('#orbPic').src = levelInfo.orbPic;
     modalBody.querySelector('#orbElement').textContent = levelInfo.element;
     modalBody.querySelector('#levelDescription').textContent = levelInfo.description;
     modalBody.querySelector("#buttonLabel").textContent = "Play ";
