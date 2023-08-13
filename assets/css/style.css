@@ -253,14 +253,14 @@ body, html {
   content: '';
   width: 60%; /* Adjust the size of the orb (smaller) */
   height: 60%; /* Adjust the size of the orb (smaller) */
-  background-color: #ff4500; /* Fully orange color for the glowing orb */
+  background: #F8B251 url(../images/fire_orb.svg) no-repeat center; /* Fully orange color for the glowing orb */
   border-radius: 50%; /* Make it a circular shape */
   position: absolute;
   top: 50%; /* Position the orb in the vertical middle */
   left: 50%; /* Position the orb in the horizontal middle */
   transform: translate(-50%, -50%); /* Center the orb perfectly */
   z-index: 1; /* Position the pseudo-element in front of the grey square */
-  box-shadow: 0 0 5px 5px #ff4500; /* Glowing effect for the orb */
+  box-shadow: 0 0 5px 5px #F9F871; /* Glowing effect for the orb */
 }
 
 /* Pseudo-element for the glowing orb */
