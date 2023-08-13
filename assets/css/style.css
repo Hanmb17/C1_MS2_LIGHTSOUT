@@ -56,6 +56,10 @@ body, html {
     color:white; 
 }
 
+#rest-icon {
+    width: 95%;
+}
+
 #rest-icon, #hint-text {
 transition: transform 0.3s ease-in-out; 
 }
@@ -114,7 +118,7 @@ transition: transform 0.3s ease-in-out;
 
 #game-grid .row {
     align-items: center;
-    justify-content: center;
+    /* justify-content: center;*/
     gap: 5px;
   }
 
