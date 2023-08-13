@@ -29,6 +29,7 @@ export function loadLevel() {
     updateNumberOfHints(startingHints);
     // Add count donw time in seconds
     countDownTime = 240;
+
     //startCountdownTimer();
     winningInfo = {
         type: 'winning',

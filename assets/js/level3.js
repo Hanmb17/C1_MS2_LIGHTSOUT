@@ -29,6 +29,7 @@ export function loadLevel() {
     updateNumberOfHints(startingHints);
     // Add count donw time in seconds
     countDownTime = 210;
+
     // startCountdownTimer();
      // Set up winning modal
      winningInfo = {

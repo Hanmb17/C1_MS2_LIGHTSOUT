@@ -73,6 +73,12 @@ function startingModalForCurrentLevel(levelInfo){
     // Create a new Bootstrap Modal instance using the modal element
     const myModal = new bootstrap.Modal(document.getElementById('staticBackdrop'));
     myModal.show();
+
+      // Update the level number and add a new class to the h2 element
+      const levelNumberElement = document.querySelector('.level-number');
+    
+      // Update the level number text
+      levelNumberElement.textContent = `Level ${levelInfo.levelNo}`;
     
 }
 // Update modal for winning message
@@ -91,6 +97,7 @@ function winningModal(winningInfo) {
         const myModal = new bootstrap.Modal(document.getElementById('staticBackdrop'));
         myModal.show(); // Show the modal with updated content after a short delay
      }, 200);
+
 }
 
 // Update modal for winning message
@@ -111,6 +118,7 @@ function finalModal() {
         const myModal = new bootstrap.Modal(document.getElementById('staticBackdrop'));
         myModal.show(); // Show the modal with updated content after a short delay
      }, 200);
+
 }
 
 // Set up the game grid
@@ -137,6 +145,7 @@ function setUpGrid(){// Generate the game grid HTML based on the specified gridS
         randomStart();
     }
 }
+
 
 // function to turn the lights on and off
 function toggleLights(light) {
