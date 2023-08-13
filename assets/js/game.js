@@ -99,8 +99,10 @@ function finalModal() {
     const modalBody = document.querySelector('.modal-body');
     
     // Update modal body information
+    modalBody.querySelector("#levelPic").src = "assets/images/all_lumia.svg";
     modalBody.querySelector('#winningMessage').textContent = "Congratulations, You freed all the Lumia";
-    modalBody.querySelector('#winningMessage').classList.remove('d-none'); // Show the winningMessage element
+    modalBody.querySelector('#winningMessage').classList.remove('d-none');
+    modalBody.querySelectorAll('.finalMessage').forEach(element => element.classList.add('d-none'));
 
      // Show the modal and update content that is changed after a delay
      setTimeout(() => {
