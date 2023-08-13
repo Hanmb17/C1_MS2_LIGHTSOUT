@@ -103,6 +103,7 @@ function finalModal() {
     modalBody.querySelector('#winningMessage').textContent = "Congratulations, You freed all the Lumia";
     modalBody.querySelector('#winningMessage').classList.remove('d-none');
     modalBody.querySelectorAll('.finalMessage').forEach(element => element.classList.add('d-none'));
+    modalBody.querySelector("#infoModal").classList.add('mt-4', 'm-lg-0', 'd-flex', 'flex-column', 'align-items-center', 'align-lg-end');
 
      // Show the modal and update content that is changed after a delay
      setTimeout(() => {
