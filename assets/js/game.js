@@ -443,6 +443,8 @@ document.addEventListener('DOMContentLoaded', function() {
             myModal.hide();
             //currentLevel++;
             initLightsOutGame();
+        } else if (buttonText.includes("Home")) {
+            window.location.href = 'index.html'; // Replace with your actual home page URL
         } else {
             // Call the startCountdownTimer() function
             await startCountdownTimer();
