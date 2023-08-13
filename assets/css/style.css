@@ -56,13 +56,61 @@ body, html {
     color:white; 
 }
 
+
+#menu-button {
+    display: inline-block;
+}
+
+
 #rest-icon {
     width: 95%;
 }
 
-#rest-icon, #hint-text {
-transition: transform 0.3s ease-in-out; 
+#rest-icon, #hint-text, #menu-button {
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; 
 }
+
+
+.line {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    margin: 6px 0;
+    border-radius: 5px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* menu toogle animaition when expanded and collasped */
+.collasped .line:nth-child(1) {
+    transform: translateY(0) rotate(0);
+}
+
+.collasped .line:nth-child(2) {
+    opacity: 1;
+}
+
+.collasped .line:nth-child(3) {
+    transform: translateY(0) rotate(0);
+}
+
+.expanded #menu-button {
+    transform: translateY(-100%);
+}
+
+.expanded .line:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.expanded .line:nth-child(2) {
+    opacity: 0;
+}
+
+.expanded .line:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
 
 #reset-icon:hover {
     transform: rotate(45deg);   
