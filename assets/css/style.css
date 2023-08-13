@@ -33,6 +33,10 @@ h3 {
     color: white;
 }
 
+#levelPic {
+    max-width: 250px;
+}
+
 #orbPic {
     max-width: 55px;
 }
