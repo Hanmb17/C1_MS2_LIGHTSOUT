@@ -468,7 +468,16 @@ document.addEventListener('DOMContentLoaded', function() {
         checkWin();
     }
       });
+
+    // Add event listener to  expand emgame menu
+    document.getElementById('menu-button').addEventListener('click', function() {
+        this.classList.toggle('expanded');
+    });
+
       
+
+
+
     // Add event listener to the restart button
     document.getElementById('reset-button').addEventListener('click', function() {
         resetGame();
