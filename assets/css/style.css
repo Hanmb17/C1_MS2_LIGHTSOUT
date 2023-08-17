@@ -1,6 +1,21 @@
 
-header, .modal-content {
+
+header, footer, .modal-content {
     background-color: #1C0539;
+}
+
+main {
+    flex: 1 0 auto;
+    margin-top: 66px;
+  }
+
+
+  /* Style the footer */
+  footer {
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
 }
 
 .logo {
@@ -100,7 +115,7 @@ h3 {
     padding: 10px 20px; 
     text-align: center;
     text-decoration: none;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease-in-out;
     margin: auto;
 }
 
@@ -124,8 +139,13 @@ h3 {
 /* --- Game styling --- */
 
 body, html {
+    display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--white-color);
     font-family: 'Roboto', sans-serif;
     margin: 0;
+    
 }
 
 .background-wrapper {
@@ -413,6 +433,9 @@ body, html {
     z-index: 1; /* Position the pseudo-element in front of the grey square */
     box-shadow: 0 0 4px 4px #70C3BC; /* Glowing effect for the orb */
   }
+
+
+
 
   @media (min-aspect-ratio: 1/1) and (max-width: 600px) {
     .planet-button {
