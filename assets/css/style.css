@@ -60,6 +60,11 @@ h3 {
     transition: transform 0.3s ease; 
 }
 
+.button-font, .home-button-font {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
 
 /* --- Home Page styling --- */
 
@@ -68,6 +73,51 @@ h3 {
     min-height: 100vh;
     background: url(../images/space_background.svg) no-repeat center;
     background-size: cover;
+}
+
+
+
+.planet-button {
+    border-radius: 50%;
+    padding: 10px 20px; 
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    max-width: 125px;
+    aspect-ratio: 1;
+    box-shadow: #1c053996 8px 8px 4px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#main-game-button, 
+#instructions-button, 
+#freeplay-game-button{
+    border-radius: 50%;
+    padding: 10px 20px; 
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    margin: auto;
+}
+
+#main-game-button {
+    background: url(../images/hud_background.svg) no-repeat center / cover;; 
+}
+.planet-button:hover {
+    transform: scale(1.05); 
+}
+
+
+#instructions-button {
+    background: url(../images/pink_planet.svg) no-repeat center / cover;; 
+}
+
+#freeplay-game-button {
+    background: url(../images/green_planet.svg) no-repeat center / cover;; 
 }
 
 
@@ -110,6 +160,7 @@ body, html {
     font-size: 1.25rem;
     color:white; 
 }
+
 
 
 #menu-button {
@@ -362,3 +413,12 @@ body, html {
     z-index: 1; /* Position the pseudo-element in front of the grey square */
     box-shadow: 0 0 4px 4px #70C3BC; /* Glowing effect for the orb */
   }
+
+  @media (min-aspect-ratio: 1/1) and (max-width: 600px) {
+    .planet-button {
+        max-width: 30vh;
+    }
+
+    .home-button-font {font-size: 16px;}
+}
+
