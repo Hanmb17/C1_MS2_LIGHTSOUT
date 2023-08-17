@@ -60,6 +60,17 @@ h3 {
     transition: transform 0.3s ease; 
 }
 
+
+/* --- Home Page styling --- */
+
+.home-background-wrapper {
+    position: relative;
+    min-height: 100vh;
+    background: url(../images/space_background.svg) no-repeat center;
+    background-size: cover;
+}
+
+
 /* --- Game styling --- */
 
 body, html {
