@@ -6,7 +6,6 @@ header, footer, .modal-content {
 
 main {
     flex: 1 0 auto;
-    margin-top: 66px;
   }
 
 
@@ -37,6 +36,10 @@ h2 {
 h3 {
     font-family: 'Yusei Magic', sans-serif;
     color: white;
+}
+
+p{
+    color: White;
 }
 
 .green-font {
@@ -92,9 +95,6 @@ h3 {
     font-size: 18px;
 }
 
-.btn-close {
-    color:white;
-}
 /* --- Home Page styling --- */
 
 
@@ -106,6 +106,9 @@ h3 {
     background-size: cover;
 }
 
+.game-intro-wrapper {
+    background-color: #421a617d;
+}
 
 
 .planet-button {
@@ -287,8 +290,6 @@ body, html {
     cursor: pointer;
 
 }
-
-
 
 #reset-icon:hover {
     transform: rotate(45deg);   
