@@ -92,7 +92,12 @@ h3 {
     font-size: 18px;
 }
 
+.btn-close {
+    color:white;
+}
 /* --- Home Page styling --- */
+
+
 
 .home-background-wrapper {
     position: relative;
