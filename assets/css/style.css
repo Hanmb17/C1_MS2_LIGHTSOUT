@@ -5,7 +5,9 @@ header, footer, .modal-content {
 }
 
 main {
+    display: flex;
     flex: 1 0 auto;
+    flex-direction: column;
   }
 
 
@@ -107,7 +109,16 @@ p{
 }
 
 .game-intro-wrapper {
+    order: 1; 
+}
+
+.game-menu {
+    flex: 1 0 auto;
+    order: 2; 
+}
+.game-intro-wrapper {
     background-color: #421a617d;
+    order: 1;
 }
 
 
@@ -460,5 +471,16 @@ body, html {
     }
 
     .home-button-font {font-size: 16px;}
+}
+
+/* Media query for mobile devices */
+@media (max-width: 767px) {
+    .game-intro-wrapper {
+        order: 2;
+    }
+
+    .game-menu{
+        order: 1; 
+    }
 }
 
