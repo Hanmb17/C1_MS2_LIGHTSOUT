@@ -43,11 +43,20 @@ h3 {
 p{
     color: White;
 }
+a {
+    text-decoration: none;
+}
 
 .green-font {
     color: #97C9C2;
 }
 
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
 
 .icon-link{
     transition: transform 0.3 ease-in-out;
