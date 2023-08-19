@@ -17,8 +17,9 @@
 </head>
 
 <body class="background-wrapper">
-    <!-- Game Modal -->
-  <!-- Modal code taken from Bootstrap 5.3 documentation -->
+    <!-- Game Modals -->
+  <!-- All Modals code taken from Bootstrap 5.3 documentation -->
+  <!-- Play mode modal-->
   <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
       <div class="modal-content">
@@ -66,6 +67,64 @@
     </div>
   </div>
   </div>
+
+    <!-- Freeplay Modal -->
+    <div class="modal fade" id="FreeplaySetUpModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="FreeplaySetUpModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Elemental Lumina - Free Play</h1>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h2>Set Up Your Game</h2>
+                <br>
+                <label>Grid Size:</label>
+                <div class="grid-size-options">
+                <label>
+                    <input type="radio" name="gridSize" value="3x3" checked>
+                    3x3
+                </label>
+                <label>
+                    <input type="radio" name="gridSize" value="4x4">
+                    4x4
+                    </label>
+                <label>
+                    <input type="radio" name="gridSize" value="5x5">
+                    5x5
+                </label>
+                <label>
+                    <input type="radio" name="gridSize" value="6x6">
+                    6x6
+                </label>
+                </div>
+                <h3 class="green-font">Number Of Hints</h3>
+                <div class="grid-size-options">
+                    <label>
+                        <input type="radio" name="numberOfHints" value="3x3" checked>
+                        None
+                    </label>
+                    <label>
+                        <input type="radio" name="numberOfHints" value="4x4">
+                        Custom Amount
+                    </label>
+                    <label>
+                        <input type="number" id="numberOfHints" name="numberOfHints" min="1" max="999">
+                        Enter Amount
+                        </label>
+                    <label>
+                    <label>
+                        <input type="radio" name="numberOfHints" value="5x5">
+                        Infinte <i class="fa-solid fa-infinity"></i>
+                    </label>
+                    </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Play<i class="fa-solid fa-play ps-2"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
     <!-- Instructions Modal -->
     <div class="modal fade" id="instructionsModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="instructionsModalLabel" aria-hidden="true">
         <div class="modal-dialog">
