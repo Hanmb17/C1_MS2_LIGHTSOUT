@@ -439,11 +439,7 @@ function timeSolvedIn(){
     console.log(setTimeSolvedIn(elaspedTime));
 }
 
-function freeplayHintsSetUp(hintOption){
-
-    console.log(hintOption);
- // hintOption = document.querySelector('input[name="numberOfHints"]:checked').value;
-            
+function freeplayHintsSetUp(hintOption){         
             if (hintOption === "custom") {
                 // Use the custom hint value if provided, otherwise default to 0
                 const customHintValue = parseInt(document.getElementById('hintsRequested').value) || 0;
@@ -536,9 +532,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
       });
 
+      document.getElementById('customHintsRadio').addEventListener('click', handleHintRadioButtonChange);
+
       document.getElementById('freeplay-play-button').addEventListener('click',function(){
         freeplaySetUp();
-      })
+      });
     // Add event listener to  expand emgame menu
     document.getElementById('menu-button').addEventListener('click', function() {
         this.classList.toggle('expanded');
@@ -604,4 +602,26 @@ document.addEventListener('DOMContentLoaded', function() {
     }
       }); 
 });
+
+
+function handleHintRadioButtonChange() {
+    var radio = document.getElementById("customHintsRadio");
+    console.log(radio);
+    var numberInput = document.getElementById("numberInput");
+
+    if (radio.checked) {
+        numberInput.classList.remove("d-none");
+    } else {
+        numberInput.classList.add("d-none");
+    
+    }
+
+    // Attach click event listeners to other radio buttons as well
+    var otherRadios = document.querySelectorAll('[name="numberOfHints"]:not(#customHintsRadio)');
+    otherRadios.forEach(function(otherRadio) {
+        otherRadio.addEventListener('click', function() {
+            numberInput.classList.add("d-none");
+        });
+    });
+};
 
