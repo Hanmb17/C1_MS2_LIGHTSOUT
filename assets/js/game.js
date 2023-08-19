@@ -31,7 +31,7 @@ move counter, and hints. The goal is to turn off all the lights on the grid in t
     // Enable the hint button to allow the user clicking it again
 
      // Disable the hint button if no more hints are available
-     if (availableHints > 0) {
+     if (availableHints > 0 || availableHints === "infinite") {
         document.getElementById('hint-button').classList.remove("deactivated-button");
         console.log('No more hints available.');}
 }
@@ -452,8 +452,10 @@ function freeplayHintsSetUp(hintOption){
 
 // Function to update the number of hints the user has left
 function updateNumberOfHints(startingHints){
+    console.log(totalHints);
     if (startingHints === "infinite") {
         document.getElementById('hints-count').innerHTML = `<i class="fas fa-infinity"></i>`;
+        availableHints = "infinite";
     }else if(startingHints === "none"){
         document.getElementById('hint-button').classList.add("deactivated-button");
     }else{
@@ -535,6 +537,7 @@ document.addEventListener('DOMContentLoaded', function() {
       document.getElementById('customHintsRadio').addEventListener('click', handleHintRadioButtonChange);
 
       document.getElementById('freeplay-play-button').addEventListener('click',function(){
+        availableHints = 0;
         freeplaySetUp();
       });
     // Add event listener to  expand emgame menu
@@ -568,10 +571,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add event listener to the hint button
     document.getElementById('hint-button').addEventListener('click', function() {
         if (!this.classList.contains('deactivated-button')) {
-        if (availableHints > 0) {
+        if (availableHints > 0 || availableHints ==="infinite") {
+            if (availableHints !== "infinite"){
             // Decrement the available hints count
             availableHints--;
-            document.getElementById('hints-count').textContent = availableHints;
+            document.getElementById('hints-count').textContent = availableHints;}
         // Get solution for current grid pattern
         var currentSolution = solution();
 
