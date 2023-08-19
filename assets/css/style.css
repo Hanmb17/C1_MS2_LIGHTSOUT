@@ -185,7 +185,9 @@ body, html {
     margin: 0;
     
 }
-
+.invalid-input{
+    color: red;
+}
 .background-wrapper {
     position: relative;
     min-height: 100vh;

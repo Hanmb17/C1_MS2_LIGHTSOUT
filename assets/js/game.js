@@ -536,10 +536,35 @@ document.addEventListener('DOMContentLoaded', function() {
 
       document.getElementById('customHintsRadio').addEventListener('click', handleHintRadioButtonChange);
 
-      document.getElementById('freeplay-play-button').addEventListener('click',function(){
+        // Add event listener to the modal before it hides
+    var myModalEl = document.getElementById('freeplaySetUpModal');
+    myModalEl.addEventListener('hide.bs.modal', function(event) {
+        const isValid = validateInput();
+        console.log(isValid);
+
+        if (!isValid) {
+            // Prevent the modal from closing when input is not valid
+            event.preventDefault();
+            event.stopPropagation();
+            // Display an error message or take action
+        } else {
         availableHints = 0;
-        freeplaySetUp();
-      });
+       freeplaySetUp();
+        }
+    });
+
+    document.getElementById('hintsRequested').addEventListener('input', function() {
+        var value = parseInt(this.value);
+
+        if (isNaN(value) || value < 1 || value > 99) {
+            this.classList.add('invalid-input');
+        } else {
+            this.classList.remove('invalid-input');
+        }
+    });
+
+
+
     // Add event listener to  expand emgame menu
     document.getElementById('menu-button').addEventListener('click', function() {
         this.classList.toggle('expanded');
@@ -615,6 +640,7 @@ function handleHintRadioButtonChange() {
 
     if (radio.checked) {
         numberInput.classList.remove("d-none");
+        validateInput();
     } else {
         numberInput.classList.add("d-none");
     
@@ -628,4 +654,14 @@ function handleHintRadioButtonChange() {
         });
     });
 };
+
+function validateInput() {
+    var hintsRequestedInput = document.getElementById('hintsRequested');
+    var value = parseInt(hintsRequestedInput.value);
+    
+    if (isNaN(value) || value < 1 || value > 99) {
+        hintsRequestedInput.classList.add('invalid-input');
+        return false;
+    } else {return true;}
+}
 
