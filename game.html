@@ -66,6 +66,38 @@
     </div>
   </div>
   </div>
+    <!-- Instructions Modal -->
+    <div class="modal fade" id="instructionsModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="instructionsModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Elemental Lumina - How to Play</h1>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h2>Free the trapped Lumina by collecting all the Elemental orbs.</h2>
+                <br>
+                <h3 class="green-font">Rules:</h3>
+                <ul>
+                    <li>Each level starts with Elemental orbs in a specific pattern.</li>
+                    <li>Elemental orbs can only be collected when arranged in the below pattern. <img src=""></li>
+                    <li>Clicking on an orb/space will either collect the orb(s) or create new ones, and this action will affect adjacent spaces.</li>
+                    <li>You must collect all the Elemental orbs to complete each level and free the trap Lumina before the time runs out.</li>
+                </ul>
+                <h3 class="green-font">How to Play:</h3>
+                <ul>
+                    <li>Click on any space/orb on the grid to either collect the orb(s) or create new one(s).</li>
+                    <li>Clicking a space/orb will also trigger changes in adjacent spaces/orbs (up, right, down, and left).</li>
+                    <li>If you need assistance, click the "Hint" button. The remaining number of hints is displayed next to the hint button.</li>
+                </ul>
+             <span class="green-font"><p>Can you successfully free all the Lumina by collecting all the orbs?</p></span>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
 
   <header class="container-fluid">
     <div class="m-2">
@@ -95,7 +127,7 @@
                         <span class="line"></span>
 
                         <div id="toggle-menu" class="collapsed">
-                            <button class="submenu-button"><i class="fa-solid fa-question"></i></button>
+                            <button class="submenu-button" data-bs-toggle="modal" data-bs-target="#instructionsModal"><i class="fa-solid fa-question"></i></button>
                             <button class="submenu-button" id="home-button"><i class="fa-solid fa-house"></i></button>
                         </div>
                     </div>
