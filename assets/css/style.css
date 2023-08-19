@@ -492,4 +492,12 @@ body, html {
         order: 1; 
     }
 }
-
+ @media (max-width: 320px) {
+    
+    .heads-up-display-items {
+    max-width: 100px;    
+}
+  #move-counter, #timer {
+    font-size: 28px ;
+  }  
+ }
