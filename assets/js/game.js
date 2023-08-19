@@ -617,7 +617,7 @@ function handleHintRadioButtonChange() {
     }
 
     // Attach click event listeners to other radio buttons as well
-    var otherRadios = document.querySelectorAll('[name="numberOfHints"]:not(#customHintsRadio)');
+    var otherRadios = document.querySelectorAll('[name="numberOfHints"]:not(#customHintsRadio):not(#hintsRequested)');
     otherRadios.forEach(function(otherRadio) {
         otherRadio.addEventListener('click', function() {
             numberInput.classList.add("d-none");
