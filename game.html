@@ -69,7 +69,7 @@
   </div>
 
     <!-- Freeplay Modal -->
-    <div class="modal fade" id="FreeplaySetUpModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="FreeplaySetUpModalLabel" aria-hidden="true">
+    <div class="modal fade" id="freeplaySetUpModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="freeplaySetUpModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
@@ -101,26 +101,26 @@
                 <h3 class="green-font">Number Of Hints</h3>
                 <div class="grid-size-options">
                     <label>
-                        <input type="radio" name="numberOfHints" value="3x3" checked>
+                        <input type="radio" name="numberOfHints" value="none" checked>
                         None
                     </label>
                     <label>
-                        <input type="radio" name="numberOfHints" value="4x4">
+                        <input type="radio" name="numberOfHints" value="custom">
                         Custom Amount
                     </label>
                     <label>
-                        <input type="number" id="numberOfHints" name="numberOfHints" min="1" max="999">
+                        <input type="number" id="hintsRequested" name="numberOfHints" min="1" max="999">
                         Enter Amount
                         </label>
                     <label>
                     <label>
-                        <input type="radio" name="numberOfHints" value="5x5">
+                        <input type="radio" name="numberOfHints" value="infinite">
                         Infinte <i class="fa-solid fa-infinity"></i>
                     </label>
                     </div>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Play<i class="fa-solid fa-play ps-2"></i></button>
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="freeplay-play-button">Play<i class="fa-solid fa-play ps-2"></i></button>
             </div>
           </div>
         </div>

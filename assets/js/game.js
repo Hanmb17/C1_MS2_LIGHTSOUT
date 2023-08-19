@@ -48,9 +48,22 @@ function initLightsOutGame() {
         console.log("final modal");
         finalModal();}
     }else{
-    setUpGrid();
+        const myModal = new bootstrap.Modal(document.getElementById('freeplaySetUpModal'));
+    myModal.show();
+    //setUpGrid();
 }
 }
+
+function freeplaySetUp () {
+     // Extract grid size and number of hints from the modal inputs
+     gridSize = parseInt(document.querySelector('input[name="gridSize"]:checked').value);
+     var selectedValue = document.querySelector('input[name="numberOfHints"]:checked').value;
+     console.log(selectedValue);
+     console.log(gridSize);
+     freeplayHintsSetUp(selectedValue);
+     setUpGrid();
+}
+
 // Set Up level Modal start
 function startingModalForCurrentLevel(levelInfo){
     // Get modal body 
@@ -426,12 +439,34 @@ function timeSolvedIn(){
     console.log(setTimeSolvedIn(elaspedTime));
 }
 
+function freeplayHintsSetUp(hintOption){
+
+    console.log(hintOption);
+ // hintOption = document.querySelector('input[name="numberOfHints"]:checked').value;
+            
+            if (hintOption === "custom") {
+                // Use the custom hint value if provided, otherwise default to 0
+                const customHintValue = parseInt(document.getElementById('hintsRequested').value) || 0;
+                updateNumberOfHints(customHintValue);
+            } else {
+                // Use the selected hint option directly (Infinity or 0)
+                updateNumberOfHints(hintOption);
+            }
+}
+
 // Function to update the number of hints the user has left
 function updateNumberOfHints(startingHints){
+    if (startingHints === "infinite") {
+        document.getElementById('hints-count').innerHTML = `<i class="fas fa-infinity"></i>`;
+    }else if(startingHints === "none"){
+        document.getElementById('hint-button').classList.add("deactivated-button");
+    }else{
+
     totalHints = startingHints + availableHints;
     availableHints = totalHints;
     document.getElementById('hints-count').textContent = availableHints;
     document.getElementById('hint-button').classList.remove("deactivated-button");
+    }
 }
 
 
@@ -501,6 +536,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
       });
 
+      document.getElementById('freeplay-play-button').addEventListener('click',function(){
+        freeplaySetUp();
+      })
     // Add event listener to  expand emgame menu
     document.getElementById('menu-button').addEventListener('click', function() {
         this.classList.toggle('expanded');
