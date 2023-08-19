@@ -159,7 +159,7 @@ a {
 }
 
 #main-game-button {
-    background: url(../images/hud_background.svg) no-repeat center / cover;; 
+    background: #1C0539 url(../images/hud_background.svg) no-repeat center / cover;
 }
 .planet-button:hover {
     transform: scale(1.05); 
@@ -167,11 +167,11 @@ a {
 
 
 #instructions-button {
-    background: url(../images/pink_planet.svg) no-repeat center / cover;; 
+    background: #1C0539 url(../images/pink_planet.svg) no-repeat center / cover;
 }
 
 #freeplay-game-button {
-    background: url(../images/green_planet.svg) no-repeat center / cover;; 
+    background: #1C0539 url(../images/green_planet.svg) no-repeat center / cover;
 }
 
 
