@@ -479,13 +479,20 @@ function pauseCountdownTimer() {
 
 // Function to resume the countdown timer
 function resumeCountdownTimer() {
+    if (gameMode === "play"){
     startCountdownTimer();
+    } else {
+        startTimer();
+    }
 }
-
 // reset the timer
 function resetCountDownTimer(){
+    if (gameMode === "play"){
     countDownTime = timerStartTime;
-    startCountdownTimer();
+    startCountdownTimer();} else {
+        countDownTime = 0;
+        startTimer();
+    }
 } 
 
 function timeSolvedIn(){
