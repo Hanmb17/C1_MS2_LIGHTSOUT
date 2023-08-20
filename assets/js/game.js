@@ -15,13 +15,15 @@ move counter, and hints. The goal is to turn off all the lights on the grid in t
  var loadedLevels = []; // Array to keep track of loaded levels
  var currentLevel = 1;
  const maxLevel = 4;
- var countDownTime;
+ var countDownTime = 0;
  var timerStartTime;
  var countDown;
  var winningInfo;
  var availableHints = 0;
  var totalHints;
  let myModal = new bootstrap.Modal(document.getElementById('staticBackdrop'));
+
+ const countdownElement = document.getElementById('timer');
 
  // Function to stop the flashing effect when the light is clicked
  function stopFlashing(light) {
@@ -157,6 +159,7 @@ function setUpGrid(){// Generate the game grid HTML based on the specified gridS
 
     if (gameMode === "freeplay"){
         randomStart();
+        startTimer();
     }
 }
 
@@ -272,6 +275,8 @@ function checkWin() {
                 //initLightsOutGame();
             }
         } else {
+            pauseCountdownTimer();
+            countDownTime = 0;
             // start a new game
             initLightsOutGame();
         }
@@ -363,7 +368,7 @@ function startCountdownTimer() {
         clearInterval(countDown);
     }
     // Get the countdown display element from the HTML document
-    const countdownElement = document.getElementById('timer');
+   
     // Display the initial countdown value
     displayTime(countDownTime);
   
@@ -382,16 +387,16 @@ function startCountdownTimer() {
       }
     }, 1000);
 
-    //displayTime(count)
+    displayTime(countDownTime);
     // Function to display the remaining time in the format (MM:SS)
-  function displayTime(seconds) {
-    const minutes = Math.floor(seconds / 60);
-    const remainingSeconds = seconds % 60;
+  //function displayTime(seconds) {
+    //const minutes = Math.floor(seconds / 60);
+    //const remainingSeconds = seconds % 60;
     // Ternary operator to display time
-    countdownElement.innerHTML = `
-      ${minutes < 10 ? "0" : ""}${minutes}:${remainingSeconds < 10 ? "0" : ""}${remainingSeconds}
-    `;
-  }
+    //countdownElement.innerHTML = `
+      //${minutes < 10 ? "0" : ""}${minutes}:${remainingSeconds < 10 ? "0" : ""}${remainingSeconds}
+    //`;
+ // }
 
   // Function to display "Time out" when the countdown ends
   function endCount() {
@@ -399,6 +404,45 @@ function startCountdownTimer() {
   }
 }
 
+// Create countdown timer
+function startTimer() {
+    if (countDown) {
+        clearInterval(countDown);
+    }
+    // Get the countdown display element from the HTML document
+   
+    // Display the initial countdown value
+    displayTime(countDownTime);
+  
+    // Start the countdown using setInterval
+    countDown = setInterval(() => {
+      // Decrease the remaining time by 1 second
+      countDownTime++;
+  
+      // Update the countdown displayTime with the updated time
+      displayTime(countDownTime);
+  
+      // Check if the countdown has reached 0 or below
+      if (countDownTime<= 0) {
+        // If the countdown has ended, display "Time out"
+        endCount();
+      }
+    }, 1000);
+
+    displayTime(countDownTime);
+}
+
+
+
+
+function displayTime(seconds) {
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = seconds % 60;
+    // Ternary operator to display time
+    countdownElement.innerHTML = `
+      ${minutes < 10 ? "0" : ""}${minutes}:${remainingSeconds < 10 ? "0" : ""}${remainingSeconds}`
+    
+}
 
 // Function to pause the countdown timer
 function pauseCountdownTimer() {
