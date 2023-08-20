@@ -21,9 +21,11 @@ move counter, and hints. The goal is to turn off all the lights on the grid in t
  var winningInfo;
  var availableHints = 0;
  var totalHints;
+ let isModalShowing = false;
  let myModal = new bootstrap.Modal(document.getElementById('staticBackdrop'));
 
  const countdownElement = document.getElementById('timer');
+const instructionsModal = document.getElementById('instructionsModal');
 
  // Function to stop the flashing effect when the light is clicked
  function stopFlashing(light) {
@@ -479,6 +481,8 @@ function pauseCountdownTimer() {
 
 // Function to resume the countdown timer
 function resumeCountdownTimer() {
+
+    console.log("resume");
     if (gameMode === "play"){
     startCountdownTimer();
     } else {
@@ -663,27 +667,40 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-    // Add event listener to  expand emgame menu
-    document.getElementById('menu-button').addEventListener('click', function() {
-        this.classList.toggle('expanded');
-        document.getElementById('toggle-menu').classList.toggle('expanded');
+ // Add event listener to expand game menu
+document.getElementById('menu-button').addEventListener('click', function() {
+    this.classList.toggle('expanded');
+    document.getElementById('toggle-menu').classList.toggle('expanded');
 
-        // Check if the menu button has the 'expanded' class to determine the menu state
-        if (this.classList.contains('expanded')) {
-         pauseCountdownTimer();
-        } else {
-            resumeCountdownTimer();
-     }
-
-    });
+    if (this.classList.contains('expanded')) {
+        if (!isModalShowing) {
+            pauseCountdownTimer(); 
+        }
+    } else {
+        if (!isModalShowing) {
+            resumeCountdownTimer();  
+        }
+    }
+});
 
     // Add event listener to the home button
     document.getElementById('home-button').addEventListener('click', () => {
     window.location.href = 'index.html'; // Replace with your actual home page URL
 });
 
-      
+  
+// Add event listener for when the instructions modal is displayed
+instructionsModal.addEventListener('show.bs.modal', function() {
+    console.log("Pause");
+    isModalShowing = true;
+    pauseCountdownTimer(); 
+});
 
+// Add event listener for when the instructions modal is hidden
+instructionsModal.addEventListener('hidden.bs.modal', function() {
+    isModalShowing = false;
+    resumeCountdownTimer();
+});
 
 
     // Add event listener to the restart button
