@@ -27,7 +27,7 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="staticBackdropLabel">Elemental Lumina - How to Play</h1>
+            <h1 class="modal-title fs-5" id="instructionsModalLabel">Elemental Lumina - How to Play</h1>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -48,9 +48,9 @@
               <li>Clicking a space/orb will also trigger changes in adjacent spaces/orbs (up, right, down, and left).</li>
               <li>If you need assistance, click the "Hint" button. The remaining number of hints is displayed next to the hint button.</li>
             </ul>
-            <span class="green-font">
-              <p>Can you successfully free all the Lumina by collecting all the orbs?</p>
-            </span>
+            <div>
+              <p class="green-font">Can you successfully free all the Lumina by collecting all the orbs?</p>
+            </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">Close</button>
@@ -78,7 +78,10 @@
       </section>
       <section class="container-fluid game-menu">
         <!-- Game menu -->
-        <div class="row justify-content-center align-items-stretch">
+        <div class="row justify-content-center align-items-stretch py-2">
+          <div>
+            <h3 class="text-center">Game Menu</h3>
+          </div>
           <div class="col-12 m-2">
             <div class="planet-button" id="main-game-button">
               <span>
