@@ -691,7 +691,6 @@ document.getElementById('menu-button').addEventListener('click', function() {
   
 // Add event listener for when the instructions modal is displayed
 instructionsModal.addEventListener('show.bs.modal', function() {
-    console.log("Pause");
     isModalShowing = true;
     pauseCountdownTimer(); 
 });
