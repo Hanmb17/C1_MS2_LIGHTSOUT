@@ -66,6 +66,9 @@ function freeplaySetUp () {
      setUpGrid();
 }
 
+
+
+
 // Set Up level Modal start
 function startingModalForCurrentLevel(levelInfo){
     // Get modal body 
@@ -136,6 +139,29 @@ function finalModal() {
      }, 200);
 
 }
+
+
+// Update modal for winning message
+function freeplayWinModal() {
+    console.log('final modal loading');
+    const freeplayModal = document.querySelector('#freeplaySetUpModal');
+    const modalBody = freeplayModal.querySelector('.modal-body');
+    console.log(modalBody);
+    
+    // Update modal body information
+    modalBody.querySelector("#freeplayTime").textContent = timeCompleted(countDownTime);
+    modalBody.querySelector('#freeplayMoves').textContent = moveCount;
+    modalBody.querySelectorAll('.win').forEach(element => element.classList.remove('d-none'));
+
+     // Show the modal and update content that is changed after a delay
+     setTimeout(() => {
+        const myModal = new bootstrap.Modal(document.getElementById('freeplaySetUpModal'));
+        myModal.show(); // Show the modal with updated content after a short delay
+     }, 200);
+
+}
+
+
 
 // Set up the game grid
 function setUpGrid(){// Generate the game grid HTML based on the specified gridSize
@@ -276,9 +302,11 @@ function checkWin() {
             }
         } else {
             pauseCountdownTimer();
+            freeplayWinModal();
             countDownTime = 0;
             // start a new game
-            initLightsOutGame();
+            
+           // initLightsOutGame();
         }
   }
 }
@@ -482,6 +510,25 @@ function timeSolvedIn(){
 
     console.log(setTimeSolvedIn(elaspedTime));
 }
+
+
+function timeCompleted(seconds) {
+
+    if (seconds >= 60){
+    const minutes = Math.floor(seconds / 60);
+    const remainingSeconds = seconds % 60;
+     const time = `${minutes} minutes ${remainingSeconds} seconds`;
+    console.log(time);
+    return time;
+
+    }else{
+      const  time = `${seconds} seconds`;
+        console.log(time);
+        return time;
+    }
+}
+
+
 
 function freeplayHintsSetUp(hintOption){         
             if (hintOption === "custom") {
