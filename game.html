@@ -1,230 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Elemental Lumina is a modern twist on the traditional lights out game. Can you free the captured Limina?">
+    <meta name="keywords" content="Lights Out Game, Puzzle game, Strategy">
+    <meta name="author" content="Hannah Bowles">
+    <title>Elemental Lumina</title>
+    <!-- Link to Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon_logo.png">
+    <!-- Add Bootstrap 5 link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <!-- Add Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Yusei+Magic&display=swap" rel="stylesheet">
-    <!-- Add Bootstrap 5 link-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Yusei+Magic&display=swap" rel="stylesheet">
     <!-- Add Font Awesome link -->
     <script src="https://kit.fontawesome.com/c6d700b341.js" crossorigin="anonymous"></script>
-    <title>Enchanted Elemental Lumina</title>
-</head>
-
-<body class="background-wrapper">
+    <!-- Style sheets link -->
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body class="background-wrapper">
     <!-- Game Modals -->
-  <!-- All Modals code taken from Bootstrap 5.3 documentation -->
-  <!-- Play mode modal-->
-  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel">Enchanted Elemental Lumina</h1>
-        </div>
-        <div class="modal-body">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-12">
-                            <h2 class="d-none winning" id="winningMessage">Congratulations You Solved</h2>
-                            <h2 class="finalMessage">Level <span id="levelNo">1</span>
-                            </h2>
-                        </div>
-                    </div>
-                  <div class="row align-items-center text-center">
-                    <div class="col-lg-4">
-                        <img id="levelPic" class="img-fluid">
-                    </div>
-                    <div class="col-lg-8" id="infoModal">
-                        
-                        <div class="row finalMessage">
-                            <div class="col d-flex align-items-center py-2">
-                                <img id="orbPic" class="me-2 img-fluid">
-                                <h3 id="orbElement" class="mb-0">Fire Orbs</h3>
-                            </div>
-                        </div>
-                        <div class="row finalMessage">
-                            <div class="col">
-                                <p id="levelDescription">Level information</p>
-                            </div>
-                        </div>
-                        <div class="row my-2">
-                            <div class="col-12 d-flex justify-content-between align-items-center">
-                                <a href="index.html" class="finalMessage"><i class="fa-solid fa-house green-font"></i></a>
-                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal"><span id="buttonLabel">Play </span><i class="fa-solid fa-play ps-2"></i></button>
-                                
-                        </div>
+    <!-- All Modals code taken from Bootstrap 5.3 documentation -->
+    <!-- Play mode modal-->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Enchanted Elemental Lumina</h1>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-12">
+                  <h2 class="d-none winning" id="winningMessage">Congratulations You Solved</h2>
+                  <h2 class="finalMessage">Level <span id="levelNo">1</span>
+                  </h2>
+                </div>
+              </div>
+              <div class="row align-items-center text-center">
+                <div class="col-lg-4">
+                  <img id="levelPic" class="img-fluid" alt="Lumina for the current level" src="assets/images/fire_lumia.svg">
+                </div>
+                <div class="col-lg-8" id="infoModal">
+                  <div class="row finalMessage">
+                    <div class="col d-flex align-items-center py-2">
+                      <img id="orbPic" class="me-2 img-fluid" alt="Elemental orb for current level" src="assets/images/fire_orb.svg">
+                      <h3 id="orbElement" class="mb-0">Fire Orbs</h3>
                     </div>
                   </div>
-                  
+                  <div class="row finalMessage">
+                    <div class="col">
+                      <p id="levelDescription">Level information</p>
+                    </div>
+                  </div>
+                  <div class="row my-2">
+                    <div class="col-12 d-flex justify-content-between align-items-center">
+                      <a href="index.html" class="finalMessage" aria-label="Go to home page">
+                        <i class="fa-solid fa-house green-font"></i>
+                      </a>
+                      <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+                        <span id="buttonLabel">Play </span>
+                        <i class="fa-solid fa-play ps-2"></i>
+                      </button>
+                    </div>
+                  </div>
                 </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  </div>
-
     <!-- Freeplay Modal -->
     <div class="modal fade" id="freeplaySetUpModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="freeplaySetUpModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="staticBackdropLabel">Elemental Lumina - Free Play</h1>
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="freeplaySetUpModalLabel">Elemental Lumina - Free Play</h1>
+          </div>
+          <div class="modal-body">
+            <h2 class="win d-none">Congratulations!</h2>
+            <p class="win d-none">You turned all the lights out in <span id="freeplayMoves"></span> and in <span id="freeplayTime"></span>
+            </p>
+            <br class="win d-none">
+            <div class="line-container win d-none">
+              <hr class="green-line win d-none">
             </div>
-            <div class="modal-body">
-                <h2 class="win d-none">Congratulations!</h2>
-                <p class="win d-none">You turned all the lights out in <span id="freeplayMoves"></span> and in <span id="freeplayTime"></span></p3>
-                <br class="win d-none">
-                <div class="line-container win d-none">
-                    <hr class="green-line win d-none">
-                </div>
-        
-                <h2 class="win d-none">Set Up Your Game</h2>
-                <h3 class="green-font">Number Of Hints</h3>
-                <div class="grid-size-options">
-                <label>
-                    <input type="radio" name="gridSize" value="3x3" checked>
-                    3x3
-                </label>
-                <label>
-                    <input type="radio" name="gridSize" value="4x4">
-                    4x4
-                    </label>
-                <label>
-                    <input type="radio" name="gridSize" value="5x5">
-                    5x5
-                </label>
-                <label>
-                    <input type="radio" name="gridSize" value="6x6">
-                    6x6
-                </label>
-                </div>
-                <h3 class="green-font">Number Of Hints</h3>
-                <div class="grid-size-options">
-                    <label>
-                        <input type="radio" name="numberOfHints" value="none" checked>
-                        None
-                    </label>
-                    <label>
-                        <input type="radio" name="numberOfHints" value="custom" id="customHintsRadio">
-                        Custom Amount
-                    </label>
-                    <label class="d-none" id="numberInput">
-                        <input type="number" id="hintsRequested" name="numberOfHints" min="1" max="99" value="1">
-                        Max 99
-                        </label>
-                    <label>
-                    <label>
-                        <input type="radio" name="numberOfHints" value="infinite">
-                        Infinte <i class="fa-solid fa-infinity"></i>
-                    </label>
-                    </div>
+            <h2 class="win d-none">Set Up Your Game</h2>
+            <h3 class="green-font">Number Of Hints</h3>
+            <div class="grid-size-options">
+              <label>
+                <input type="radio" name="gridSize" value="3x3" checked> 3x3 </label>
+              <label>
+                <input type="radio" name="gridSize" value="4x4"> 4x4 </label>
+              <label>
+                <input type="radio" name="gridSize" value="5x5"> 5x5 </label>
+              <label>
+                <input type="radio" name="gridSize" value="6x6"> 6x6 </label>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="freeplay-play-button">Play<i class="fa-solid fa-play ps-2"></i></button>
+            <h3 class="green-font">Number Of Hints</h3>
+            <div class="grid-size-options">
+              <label>
+                <input type="radio" name="numberOfHints" value="none" checked> None </label>
+              <label>
+                <input type="radio" name="numberOfHints" value="custom" id="customHintsRadio"> Custom Amount </label>
+              <label class="d-none" id="numberInput">
+                <input type="number" id="hintsRequested" name="numberOfHints" min="1" max="99" value="1"> Max 99 </label>
+              <label>
+                <input type="radio" name="numberOfHints" value="infinite"> Infinite <i class="fa-solid fa-infinity"></i>
+              </label>
             </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="freeplay-play-button">Play <i class="fa-solid fa-play ps-2"></i>
+            </button>
           </div>
         </div>
       </div>
+    </div>
     <!-- Instructions Modal -->
     <div class="modal fade" id="instructionsModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="instructionsModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="staticBackdropLabel">Elemental Lumina - How to Play</h1>
-              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="instructionsModalLabel">Elemental Lumina - How to Play</h1>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h2>Free the trapped Lumina by collecting all the Elemental orbs.</h2>
+            <br>
+            <h3 class="green-font">Rules:</h3>
+            <ul>
+              <li>Each level starts with Elemental orbs in a specific pattern.</li>
+              <li>Elemental orbs can only be collected when arranged in the below pattern. <br>
+                <img class="lights-out-img" src="assets/images/lights_out_pattern.svg" alt="Lights out pattern required for solving the puzzle">
+              </li>
+              <li>Clicking on an orb/space will either collect the orb(s) or create new ones, and this action will affect adjacent spaces.</li>
+              <li>You must collect all the Elemental orbs to complete each level and free the trap Lumina before the time runs out.</li>
+            </ul>
+            <h3 class="green-font">How to Play:</h3>
+            <ul>
+              <li>Click on any space/orb on the grid to either collect the orb(s) or create new one(s).</li>
+              <li>Clicking a space/orb will also trigger changes in adjacent spaces/orbs (up, right, down, and left).</li>
+              <li>If you need assistance, click the "Hint" button. The remaining number of hints is displayed next to the hint button.</li>
+            </ul>
+            <div>
+              <p class="green-font">Can you successfully free all the Lumina by collecting all the orbs?</p>
             </div>
-            <div class="modal-body">
-                <h2>Free the trapped Lumina by collecting all the Elemental orbs.</h2>
-                <br>
-                <h3 class="green-font">Rules:</h3>
-                <ul>
-                    <li>Each level starts with Elemental orbs in a specific pattern.</li>
-                    <li>Elemental orbs can only be collected when arranged in the below pattern. <img src=""></li>
-                    <li>Clicking on an orb/space will either collect the orb(s) or create new ones, and this action will affect adjacent spaces.</li>
-                    <li>You must collect all the Elemental orbs to complete each level and free the trap Lumina before the time runs out.</li>
-                </ul>
-                <h3 class="green-font">How to Play:</h3>
-                <ul>
-                    <li>Click on any space/orb on the grid to either collect the orb(s) or create new one(s).</li>
-                    <li>Clicking a space/orb will also trigger changes in adjacent spaces/orbs (up, right, down, and left).</li>
-                    <li>If you need assistance, click the "Hint" button. The remaining number of hints is displayed next to the hint button.</li>
-                </ul>
-             <span class="green-font"><p>Can you successfully free all the Lumina by collecting all the orbs?</p></span>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">Close</button>
           </div>
         </div>
       </div>
-
-  <header class="container-fluid">
-    <div class="m-2">
-        <a class = "logo-link"href="index.html">
-            <img class=" logo my-2 me-2" src="assets/images/logo.svg">
-            <h1 class="ms-2 mb-0 ">Elemental Lumina</h1>
-        </a>
     </div>
-</header>
+    <header class="container-fluid">
+      <div class="m-2">
+        <a class="logo-link" href="index.html">
+          <img class=" logo my-2 me-2" src="assets/images/logo.svg" alt="Elemental Lumina Logo">
+          <h1 class="ms-2 mb-0 ">Elemental Lumina</h1>
+        </a>
+      </div>
+    </header>
     <main>
-        <section class="container-fluid my-2">
+      <section class="container-fluid my-2">
+        <div>
+          <h2 class="level-number">Level 1</h2>
+        </div>
+        <div class="row heads-up-display">
+          <div class="col-6 heads-up-display-items" id="move-counter">0</div>
+          <div class="col-6 heads-up-display-items" id="timer">00:00</div>
+        </div>
+        <!-- Game board-->
+        <div id="game-grid" class="p-2 row"></div>
+        <div class="row" id="game-controls">
+          <div class="col-4 game-control-buttons">
+            <div id="menu-button" class="collapsed">
+              <span class="line"></span>
+              <span class="line"></span>
+              <span class="line"></span>
+              <div id="toggle-menu" class="collapsed">
+                <button class="submenu-button" data-bs-toggle="modal" data-bs-target="#instructionsModal" aria-label="Open Instructions">
+                  <i class="fa-solid fa-question"></i>
+                </button>
+                <button class="submenu-button" id="home-button" aria-label="Go to home page">
+                  <i class="fa-solid fa-house"></i>
+                </button>
+              </div>
             </div>
-                <h2 class="level-number">Level 1</h2>
-            </div>
-            <div class="row heads-up-display">
-                <div class="col-6 heads-up-display-items" id="move-counter">0</div>
-                <div class="col-6 heads-up-display-items" id="timer">00:00</div>
-            </div>
-            <!-- Game board-->
-            <div id="game-grid" class="p-2 row"></div>
-
-            <div class="row" id="game-controls">
-                <div class="col-4 game-control-buttons">
-                     <div id="menu-button" class="collapsed">
-                        <span class="line"></span>
-                        <span class="line"></span>
-                        <span class="line"></span>
-
-                        <div id="toggle-menu" class="collapsed">
-                            <button class="submenu-button" data-bs-toggle="modal" data-bs-target="#instructionsModal"><i class="fa-solid fa-question"></i></button>
-                            <button class="submenu-button" id="home-button"><i class="fa-solid fa-house"></i></button>
-                        </div>
-                    </div>
-                    
-                </div>
-                <div class="col-4 game-control-buttons" id="reset-button">
-                    <img class="img-fluid" id="reset-icon" src="assets/images/reset_icon.svg">
-                </div>
-                <div class="col-4 game-control-buttons" id="hint-button">
-                    <span id="hint-text">Hint</span>
-                    <div class="circle-overlay" id="hints-count">0</div>
-                </div>
-            </div>
-        </section>
+          </div>
+          <div class="col-4 game-control-buttons" id="reset-button" aria-label="Restart the game">
+            <img class="img-fluid" id="reset-icon" src="assets/images/reset_icon.svg" alt="reset icon">
+          </div>
+          <div class="col-4 game-control-buttons" id="hint-button" aria-label="Get a Hint">
+            <span id="hint-text">Hint</span>
+            <div class="circle-overlay" id="hints-count">0</div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="container-fluid">
-        <div class="row align-items-center justify-content-center">
-            <div class="col-12 col-sm-4 col-md-3 d-flex m-2 justify-content-center">
-                <p class="m-0 me-2">Contact Us</p>              
-                <a class="ms-2 green-font"><i class="fa-regular fa-envelope icon-link"></i></a>
-            </div>
-            <div class="col-12 col-sm-4 col-md-3 m-2">
-                <p class="m-0">Copyright 2023</p>
-            </div>
-            <div class="col-3 col-sm-4 col-md-3 m-2 d-flex justify-content-center">
-                <a class="green-font mx-2" href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f icon-link"></i></a>
-                <a class="green-font mx-2" href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram icon-link"></i></a>
-                <a class="green-font mx-2" href="https://twitter.com/" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter icon-link"></i></a>
-            </div>
+      <div class="row align-items-center justify-content-center">
+        <div class="col-12 col-sm-4 col-md-3 d-flex m-2 justify-content-center">
+          <p class="m-0 me-2">Contact Us</p>
+          <a class="ms-2 green-font">
+            <i class="fa-regular fa-envelope icon-link"></i>
+          </a>
         </div>
+        <div class="col-12 col-sm-4 col-md-3 m-2">
+          <p class="m-0">Copyright 2023</p>
+        </div>
+        <div class="col-3 col-sm-4 col-md-3 m-2 d-flex justify-content-center">
+          <a class="green-font mx-2" href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f icon-link"></i>
+          </a>
+          <a class="green-font mx-2" href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+            <i class="fa-brands fa-instagram icon-link"></i>
+          </a>
+          <a class="green-font mx-2" href="https://twitter.com/" target="_blank" aria-label="Twitter">
+            <i class="fa-brands fa-x-twitter icon-link"></i>
+          </a>
+        </div>
+      </div>
     </footer>
-  
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <script src="assets/js/game.js"></script>
-</body>
+  </body>
 </html>
