@@ -199,7 +199,7 @@ PageSpeed Insights a tool by Google was used to test the performance of the webs
 The website was tested on the following devices:
 - Lenovo L340
 - iPad Mini 
-- iPhone 8
+- iPhone 13
 - Google Pixel 7
 
 In addition, Google Chrome Developer Tools device toggle was used to test the website for all available device options and the responsive website design tester.

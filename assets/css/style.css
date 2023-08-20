@@ -1,293 +1,311 @@
-
-
-header, footer, .modal-content {
-    background-color: #1C0539;
-}
-
-main {
+/* Setting the site variables*/
+:root {
+    --primary-color: #1c0539;
+    --secondary-color: #457d75;
+    --white-color: #ffffff;
+    --font-yusei-magic: "Yusei Magic", sans-serif;
+    --font-roboto: "Roboto", sans-serif;
+    --font-size-medium: 18px;
+    --font-size-large: 24px;
+  }
+  
+  /* Global styles */
+  header,
+  footer,
+  .modal-content {
+    background-color: var(--primary-color);
+  }
+  
+  body,
+  html {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--white-color);
+    font-family: var(--font-roboto);
+    margin: 0;
+  }
+  
+  main {
     display: flex;
     flex: 1 0 auto;
     flex-direction: column;
   }
-
-
+  
+  /* Heading  and font styles */
+  h1,
+  h2,
+  h3,
+  p {
+    font-family: var(--font-yusei-magic);
+    color: var(--white-color);
+  }
+  
+  h2 {
+    font-size: var(--font-size-large);
+    text-align: center;
+  }
+  
+  h1,
+  h3,
+  .green-font {
+    color: #97c9c2;
+  }
+  
   /* Style the footer */
   footer {
-    color: white;
+    color: var(--white-color);
     text-align: center;
     padding: 10px;
     font-size: 18px;
-}
-
-.logo {
+  }
+  
+  .logo {
     max-height: 50px;
-}
-
-h1{
-    font-family: 'Yusei Magic', sans-serif;
-    color:#97C9C2;
-    text-align: left;
-}
-
-h2 {
-    font-family: 'Yusei Magic', sans-serif;
-    color: white;
-    text-align: center;
-}
-
-h3 {
-    font-family: 'Yusei Magic', sans-serif;
-    color: white;
-}
-
-p{
-    color: White;
-}
-a {
+  }
+  
+  a {
     text-decoration: none;
-}
-
-.green-font {
-    color: #97C9C2;
-}
-
-.logo-link {
+  }
+  
+  .logo-link {
     display: flex;
     align-items: center;
     text-decoration: none;
     color: inherit;
-}
-
-.icon-link{
-    transition: transform 0.3 ease-in-out;
-
-}
-
-.icon-link:hover {
-    color: white;
+  }
+  
+  .icon-link {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .icon-link:hover {
+    color: var(--white-color);
     transform: scale(1.5);
-}
-
-/* --- Modal styling --- */
-.modal-body {
-    color: white;
-}
-
-#levelPic {
+  }
+  
+  /* --- Modal styling --- */
+  .modal-body {
+    color: var(--white-color);
+  }
+  
+  #levelPic {
     max-width: 250px;
-}
-
-#orbPic {
+  }
+  
+  #orbPic {
     max-width: 55px;
-}
-
-.btn-primary {
-    background-color: #457D75;
+  }
+  
+  .btn-primary {
+    background-color: var(--secondary-color);
     border: none;
-    box-shadow: 0 0 5px 5px #61B0A5;
+    box-shadow: 0 0 5px 5px #61b0a5;
     transition: transform 0.3s;
-}
-
-.btn-primary:hover, .btn-primary:focus, :not(.btn-check)+.btn:active{
-    background-color: #457D75;
+  }
+  
+  .btn-primary:hover,
+  .btn-primary:focus,
+  :not(.btn-check) + .btn:active {
+    background-color: var(--secondary-color);
     border: none;
-    box-shadow: 0 0 8px 8px #61B0A5;
-}
-.btn-primary:hover .fa-play {
+    box-shadow: 0 0 8px 8px #61b0a5;
+  }
+  .btn-primary:hover .fa-play {
     transform: translateX(4px);
     font-size: 1.25rem;
     vertical-align: middle;
-    transition: transform 0.3s ease; 
-}
-
-.button-font, .home-button-font {
-    color: white;
+    transition: transform 0.3s ease;
+  }
+  
+  .button-font,
+  .home-button-font {
+    color: var(--white-color);
     text-decoration: none;
     font-size: 18px;
-}
-
-/* --- Home Page styling --- */
-
-
-
-.home-background-wrapper {
+  }
+  
+  .invalid-input {
+    color: red;
+  }
+  
+  .line-container {
+    width: 50%;
+    margin: auto;
+  }
+  .green-line {
+    color: var(--secondary-color);
+    opacity: 1;
+    border-width: 3px;
+  }
+  
+  /* --- Home Page styling --- */
+  .home-background-wrapper {
     position: relative;
     min-height: 100vh;
     background: url(../images/space_background.svg) no-repeat center;
     background-size: cover;
-}
-
-.game-intro-wrapper {
-    order: 1; 
-}
-
-.game-menu {
+  }
+  
+  .game-intro-wrapper {
+    order: 1;
+  }
+  
+  .game-menu {
     flex: 1 0 auto;
-    order: 2; 
-}
-.game-intro-wrapper {
+    order: 2;
+  }
+  .game-intro-wrapper {
     background-color: #421a617d;
     order: 1;
-}
-
-
-.planet-button {
+  }
+  
+  .planet-button {
     border-radius: 50%;
-    padding: 10px 20px; 
+    padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     display: flex;
-    justify-content: center; 
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
     transition: background-color 0.3s ease, transform 0.3s ease;
     max-width: 125px;
-    aspect-ratio: 1;
+    aspect-ratio: 1/1;
     box-shadow: #1c053996 8px 8px 4px;
     margin: 10px;
     cursor: pointer;
-}
-
-#main-game-button, 
-#instructions-button, 
-#freeplay-game-button{
+  }
+  
+  #main-game-button,
+  #instructions-button,
+  #freeplay-game-button {
     border-radius: 50%;
-    padding: 10px 20px; 
+    padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     transition: transform 0.3s ease-in-out;
     margin: auto;
-}
-
-#main-game-button {
-    background: #1C0539 url(../images/hud_background.svg) no-repeat center / cover;
-}
-.planet-button:hover {
-    transform: scale(1.05); 
-}
-
-#instructions-button {
-    background: #1C0539 url(../images/pink_planet.svg) no-repeat center / cover;
-}
-
-#freeplay-game-button {
-    background: #1C0539 url(../images/green_planet.svg) no-repeat center / cover;
-}
-
-
-/* --- Game styling --- */
-
-body, html {
+  }
+  
+  #main-game-button {
+    background: var(--primary-color) url(../images/hud_background.svg) no-repeat
+      center / cover;
+  }
+  .planet-button:hover {
+    transform: scale(1.05);
+  }
+  
+  #instructions-button {
+    background: var(--primary-color) url(../images/pink_planet.svg) no-repeat
+      center / cover;
+  }
+  
+  #freeplay-game-button {
+    background: var(--primary-color) url(../images/green_planet.svg) no-repeat
+      center / cover;
+  }
+  
+  /* --- Game styling --- */
+  body,
+  html {
     display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background-color: var(--white-color);
-    font-family: 'Roboto', sans-serif;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--white-color);
+    font-family: "Roboto", sans-serif;
     margin: 0;
-    
-}
-.invalid-input{
-    color: red;
-}
-
-.line-container {
-    width:50%;
-    margin: auto;
-}
-.green-line {
-    color: #457D75;
-    opacity: 1;
-    border-width: 3px;
-}
-.background-wrapper {
+  }
+  
+  .background-wrapper {
     position: relative;
     min-height: 100vh;
-    background: url(../images/game_background.svg) no-repeat 70%  bottom;
+    background: url(../images/game_background.svg) no-repeat 70% bottom;
     background-size: cover;
-}
-
-.heads-up-display, #game-controls {
+  }
+  
+  .heads-up-display,
+  #game-controls {
     justify-content: space-between;
     max-width: 50vh;
-    margin:auto;
-}
-.heads-up-display-items {
-    display:flex;
+    margin: auto;
+  }
+  .heads-up-display-items {
+    display: flex;
     align-items: center;
     background: url(../images/hud_background.svg) no-repeat center;
     max-width: 125px;
-    aspect-ratio: 1;
-    color:white; 
-}
-
-.game-control-buttons {
-    display:flex;
+    aspect-ratio: 1/1;
+    color: var(--white-color);
+  }
+  
+  .game-control-buttons {
+    display: flex;
     align-items: center;
     justify-content: center;
     background: url(../images/game_control_button.svg) no-repeat center;
     max-width: 60px;
-    aspect-ratio: 1;
-    font-family: 'Roboto', sans-serif;
+    aspect-ratio: 1/1;
+    font-family: "Roboto", sans-serif;
     font-size: 1.25rem;
-    color:white; 
-}
-
-
-
-#menu-button {
+    color: var(--white-color);
+  }
+  
+  #menu-button {
     display: inline-block;
-    position: relative; 
-}
-
-
-#rest-icon {
+    position: relative;
+  }
+  
+  #rest-icon {
     width: 95%;
-}
-
-#rest-icon, #hint-text, #menu-button {
+  }
+  
+  #rest-icon,
+  #hint-text,
+  #menu-button {
     cursor: pointer;
-    transition: transform 0.3s ease-in-out; 
-}
-
-.line {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .line {
     display: block;
     width: 30px;
     height: 4px;
-    background-color: white;
+    background-color: var(--white-color);
     margin: 6px 0;
     border-radius: 5px;
     transition: transform 0.3s, opacity 0.3s;
-}
-
-/* menu toogle animaition when expanded and collasped */
-.collasped .line:nth-child(1) {
+  }
+  
+  /* menu toogle animaition when expanded and collasped */
+  .collasped .line:nth-child(1) {
     transform: translateY(0) rotate(0);
-}
-
-.collasped .line:nth-child(2) {
+  }
+  
+  .collasped .line:nth-child(2) {
     opacity: 1;
-}
-
-.collasped .line:nth-child(3) {
+  }
+  
+  .collasped .line:nth-child(3) {
     transform: translateY(0) rotate(0);
-}
-
-.expanded #menu-button {
+  }
+  
+  .expanded #menu-button {
     transform: translateY(-100%);
-}
-
-.expanded .line:nth-child(1) {
+  }
+  
+  .expanded .line:nth-child(1) {
     transform: translateY(10px) rotate(45deg);
-}
-
-.expanded .line:nth-child(2) {
+  }
+  
+  .expanded .line:nth-child(2) {
     opacity: 0;
-}
-
-.expanded .line:nth-child(3) {
+  }
+  
+  .expanded .line:nth-child(3) {
     transform: translateY(-10px) rotate(-45deg);
-}
-
-#toggle-menu {
+  }
+  
+  #toggle-menu {
     position: absolute;
     width: 150%;
     top: calc(-100% - 80px);
@@ -295,53 +313,51 @@ body, html {
     background: none;
     opacity: 0;
     transform: translateY(-10px);
-    transition: opacity 0.3s, transform 0.3s; 
+    transition: opacity 0.3s, transform 0.3s;
     z-index: 2;
-    pointer-events: none; 
-}
-
-.expanded #menu-button {
+    pointer-events: none;
+  }
+  
+  .expanded #menu-button {
     transform: translateY(-100%);
-}
-
-.expanded #toggle-menu {
-    opacity: 1; /* Make the submenu visible */
+  }
+  
+  .expanded #toggle-menu {
+    opacity: 1;
     transform: translateY(0);
-    pointer-events: auto;
-}
-
-.submenu-button {
+    pointer-events: all;
+  }
+  
+  .submenu-button {
     display: block;
     width: 100%;
     padding: 10px 0;
     border: none;
-    background: url(../images/game_control_button.svg) center no-repeat ;
-    color: white;
+    background: url(../images/game_control_button.svg) center no-repeat;
+    color: var(--white-color);
     text-align: center;
     cursor: pointer;
-
-}
-
-#reset-icon:hover {
-    transform: rotate(45deg);   
-}
-
-#hint-text:hover {
+  }
+  
+  #reset-icon:hover {
+    transform: rotate(45deg);
+  }
+  
+  #hint-text:hover {
     font-size: 1.4rem;
-
-}
-
-#hint-button {
-    position: relative; /* Set the parent element as a positioning context */
-}
-
-.deactivated-button {
+  }
+  
+  #hint-button {
+    position: relative;
+  }
+  
+  .deactivated-button {
     color: #666;
     cursor: not-allowed;
-    user-select: none; 
-}
-
-.circle-overlay {
+    user-select: none;
+  }
+  
+  .circle-overlay {
     position: absolute;
     bottom: -10px;
     right: -10px;
@@ -350,165 +366,173 @@ body, html {
     background-color: rgb(153, 16, 165);
     border-radius: 50%;
     z-index: 1;
-    display: flex; 
-    align-items: center; 
+    display: flex;
+    align-items: center;
     justify-content: center;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem; 
-    line-height: 1; 
-}
-
-#move-counter, #timer {
-    font-family: 'Yusei Magic', sans-serif;
-    font-size:38px;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    line-height: 1;
+  }
+  
+  #move-counter,
+  #timer {
+    font-family: "Yusei Magic", sans-serif;
+    font-size: 38px;
     justify-content: center;
-}
-
-
-#game-grid {
+    text-align: center;
+  }
+  
+  #game-grid {
     display: grid;
     justify-items: center;
     gap: 5px;
     max-height: 50vh;
-    aspect-ratio: 1; 
+    aspect-ratio: 1/1;
     margin: auto;
-}
-
-#game-grid .row {
+  }
+  
+  #game-grid .row {
     align-items: center;
-    /* justify-content: center;*/
     gap: 5px;
   }
-
-/* Light styling */
-.light {
+  
+  /* Light/orb styling */
+  .light {
     width: 100%;
-    aspect-ratio: 1;
+    aspect-ratio: 1/1;
     background-color: lightgrey;
   }
-
+  
   .on:not(.fire, .water, .earth, .air) {
     background-color: #ffc0cb; /* Pink colour for "on" state */
     box-shadow: 0 0 7px 1px #ff69b4; /* Hot pink colour for "on" state - adds a glow */
   }
-
+  
   .flashing {
     animation: flash 1s infinite;
   }
   
   @keyframes flash {
-    0%, 50% {
+    0%,
+    50% {
       background-color: #f1c40f; /* Yellow colour for flashing */
     }
-    25%, 75% {
+    25%,
+    75% {
       background-color: #ffde59; /* Lighter yellow colour for flashing */
     }
   }
-
-/* Styling the game orbs */
-.fire, .water, .earth, .air {
-  position: relative;
-}
-
-/* Pseudo-element for the grey square background */
-.fire::before, .water::before, .earth::before, .air::before {
-  content: '';
-  width: 100%;
-  height: 100%;
-  background-color: lightgrey;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
-/* Pseudo-element for the glowing orb */
-.fire.on::after {
-  content: '';
-  width: 60%; /* Adjust the size of the orb (smaller) */
-  height: 60%; /* Adjust the size of the orb (smaller) */
-  background: #F8B251 url(../images/fire_orb.svg) no-repeat center; /* Fully orange color for the glowing orb */
-  border-radius: 50%; /* Make it a circular shape */
-  position: absolute;
-  top: 50%; /* Position the orb in the vertical middle */
-  left: 50%; /* Position the orb in the horizontal middle */
-  transform: translate(-50%, -50%); /* Center the orb perfectly */
-  z-index: 1; /* Position the pseudo-element in front of the grey square */
-  box-shadow: 0 0 4px 4px #F9F871; /* Glowing effect for the orb */
-}
-
-/* Pseudo-element for the glowing orb */
-.water.on::after {
-    content: '';
-    width: 60%; /* Adjust the size of the orb (smaller) */
-    height: 60%; /* Adjust the size of the orb (smaller) */
-    background: #00BCD4 url(../images/water_orb.svg) no-repeat center; /* Fully blue color for the glowing orb */
-    border-radius: 50%; /* Make it a circular shape */
-    position: absolute;
-    top: 50%; /* Position the orb in the vertical middle */
-    left: 50%; /* Position the orb in the horizontal middle */
-    transform: translate(-50%, -50%); /* Center the orb perfectly */
-    z-index: 1; /* Position the pseudo-element in front of the grey square */
-    box-shadow: 0 0 4px 4px #9AFFF6; /* Glowing effect for the orb */
+  
+  /* Styling the game orbs */
+  .fire,
+  .water,
+  .earth,
+  .air {
+    position: relative;
   }
-
-  /* Pseudo-element for the glowing orb */
-.earth.on::after {
-    content: '';
-    width: 60%; /* Adjust the size of the orb (smaller) */
-    height: 60%; /* Adjust the size of the orb (smaller) */
-    background: #228B22 url(../images/earth_orb.svg) no-repeat center; /* Fully blue color for the glowing orb */
-    border-radius: 50%; /* Make it a circular shape */
+  
+  /* Pseudo-element for the grey square background */
+  .fire::before,
+  .water::before,
+  .earth::before,
+  .air::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: lightgrey;
     position: absolute;
-    top: 50%; /* Position the orb in the vertical middle */
-    left: 50%; /* Position the orb in the horizontal middle */
-    transform: translate(-50%, -50%); /* Center the orb perfectly */
-    z-index: 1; /* Position the pseudo-element in front of the grey square */
-    box-shadow: 0 0 4px 4px #56D656; /* Glowing effect for the orb */
+    top: 0;
+    left: 0;
+    z-index: -1;
   }
-
-    /* Pseudo-element for the glowing orb */
-.air.on::after {
-    content: '';
-    width: 60%; /* Adjust the size of the orb (smaller) */
-    height: 60%; /* Adjust the size of the orb (smaller) */
-    background: #87EAEB url(../images/air_orb.svg) no-repeat center; /* Fully blue color for the glowing orb */
-    border-radius: 50%; /* Make it a circular shape */
+  
+  /* Pseudo-element for the fire orb */
+  .fire.on::after {
+    content: "";
+    width: 60%;
+    height: 60%;
+    background: #f8b251 url(../images/fire_orb.svg) no-repeat center;
+    border-radius: 50%;
     position: absolute;
-    top: 50%; /* Position the orb in the vertical middle */
-    left: 50%; /* Position the orb in the horizontal middle */
-    transform: translate(-50%, -50%); /* Center the orb perfectly */
-    z-index: 1; /* Position the pseudo-element in front of the grey square */
-    box-shadow: 0 0 4px 4px #70C3BC; /* Glowing effect for the orb */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    box-shadow: 0 0 4px 4px #f9f871;
   }
-
-
-
-
+  
+  /* Pseudo-element for the water orb */
+  .water.on::after {
+    content: "";
+    width: 60%;
+    height: 60%;
+    background: #00bcd4 url(../images/water_orb.svg) no-repeat center;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    box-shadow: 0 0 4px 4px #9afff6;
+  }
+  
+  /* Pseudo-element for the earth orb */
+  .earth.on::after {
+    content: "";
+    width: 60%;
+    height: 60%;
+    background: #228b22 url(../images/earth_orb.svg) no-repeat center;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    box-shadow: 0 0 4px 4px #56d656;
+  }
+  
+  /* Pseudo-element for the air orb */
+  .air.on::after {
+    content: "";
+    width: 60%;
+    height: 60%;
+    background: #87eaeb url(../images/air_orb.svg) no-repeat center;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    box-shadow: 0 0 4px 4px #70c3bc;
+  }
+  
+  /* Media queries */
   @media (min-aspect-ratio: 1/1) and (max-width: 600px) {
     .planet-button {
-        max-width: 30vh;
+      max-width: 30vh;
     }
-
-    .home-button-font {font-size: 16px;}
-}
-
-/* Media query for mobile devices */
-@media (max-width: 767px) {
+    .home-button-font {
+      font-size: 16px;
+    }
+  }
+  
+  /* Media query for mobile devices */
+  @media (max-width: 767px) {
     .game-intro-wrapper {
-        order: 2;
+      order: 2;
     }
-
-    .game-menu{
-        order: 1; 
+    .game-menu {
+      order: 1;
     }
-}
- @media (max-width: 320px) {
-    
+  }
+  
+  @media (max-width: 320px) {
     .heads-up-display-items {
-    max-width: 100px;    
-}
-  #move-counter, #timer {
-    font-size: 28px ;
-  }  
- }
+      max-width: 100px;
+    }
+    #move-counter,
+    #timer {
+      font-size: 28px;
+    }
+  }
+  
