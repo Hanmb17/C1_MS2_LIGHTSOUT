@@ -1,108 +1,334 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Elemental Lumina - A Lights Out Based Game
+(Developer: Hannah Bowles)
 
-Welcome USER_NAME,
+![Mockup image]()
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+[Live webpage](https://hanmb17.github.io/C1_MS2_LIGHTSOUT/)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+Elemental Lumina is a twist on the classis lights out game by Tiger Electronics in 1995. Users have to solve the puzzles to free the trap Lumina, this is done by collecting the elemntal orbs. These orbs can only be collected in a certain pattern - the lights out pattern. Once all orbs are collected the user completes the level. The game consistes of 4 levels and progressivly get harder. There is also a freeplay mode that alows the user to pick the size of the grid they want to play and and how many hitns they want. - This is played like the orginal lights out game.
+## Table of Content
 
-## Gitpod Reminders
+1. [Project Goals](#project-goals)
+    1. [User Goals](#user-goals)
+    2. [Site Owner Goals](#site-owner-goals)
+2. [User Experience](#user-experience)
+    1. [Target Audience](#target-audience)
+    2. [User Requirements and Expectations](#user-requirements-and-expectations)
+    3. [User Stories](#user-stories)
+3. [Design](#design)
+    1. [Design Choices](#design-choices)
+    2. [Colours](#colours)
+    3. [Fonts](#fonts)
+    4. [Structure](#structure)
+    5. [Wireframes](#wireframes)
+4. [Technologies Used](#technologies-used)
+    1. [Languages](#languages)
+    2. [Frameworks and Tools](#frameworks-and-tools)
+5. [Features](#features)
+6. [Testing](#testing)
+    1. [HTML Validation](#HTML-validation)
+    2. [CSS Validation](#CSS-validation)
+    3. [Accessibility](#accessibility)
+    4. [Performance](#performance)
+    5. [Device testing](#performing-tests-on-various-devices)
+    6. [Browser compatibility](#browser-compatibility)
+    7. [Testing user stories](#testing-user-stories)
+8. [Bugs](#bugs)
+9. [Deployment](#deployment)
+10. [Credits](#credits)
+11. [Acknowledgements](#acknowledgements)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Project Goals
 
-`python3 -m http.server`
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+### User Goals
+- 
+- 
+- 
+- 
+- 
+- 
+- 
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### Site Owner Goals
+-
+- 
+-
+- 
+- 
+-
 
-A blue button should appear to click: _Make Public_,
+### Developer Goals
+- 
+- 
+- 
+- 
+ 
+## User Experience
 
-Another blue button should appear to click: _Open Browser_.
+### Target Audience
+- 
+- 
+- 
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### User Requirements and Expectations
+- 
+- 
+- 
+- 
+- 
+- 
+- 
 
-To log into the Heroku toolbelt CLI:
+### User Stories
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+#### First-time User 
+1. 
+2. 
+3. 
+4. 
+5. 
+6. 
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+#### Returning User
+7. 
+8. 
+9. 
+10.   
+11. 
 
-------
+#### Site Owner 
+12. 
+13. 
+14. 
+15. 
 
-## Release History
+## Design
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### Design Choices
+I wanted to choose colours for Kitty Den from Megatron's colouring, as he was the inspiration for the website. From a picture of him as a kitten, I picked out his beautiful blue eyes and pink nose as a starting point for the website colours.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+<details><summary>Inspiration image - Megatron as a kitten</summary>
+<img src="docs/design/megatron-inspiration-picture.JPG">
+</details>
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+### Colours
+Using these colours as a base: 
+I chose an off-white for the background to help reduce too much glare.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+I chose dark blue to allow for good contrast as the primary colour. Blue is also great for a care company as it gives the feeling of trustworthiness.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+I chose a bright pink to pop against the white background and the dark blue while giving a playful feel to the site.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+Feeling I needed another colour, I chose bright orange as it's complementary to blue and works well with pink. I used [ColorSpace](https://mycolor.space/) to help find the right orange for the pink. Orange is also great for getting the playful nature of the site across.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+#### Branding Colours
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+- Blue: primary colour: #2E266D
+- Pink: secondary colour: #DE1D8D
+- Orange: tertiary colour: #FF735C
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+<details><summary>Branding Colour Ideas</summary>
+<img src="docs/design/main-brand-colours.png">
+</details>
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+The colours used on the site
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+- Blue: primary colour: #2E266D
+- Pink: secondary colour: #DE1D8D
+- Orange: tertiary colour: #FF735C
+- Off-white: white colour: #FAFAFA;
+- Overlay off-white: rgba(250, 250, 250, 0.7) - The off-white colour at 70% opacity
+- White: #FFFFFF - Used for contrast against the pink and off-white background
+- Opaque pink: rgba(222, 29, 141, 0.5) - Used for style elements to give a pop of colour
+- Light orange: #ffd6d0 a shade of the orange tertiary colour to brighten areas.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+I tested multiple options of blue and pink before choosing them and building the full-colour scheme around them to ensure I was happy with the colours and felt I had the best colours to match the site's requirements while remaining accessible.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+I used the abode colour wheel and ColorSpace to decide on the final colours and test the contrast of the colours with the Abode's accessibility tools and tested on the live site with the WebAIM Wave tool.
+Branding Colour Website Colours
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+<details><summary>Branding Colour Website Colours</summary>
+<img src="docs/design/website-colours.png">
+</details>
+ 
 
-------
+#### Colour Contrast Tests
 
-## FAQ about the uptime script
+<details><summary>Blue font on off-white background</summary>
+<img src="docs/design/blue-font-contrast-test.png">
+</details>
 
-**Why have you added this script?**
+<details><summary>Off white font on blue background</summary>
+<img src="docs/design/white-font-contrast-test.png">
+</details>
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+<details><summary>Blue font on light orange background</summary>
+<img src="docs/design/light-orange-blue-font-contrast.png">
+</details>
 
-**How will this affect me?**
+<details><summary>Off-white font on pink background - failed test</summary>
+<img src="docs/design/white-font-on-pink-fail-contrast.png">
+</details>
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+<details><summary>white font on pink background - passed test</summary>
+<img src="docs/design/white-font-pink-pass-contrast.png">
+</details>
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+### Fonts
+Google Fonts is used to import the 'Indie Flower and Urbanist' font used throughout the website:
+- [Indie Flower](https://fonts.google.com/specimen/Indie+Flower) 
+- [Urbanist](https://fonts.google.com/specimen/Urbanist)
+<br> 
+Indie Flower is predominantly used for headers and areas selected for styling, such as people's names. It helps them stand out and appear different from the other text on the site to make an instant impact as the user lands on the page.
+<br>
+Urbanist is used for the body of the text to make it easy to read and provides a modern look while offering a visual contrast against Indie Flower.
+<br>
+I picked these fonts as Indie Flower offers a playful and personal feel to the site, while Urbanist provides a clean, easy-to-read font with a sleek appearance. Together they work in harmony to portray the playful and professional feel of the company.
 
-**So….?**
+### Structure
+The page's structure is in well-known, user-friendly and visually attractive way. On arriving, the user sees a recognisable navigation bar which on smaller displays is a hamburger menu to the right and the company's logo on the left. The website consists of six separate pages:
+ 
+- Homepage - with the following sections unique selling points, intro to Kitty Den and customer testimonials. 
+- About Us - Includes an intro section about what they are, the history and conception of the company in a timeline style and a meet-the-staff carousel.
+- Gallery - With information about the resident cats and images showcasing cats enjoying Kitty Den services
+- Services - Simple and clean pricing cards with service detail included.
+- Contact Us - Map of Kitty Den's location, Contact form and other contact and business information. 
+- 404 - An image depicting the landing on a 404 page with a redirection button to help users find their way back.
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+### Wireframes
 
-**Can I opt out?**
+<details><summary>Home</summary>
+<img src="docs/wireframes/home-page-wireframe.png">
+</details>
+<details><summary>About Us</summary>
+<img src="docs/wireframes/about-us-wireframe.png">
+</details>
+<details><summary>Services / Prices</summary>
+<img src="docs/wireframes/services-wireframe.png">
+</details>
+<details><summary>Gallery</summary>
+<img src="docs/wireframes/gallery-wireframe.png">
+</details>
+<details><summary>Contact Us</summary>
+<img src="docs/wireframes/contact-us-wireframe.png">
+</details>
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+## Technologies Used
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+### Languages
+- [HTML](https://en.wikipedia.org/wiki/HTML)
+- [CSS](https://en.wikipedia.org/wiki/CSS)
 
-**Anything more?**
+### Frameworks and Tools
+- [Bootstrap v5.3](https://getbootstrap.com/)
+- [Git](https://git-scm.com/)
+- [Github](https://github.com/)
+- [GitPod](https://www.gitpod.io/)
+- [Tiny PNG](https://tinypng.com/)
+- [Balsamiq](https://balsamiq.com/wireframes/)
+- [Google Fonts](https://fonts.google.com/about)
+- [Font Awesome](https://fontawesome.com/search)
+- [Code Pen](https://codepen.io/)
+- [Affinity Developer 2 and Photo 2](https://affinity.serif.com/en-gb/)
+- [Grammarly](https://www.grammarly.com/)
+- [W3C validator](https://validator.w3.org/)
+- [Jigsaw CSS validator](https://jigsaw.w3.org/css-validator/)
+- [WAVE Web Accessibility Evaluation Tool](https://wave.webaim.org/)
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+## Features
 
----
 
-Happy coding!
+## Testing
+
+### HTML Validation
+The W3C Markup Validation Service was used to validate the HTML of the website. All pages pass with no errors.
+
+
+### CSS Validation
+
+
+<details><summary>Style.css - Results</summary>
+</details>
+
+### Accessibility
+The WAVE WebAIM web accessibility evaluation tool was used to ensure the website met high accessibility standards. All pages pass with 0 errors.
+
+
+
+### Performance 
+
+#### Lighthouse
+On testing the pages Ligthouse through the Google developer tools I found all pages perfromed well for both mobile and desktop.
+
+
+
+#### PageSpeed Test
+PageSpeed Insights a tool by Google was used to test the performance of the website pages. All pages perform well overall however there is room for improvement for the mobile performance, such as serving the images in a WebP format.
+
+
+
+### Performing tests on various devices
+The website was tested on the following devices:
+- Lenovo L340
+- iPad Mini 
+- iPhone 8
+- Google Pixel 7
+
+In addition, Google Chrome Developer Tools device toggle was used to test the website for all available device options and the responsive website design tester.
+
+### Browser compatibility
+The website was tested on the following browsers:
+- Google Chrome
+- Apple Safari
+- Mozilla Firefox
+- Microsoft Edge
+
+### Testing user stories
+
+#### First-time User
+
+1. 
+
+
+## Bugs
+
+
+
+## Credits
+
+### Media
+
+Images were taken from [Canva](https://www.canva.com/), [Stock Adobe](https://stock.adobe.com/uk/), [Pexels](https://www.pexels.com/) and [Pixabay](https://pixabay.com/), with credit to the below artists
+
+In order of appearance 
+
+<br>
+
+
+
+
+### Code 
+Credits for code snippets used in order of appearance
+
+- The HTML code for the [Navbar with toggler](https://getbootstrap.com/docs/5.3/components/navbar/) was taken from Bootstrap v5.3 documentation snippet - Hamburger button spans modified.
+- The HTML code for the [Timeline](https://mdbootstrap.com/docs/standard/extended/timeline/) was from MD Bootstrap - altered to fit the site's responsive requirements.
+- The CSS code for the [Timeline line and timeline circles](https://www.w3schools.com/howto/howto_css_timeline.asp) was taken from W3Schools and modified as needed.
+- The HTML code for the [carousel](https://getbootstrap.com/docs/5.3/components/carousel/) was taken from Boostrap v5.3 documentation.
+- The Javascript code for the [responsive multi-item carousel](https://www.codeply.com/p/0CWffz76Q9) was taken from a Codeply by Skelly.
+- The HTML for the [cards](https://getbootstrap.com/docs/5.3/components/card/) was taken from Bootstrap v5.3 documentation.
+- The Form dump was created using the Code Institutes form dump from the Love Running project in the CSS learning module.
+- 404 page was built using the description on [GitHub Docs](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site)
+- The CSS for making the webpage [stretch to min height of 100vh](https://dev.to/fenok/stretching-body-to-full-viewport-height-the-missing-way-2ghd) was from a blog post on DEV by Leonid Fenko.
+
+### Acknowledgements
+
+I would like to take the opportunity to thank;
+
+- My mentor, Mo Shami, for his support and excellent guidance throughout this project.
+- Iris Smok from Code Institute, my Cohort facilitator, for her wonderful advice during our weekly stand-ups.
+- My partner, Pete Williams, who kept me fed and watered and helped with testing.
+- My work colleagues at EWE Building Plastics, who tested the site and offered great feedback
