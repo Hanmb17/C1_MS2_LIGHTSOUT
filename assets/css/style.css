@@ -188,6 +188,16 @@ body, html {
 .invalid-input{
     color: red;
 }
+
+.line-container {
+    width:50%;
+    margin: auto;
+}
+.green-line {
+    color: #457D75;
+    opacity: 1;
+    border-width: 3px;
+}
 .background-wrapper {
     position: relative;
     min-height: 100vh;
