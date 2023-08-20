@@ -21,7 +21,7 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: var(--white-color);
+    background-color: var(--primary-color);
     font-family: var(--font-roboto);
     margin: 0;
   }
@@ -35,8 +35,7 @@
   /* Heading and font styles */
   h1,
   h2,
-  h3,
-  p {
+  h3 {
     font-family: var(--font-yusei-magic);
     color: var(--white-color);
   }
@@ -45,9 +44,11 @@
     font-size: var(--font-size-large);
     text-align: center;
   }
+
+  p {
+    color: var(--white-color);
+  }
   
-  h1,
-  h3,
   .green-font {
     color: #97c9c2;
   }
