@@ -1,7 +1,7 @@
 # Elemental Lumina - A Lights Out Based Game
 (Developer: Hannah Bowles)
 
-![Mockup image]()
+![Mockup image](docs/website_screen_shoot.png)
 
 [Live webpage](https://hanmb17.github.io/C1_MS2_LIGHTSOUT/)
 
@@ -123,6 +123,15 @@ For those who enjoy the nostalgia of the original game, Elemental Lumina also fe
 
 
 ### Fonts
+Google Fonts is used to import the 'Yusei Magic and Roboto' font used throughout the website:
+- [Yusei Magic](https://fonts.google.com/specimen/Yusei+Magic)
+- [Roboto](https://fonts.google.com/specimen/Roboto) 
+<br> 
+Yusei Magic whimsical design makes it perfect for headers, adding wonder and adventure to the game.
+<br>
+Roboto was the clear choice for the game's UI and text. Its modern, easy-to-read style guides players through menus and instructions while maintaining a professional look that doesn't overshadow gameplay.
+<br>
+'Roboto' and 'Yusei Magic' fonts blend perfectly in the game, providing solid mechanics and enhancing emotional connection to the story. They contribute to the unique identity and overall user experience.
 
 
 ### Structure
