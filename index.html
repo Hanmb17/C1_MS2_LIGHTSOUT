@@ -1,112 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Elemental Lumina is a modern twist on the traditional lights out game. Can you free the captured Limina?">
+    <meta name="keywords" content="Lights Out Game, Puzzle game, Strategy">
+    <meta name="author" content="Hannah Bowles">
+    <title>Elemental Lumina</title>
+    <!-- Link to Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon_logo.png">
     <!-- Add Bootstrap 5 link-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-     <!-- Add Google fonts-->
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Yusei+Magic&display=swap" rel="stylesheet"> 
+    <!-- Add Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Yusei+Magic&display=swap" rel="stylesheet">
     <!-- Add Font Awesome link -->
-     <script src="https://kit.fontawesome.com/c6d700b341.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/c6d700b341.js" crossorigin="anonymous"></script>
+    <!-- Style sheets link -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Enchanted Elemental Lumina</title>
-</head>
-<body class="home-background-wrapper">
-
-  <!-- Modal -->
-  <div class="modal fade" id="instructionsModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="instructionsModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel">Elemental Lumina - How to Play</h1>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
+  </head>
+  <body class="home-background-wrapper">
+    <!-- Instructions modal -->
+    <div class="modal fade" id="instructionsModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="instructionsModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Elemental Lumina - How to Play</h1>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
             <h2>Free the trapped Lumina by collecting all the Elemental orbs.</h2>
             <br>
             <h3 class="green-font">Rules:</h3>
             <ul>
-                <li>Each level starts with Elemental orbs in a specific pattern.</li>
-                <li>Elemental orbs can only be collected when arranged in the below pattern. <img src=""></li>
-                <li>Clicking on an orb/space will either collect the orb(s) or create new ones, and this action will affect adjacent spaces.</li>
-                <li>You must collect all the Elemental orbs to complete each level and free the trap Lumina before the time runs out.</li>
+              <li>Each level starts with Elemental orbs in a specific pattern.</li>
+              <li>Elemental orbs can only be collected when arranged in the below pattern. 
+                <br>
+                <img class="lights-out-img" src="assets/images/lights_out_pattern.svg" alt="Lights out pattern required for solving the puzzle">
+              </li>
+              <li>Clicking on an orb/space will either collect the orb(s) or create new ones, and this action will affect adjacent spaces.</li>
+              <li>You must collect all the Elemental orbs to complete each level and free the trap Lumina before the time runs out.</li>
             </ul>
             <h3 class="green-font">How to Play:</h3>
             <ul>
-                <li>Click on any space/orb on the grid to either collect the orb(s) or create new one(s).</li>
-                <li>Clicking a space/orb will also trigger changes in adjacent spaces/orbs (up, right, down, and left).</li>
-                <li>If you need assistance, click the "Hint" button. The remaining number of hints is displayed next to the hint button.</li>
+              <li>Click on any space/orb on the grid to either collect the orb(s) or create new one(s).</li>
+              <li>Clicking a space/orb will also trigger changes in adjacent spaces/orbs (up, right, down, and left).</li>
+              <li>If you need assistance, click the "Hint" button. The remaining number of hints is displayed next to the hint button.</li>
             </ul>
-         <span class="green-font"><p>Can you successfully free all the Lumina by collecting all the orbs?</p></span>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+            <span class="green-font">
+              <p>Can you successfully free all the Lumina by collecting all the orbs?</p>
+            </span>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
     <header class="container-fluid">
-        <div class="m-2">
-            <a class = "logo-link"href="index.html">
-                <img class=" logo my-2 me-2" src="assets/images/logo.svg">
-                <h1 class="ms-2 mb-0 ">Elemental Lumina</h1>
-            </a>
-        </div>
+      <div class="m-2">
+        <a class="logo-link" href="index.html">
+          <img class=" logo my-2 me-2" src="assets/images/logo.svg" alt="Elemental Lumina Logo">
+          <h1 class="ms-2 mb-0 ">Elemental Lumina</h1>
+        </a>
+      </div>
     </header>
     <main class="page-content">
-        <section class="container-fluid game-intro-wrapper">
-            <!--Intro to game-->
-            <div class="m-2 p-2">
-                <h2>Introduction: Elemental Lumina</h2>
-                <p>In the distant realm of Lumia, Lumina lived peacefully for ages until the sorcerer Alaric unearthed a way to entrap their elemental energies.</p>
-                <p>Alaric's insatiable hunger for power led him to capture the Lumina, disrupting Lumia's peaceful balance. As he amassed Lumina, the planet's harmony crumbled.
-                You are the chosen one can you liberate the Lumina and restore Lumia's equilibrium? You need to overpower Alaric's enchantments to free the captive Lumina by solving his puzzles and arranging the orbs in precise patterns to free them.
-                </p>
-                <p>Are you prepared to shatter these enchantments? Your quest begins now.</p>
+      <section class="container-fluid game-intro-wrapper">
+        <!--Intro to game-->
+        <div class="m-2 p-2">
+          <h2>Introduction: Elemental Lumina</h2>
+          <p>In the distant realm of Lumia, Lumina lived peacefully for ages until the sorcerer Alaric unearthed a way to entrap their elemental energies.</p>
+          <p>Alaric's insatiable hunger for power led him to capture the Lumina, disrupting Lumia's peaceful balance. As he amassed Lumina, the planet's harmony crumbled. You are the chosen one can you liberate the Lumina and restore Lumia's equilibrium? You need to overpower Alaric's enchantments to free the captive Lumina by solving his puzzles and arranging the orbs in precise patterns to free them. </p>
+          <p>Are you prepared to shatter these enchantments? Your quest begins now.</p>
+        </div>
+      </section>
+      <section class="container-fluid game-menu">
+        <!-- Game menu -->
+        <div class="row justify-content-center align-items-stretch">
+          <div class="col-12 m-2">
+            <div class="planet-button" id="main-game-button">
+              <span>
+                <a class="home-button-font" href="game.html?mode=play">Play Game</a>
+              </span>
             </div>
-        </section>
-        <section class="container-fluid game-menu">
-            <!-- Game menu -->
-            <div class="row justify-content-center align-items-stretch">
-                <div class="col-12 m-2">
-                    <div class="planet-button" id="main-game-button">
-                        <span><a class="home-button-font" href="game.html?mode=play">Play Game</a></span>
-                    </div>
-                 </div>
-                 <div class="col-12 col-sm-4 m-2 ">
-                    <!-- trigger modal instructionsModal -->
-                    <div class="planet-button" id="instructions-button" data-bs-toggle="modal" data-bs-target="#instructionsModal">
-                        <span class="home-button-font">How To Play</span>
-                    </div>
-                </div>
-                <div class="col-12 col-sm-4 m-2">
-                    <div class="planet-button" id="freeplay-game-button">
-                        <span><a class="home-button-font" href="game.html?mode=freeplay">Free Play</a></span>
-                    </div>
-                </div>    
+          </div>
+          <div class="col-12 col-sm-4 m-2 ">
+            <!-- trigger modal instructionsModal -->
+            <div class="planet-button" id="instructions-button" data-bs-toggle="modal" data-bs-target="#instructionsModal">
+              <span class="home-button-font">How To Play</span>
             </div>
-        </section>
+          </div>
+          <div class="col-12 col-sm-4 m-2">
+            <div class="planet-button" id="freeplay-game-button">
+              <span>
+                <a class="home-button-font" href="game.html?mode=freeplay">Free Play</a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="container-fluid">
-        <div class="row align-items-center justify-content-center">
-            <div class="col-12 col-sm-4 col-md-3 d-flex m-2 justify-content-center">
-                <p class="m-0 me-2">Contact Us</p>              
-                <a class="ms-2 green-font"><i class="fa-regular fa-envelope icon-link"></i></a>
-            </div>
-            <div class="col-12 col-sm-4 col-md-3 m-2">
-                <p class="m-0">Copyright 2023</p>
-            </div>
-            <div class="col-3 col-sm-4 col-md-3 m-2 d-flex justify-content-center">
-                <a class="green-font mx-2" href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f icon-link"></i></a>
-                <a class="green-font mx-2" href="https://www.instagram.com/" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram icon-link"></i></a>
-                <a class="green-font mx-2" href="https://twitter.com/" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter icon-link"></i></a>
-            </div>
+      <div class="row align-items-center justify-content-center">
+        <div class="col-12 col-sm-4 col-md-3 d-flex m-2 justify-content-center">
+          <p class="m-0 me-2">Contact Us</p>
+          <a class="ms-2 green-font">
+            <i class="fa-regular fa-envelope icon-link"></i>
+          </a>
         </div>
+        <div class="col-12 col-sm-4 col-md-3 m-2">
+          <p class="m-0">Copyright 2023</p>
+        </div>
+        <div class="col-3 col-sm-4 col-md-3 m-2 d-flex justify-content-center">
+          <a class="green-font mx-2" href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+            <i class="fa-brands fa-facebook-f icon-link"></i>
+          </a>
+          <a class="green-font mx-2" href="https://www.instagram.com/" target="_blank" aria-label="Instagram">
+            <i class="fa-brands fa-instagram icon-link"></i>
+          </a>
+          <a class="green-font mx-2" href="https://twitter.com/" target="_blank" aria-label="Twitter">
+            <i class="fa-brands fa-x-twitter icon-link"></i>
+          </a>
+        </div>
+      </div>
     </footer>
+    <!-- Bootstrap JavaScript Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-</body>
+  </body>
 </html>

@@ -1,4 +1,4 @@
-/* Setting the site variables*/
+/* Setting the site variables */
 :root {
     --primary-color: #1c0539;
     --secondary-color: #457d75;
@@ -32,7 +32,7 @@
     flex-direction: column;
   }
   
-  /* Heading  and font styles */
+  /* Heading and font styles */
   h1,
   h2,
   h3,
@@ -84,11 +84,15 @@
     transform: scale(1.5);
   }
   
-  /* --- Modal styling --- */
+  /* Modal styling */
   .modal-body {
     color: var(--white-color);
   }
-  
+
+  .lights-out-img {
+    width: 25%;
+  }
+
   #levelPic {
     max-width: 250px;
   }
@@ -111,6 +115,7 @@
     border: none;
     box-shadow: 0 0 8px 8px #61b0a5;
   }
+
   .btn-primary:hover .fa-play {
     transform: translateX(4px);
     font-size: 1.25rem;
@@ -133,13 +138,14 @@
     width: 50%;
     margin: auto;
   }
+
   .green-line {
     color: var(--secondary-color);
     opacity: 1;
     border-width: 3px;
   }
   
-  /* --- Home Page styling --- */
+  /* Home Page styling */
   .home-background-wrapper {
     position: relative;
     min-height: 100vh;
@@ -205,17 +211,7 @@
       center / cover;
   }
   
-  /* --- Game styling --- */
-  body,
-  html {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: var(--white-color);
-    font-family: "Roboto", sans-serif;
-    margin: 0;
-  }
-  
+  /* Game styling */
   .background-wrapper {
     position: relative;
     min-height: 100vh;
