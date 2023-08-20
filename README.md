@@ -5,7 +5,11 @@
 
 [Live webpage](https://hanmb17.github.io/C1_MS2_LIGHTSOUT/)
 
-Elemental Lumina is a twist on the classis lights out game by Tiger Electronics in 1995. Users have to solve the puzzles to free the trap Lumina, this is done by collecting the elemntal orbs. These orbs can only be collected in a certain pattern - the lights out pattern. Once all orbs are collected the user completes the level. The game consistes of 4 levels and progressivly get harder. There is also a freeplay mode that alows the user to pick the size of the grid they want to play and and how many hitns they want. - This is played like the orginal lights out game.
+Elemental Lumina offers a different take on the timeless Lights Out game originally released by Tiger Electronics in 1995. In this revamped version, users find themselves on a quest to free the trapped Lumina by solving complex puzzles. The key to success is collecting elemental orbs by following a specific pattern, similar to the classic lights-out pattern.
+
+As users progress through the game's four levels, the challenges become progressively more difficult, pushing their puzzle-solving skills to the limit. The ultimate goal is to collect all orbs in the correct sequence to complete each level and rescue all the trapped Lumina.
+
+For those who enjoy the nostalgia of the original game, Elemental Lumina also features a free-play mode. Here, players can tailor their game by selecting the grid size they want to play on and choosing the number of hints at their disposal. This mode offers a fresh yet familiar experience reminiscent of classic Lights Out gameplay.
 ## Table of Content
 
 1. [Project Goals](#project-goals)
@@ -43,179 +47,90 @@ Elemental Lumina is a twist on the classis lights out game by Tiger Electronics 
 
 
 ### User Goals
-- 
-- 
-- 
-- 
-- 
-- 
-- 
+- Easily grasp the concept of Elemental Lumina as a modern twist on the classic Lights Out game.
+- Understand the objective of freeing Lumina by solving complex puzzles and collecting elemental orbs.
+- Understand the gameplay mechanics involving the lights-out pattern and its connection to collecting elemental orbs.
+- Advance through the game's levels.
+- Experience the satisfaction of completing levels and rescuing Lumina.
+- Explore the free-play mode and its customisation options for a personalised gaming experience.
 
 ### Site Owner Goals
--
-- 
--
-- 
-- 
--
+- Attract a diverse range of gamers interested in puzzle-solving and strategy.
+- Highlight the unique selling points of Elemental Lumina, emphasising its revamped gameplay.
+- Present the game's features and mechanics clearly and engagingly.
+- Encourage users to engage with both the main game and the free-play mode.
+- Promote a sense of nostalgia for the classic Lights Out game while offering fresh gameplay.
 
 ### Developer Goals
-- 
-- 
-- 
-- 
+- Develop an intuitive and user-friendly interface for players of various skill levels.
+- Communicate the game's premise, mechanics, and objectives in a concise yet informative way.
+- Create a seamless and enjoyable gameplay experience that balances challenge and reward.
+- Ensure smooth progression through levels, maintaining user engagement and motivation.
+- Implement the free-play mode with customisable options, respecting the classic Lights Out experience.
  
 ## User Experience
 
 ### Target Audience
-- 
-- 
-- 
+- Casual gamers seeking a modern take on a classic game.
+- Puzzle enthusiasts interested in challenging gameplay.
+- Users are nostalgic for the original Lights Out game.
+- Individuals who enjoy strategic thinking and problem-solving.
+
 
 ### User Requirements and Expectations
-- 
-- 
-- 
-- 
-- 
-- 
-- 
+- Clear explanation of Elemental Lumina's unique gameplay and objective.
+- A user-friendly interface that supports intuitive navigation through levels.
+- Instruction on how to play.
+- Gradually increasing challenges that test puzzle-solving skills.
+- A sense of accomplishment upon completing levels and rescuing Lumina.
+- Customisation options in the free-play mode for a personalised experience.
+- Responsive design that adapts to users' screen size.
 
 ### User Stories
 
 #### First-time User 
-1. 
-2. 
-3. 
-4. 
-5. 
-6. 
+1. As a first-time user, I want to understand how Elemental Lumina differs from the classic Lights Out game.
+2. As a first-time user, I want a clear explanation of the goal of the game and how to progress.
+3. As a first-time user, I want to learn how the lights-out pattern is connected to collecting elemental orbs.
+4. As a first-time user, I want to be introduced to the gradual challenge increase as I progress through levels.
+5. As a first-time user, I want to experience the satisfaction of completing levels and rescuing Lumina.
+6. As a first-time user, I want to explore the free-play mode and customise my gameplay experience.
 
 #### Returning User
-7. 
-8. 
-9. 
-10.   
-11. 
+7. As a returning user, I want to dive back into the challenging world of Elemental Lumina.
+8. As a returning user, I want to test my skills on increasingly difficult levels.
+9. As a returning user, I want to relive the excitement of rescuing Lumina and progressing through the story.
+10. As a returning user, I want to experiment with different grid sizes and hint options in the free-play mode.   
 
 #### Site Owner 
-12. 
-13. 
-14. 
-15. 
 
 ## Design
 
 ### Design Choices
-I wanted to choose colours for Kitty Den from Megatron's colouring, as he was the inspiration for the website. From a picture of him as a kitten, I picked out his beautiful blue eyes and pink nose as a starting point for the website colours.
 
-<details><summary>Inspiration image - Megatron as a kitten</summary>
-<img src="docs/design/megatron-inspiration-picture.JPG">
-</details>
 
 ### Colours
-Using these colours as a base: 
-I chose an off-white for the background to help reduce too much glare.
 
-I chose dark blue to allow for good contrast as the primary colour. Blue is also great for a care company as it gives the feeling of trustworthiness.
-
-I chose a bright pink to pop against the white background and the dark blue while giving a playful feel to the site.
-
-Feeling I needed another colour, I chose bright orange as it's complementary to blue and works well with pink. I used [ColorSpace](https://mycolor.space/) to help find the right orange for the pink. Orange is also great for getting the playful nature of the site across.
 
 
 #### Branding Colours
 
-- Blue: primary colour: #2E266D
-- Pink: secondary colour: #DE1D8D
-- Orange: tertiary colour: #FF735C
-
-<details><summary>Branding Colour Ideas</summary>
-<img src="docs/design/main-brand-colours.png">
-</details>
-
-The colours used on the site
-
-- Blue: primary colour: #2E266D
-- Pink: secondary colour: #DE1D8D
-- Orange: tertiary colour: #FF735C
-- Off-white: white colour: #FAFAFA;
-- Overlay off-white: rgba(250, 250, 250, 0.7) - The off-white colour at 70% opacity
-- White: #FFFFFF - Used for contrast against the pink and off-white background
-- Opaque pink: rgba(222, 29, 141, 0.5) - Used for style elements to give a pop of colour
-- Light orange: #ffd6d0 a shade of the orange tertiary colour to brighten areas.
-
-I tested multiple options of blue and pink before choosing them and building the full-colour scheme around them to ensure I was happy with the colours and felt I had the best colours to match the site's requirements while remaining accessible.
-
-I used the abode colour wheel and ColorSpace to decide on the final colours and test the contrast of the colours with the Abode's accessibility tools and tested on the live site with the WebAIM Wave tool.
-Branding Colour Website Colours
-
-<details><summary>Branding Colour Website Colours</summary>
-<img src="docs/design/website-colours.png">
-</details>
  
 
 #### Colour Contrast Tests
 
-<details><summary>Blue font on off-white background</summary>
-<img src="docs/design/blue-font-contrast-test.png">
-</details>
 
-<details><summary>Off white font on blue background</summary>
-<img src="docs/design/white-font-contrast-test.png">
-</details>
-
-<details><summary>Blue font on light orange background</summary>
-<img src="docs/design/light-orange-blue-font-contrast.png">
-</details>
-
-<details><summary>Off-white font on pink background - failed test</summary>
-<img src="docs/design/white-font-on-pink-fail-contrast.png">
-</details>
-
-<details><summary>white font on pink background - passed test</summary>
-<img src="docs/design/white-font-pink-pass-contrast.png">
-</details>
 
 
 ### Fonts
-Google Fonts is used to import the 'Indie Flower and Urbanist' font used throughout the website:
-- [Indie Flower](https://fonts.google.com/specimen/Indie+Flower) 
-- [Urbanist](https://fonts.google.com/specimen/Urbanist)
-<br> 
-Indie Flower is predominantly used for headers and areas selected for styling, such as people's names. It helps them stand out and appear different from the other text on the site to make an instant impact as the user lands on the page.
-<br>
-Urbanist is used for the body of the text to make it easy to read and provides a modern look while offering a visual contrast against Indie Flower.
-<br>
-I picked these fonts as Indie Flower offers a playful and personal feel to the site, while Urbanist provides a clean, easy-to-read font with a sleek appearance. Together they work in harmony to portray the playful and professional feel of the company.
+
 
 ### Structure
-The page's structure is in well-known, user-friendly and visually attractive way. On arriving, the user sees a recognisable navigation bar which on smaller displays is a hamburger menu to the right and the company's logo on the left. The website consists of six separate pages:
- 
-- Homepage - with the following sections unique selling points, intro to Kitty Den and customer testimonials. 
-- About Us - Includes an intro section about what they are, the history and conception of the company in a timeline style and a meet-the-staff carousel.
-- Gallery - With information about the resident cats and images showcasing cats enjoying Kitty Den services
-- Services - Simple and clean pricing cards with service detail included.
-- Contact Us - Map of Kitty Den's location, Contact form and other contact and business information. 
-- 404 - An image depicting the landing on a 404 page with a redirection button to help users find their way back.
+
 
 ### Wireframes
 
-<details><summary>Home</summary>
-<img src="docs/wireframes/home-page-wireframe.png">
-</details>
-<details><summary>About Us</summary>
-<img src="docs/wireframes/about-us-wireframe.png">
-</details>
-<details><summary>Services / Prices</summary>
-<img src="docs/wireframes/services-wireframe.png">
-</details>
-<details><summary>Gallery</summary>
-<img src="docs/wireframes/gallery-wireframe.png">
-</details>
-<details><summary>Contact Us</summary>
-<img src="docs/wireframes/contact-us-wireframe.png">
-</details>
+
 
 ## Technologies Used
 
