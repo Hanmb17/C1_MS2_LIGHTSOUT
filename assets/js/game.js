@@ -306,6 +306,9 @@ function checkWin() {
             pauseCountdownTimer();
             freeplayWinModal();
             countDownTime = 0;
+            moveCount = 0;
+            document.getElementById('move-counter').textContent = moveCount;
+
             // start a new game
             
            // initLightsOutGame();
