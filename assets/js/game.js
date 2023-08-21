@@ -61,7 +61,7 @@ function initLightsOutGame() {
 function freeplaySetUp () {
      // Extract grid size and number of hints from the modal inputs
      gridSize = parseInt(document.querySelector('input[name="gridSize"]:checked').value);
-     var selectedValue = document.querySelector('input[name="numberOfHints"]:checked').value;
+     var selectedValue = document.querySelector('input[name="hintOption"]:checked').value;
      console.log(selectedValue);
      console.log(gridSize);
      freeplayHintsSetUp(selectedValue);
@@ -762,21 +762,25 @@ instructionsModal.addEventListener('hidden.bs.modal', function() {
 function handleHintRadioButtonChange() {
     var radio = document.getElementById("customHintsRadio");
     console.log(radio);
-    var numberInput = document.getElementById("numberInput");
+    const numberInput = document.getElementById("hintsRequested");
+    const numberInputLabel = document.getElementById("hintsRequestedLabel");
 
     if (radio.checked) {
         numberInput.classList.remove("d-none");
+        numberInputLabel.classList.remove("d-none");
         validateInput();
     } else {
         numberInput.classList.add("d-none");
+        numberInputLabel.classList.add("d-none");
     
     }
 
     // Attach click event listeners to other radio buttons as well
-    var otherRadios = document.querySelectorAll('[name="numberOfHints"]:not(#customHintsRadio):not(#hintsRequested)');
+    var otherRadios = document.querySelectorAll('[name="hintOption"]:not(#customHintsRadio):not(#hintsRequested)');
     otherRadios.forEach(function(otherRadio) {
         otherRadio.addEventListener('click', function() {
             numberInput.classList.add("d-none");
+            numberInputLabel.classList.add("d-none");
         });
     });
 };
