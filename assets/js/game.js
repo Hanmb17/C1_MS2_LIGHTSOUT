@@ -338,9 +338,14 @@ function resetGame() {
 }
 
 function resetHints() {
-    availableHints = totalHints;
-    document.getElementById('hints-count').textContent = availableHints;
-    document.getElementById('hint-button').classList.remove("deactivated-button");
+    console.log(totalHints);
+    if (totalHints !== "none" && totalHints !=="infinite"){
+        availableHints = totalHints;
+        console.log("running");
+        document.getElementById('hints-count').textContent = availableHints;
+        document.getElementById('hint-button').classList.remove("deactivated-button");
+    }
+    
 }
 
 function lightsToBeTurnedOn(LightsToTurnOn) {
@@ -557,12 +562,14 @@ function freeplayHintsSetUp(hintOption){
 
 // Function to update the number of hints the user has left
 function updateNumberOfHints(startingHints){
-    console.log(totalHints);
+    console.log(startingHints, "set up hints");
     if (startingHints === "infinite") {
         document.getElementById('hints-count').innerHTML = `<i class="fas fa-infinity"></i>`;
-        availableHints = "infinite";
+        availableHints = startingLights;
+        totalHints = startingHints;
     }else if(startingHints === "none"){
         document.getElementById('hint-button').classList.add("deactivated-button");
+         totalHints = startingHints;
     }else{
 
     totalHints = startingHints + availableHints;
@@ -570,6 +577,8 @@ function updateNumberOfHints(startingHints){
     document.getElementById('hints-count').textContent = availableHints;
     document.getElementById('hint-button').classList.remove("deactivated-button");
     }
+
+    
 }
 
 
