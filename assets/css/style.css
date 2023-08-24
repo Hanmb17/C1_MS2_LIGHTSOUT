@@ -111,6 +111,7 @@
   
   .btn-primary:hover,
   .btn-primary:focus,
+  .btn:active,
   :not(.btn-check) + .btn:active {
     background-color: var(--secondary-color);
     border: none;
