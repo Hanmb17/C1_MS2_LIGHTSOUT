@@ -93,9 +93,7 @@ Defensive programming was manually tested with the below user acceptance testing
 
 
 ## Automated Testing
-
-
-
+I haven't used automated testing as the project is only a small one however I would like to add it to the feature as the game grows and more features/levels are introduced. I would look a using JEST.
 
 ## Bugs
 
