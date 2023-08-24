@@ -18,6 +18,11 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 ### CSS
 
 I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-validator) to validate all of my CSS files.
+When I ran a test on my URL errors and warnings due to Bootstrap where present. So I chose to paste my CSS code in directly.
+
+| Script         | Screenshot                                                             | Notes                               |
+| ------------ | ---------------------------------------------------------------------- | ----------------------------------- |
+| Style.css       | ![screenshot]()         | Pass: No Errors  - 2 warnings due to using dynamic nature for setting fonts                   |
 
 
 ### JavaScript
