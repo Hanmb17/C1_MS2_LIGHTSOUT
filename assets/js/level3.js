@@ -8,8 +8,8 @@ export function loadLevel() {
         levelNo:"3",
         orbPic:"https://hanmb17.github.io/C1_MS2_LIGHTSOUT/assets/images/earth_orb.svg",
         element:"Earth",
-        description: "Explore Lumaria's eternal flames. Solve this puzzle to align the Fire Lumia's orbs to restore a Fire Lumia. Ignite orbs to awaken Lumian power. Can you solve the Luminous Blaze's enigma? Your Lumian journey begins."
-    };
+        description: "Alaric has captured the Earth Lumina to harness the power of earth!Crack the Alarics puzzle to free the Lumina. To help you crack his tricky puzzle, here is 3 more hints,  but you only have 3 mins and 30s to solve it."
+    }
     startingModalForCurrentLevel(levelInfo);
 
     // Set the starting lights for level 3
@@ -27,10 +27,9 @@ export function loadLevel() {
     // Starting number of hints
     let startingHints = 3;
     updateNumberOfHints(startingHints);
-    // Add count donw time in seconds
+    //Set countdown timer in secounds
     countDownTime = 210;
 
-    // startCountdownTimer();
      // Set up winning modal
      winningInfo = {
         type: 'winning',

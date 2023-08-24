@@ -3,12 +3,10 @@
 export function loadLevel() {
     const levelInfo = {
         levelPicURL: "https://hanmb17.github.io/C1_MS2_LIGHTSOUT/assets/images/air_lumia.svg",
-        type: 'level',
-        levelTitle: "Eternal Luminous Swirl",
         levelNo:"4",
         orbPic:"https://hanmb17.github.io/C1_MS2_LIGHTSOUT/assets/images/air_orb.svg",
         element:"Air",
-        description: "Explore Lumaria's eternal flames. Solve this puzzle to align the Fire Lumia's orbs to restore a Fire Lumia. Ignite orbs to awaken Lumian power. Can you solve the Luminous Blaze's enigma? Your Lumian journey begins."
+        description: "Alaric has captured the Air Lumina to harness the force of air! Crack the Alarics puzzle to free the Lumina. To help you crack his cunning puzzle, here is 3 more hints,  but you only have 4 mins to solve it."
     };
     startingModalForCurrentLevel(levelInfo);
     // Set grid size for level 4
@@ -27,13 +25,13 @@ export function loadLevel() {
     // Starting number of hints
     let startingHints = 3;
     updateNumberOfHints(startingHints);
-    // Add count donw time in seconds
+
+    // Set countdown timer in secounds
     countDownTime = 240;
 
-    //startCountdownTimer();
+     // Add info for winning modal
     winningInfo = {
         type: 'winning',
-        description: "Air Lumia",
-        time: "30 seconds"
+        description: "Air Lumia"
     };
 }

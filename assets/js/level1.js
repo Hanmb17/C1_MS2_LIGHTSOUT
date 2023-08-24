@@ -4,15 +4,12 @@ export function loadLevel() {
     // Set up starting modal
     const levelInfo = {
         levelPicURL: "https://hanmb17.github.io/C1_MS2_LIGHTSOUT/assets/images/fire_lumia.svg",
-        type: 'level',
-        levelTitle: "Eternal Luminous Blaze",
         levelNo:"1",
         orbPic:"https://hanmb17.github.io/C1_MS2_LIGHTSOUT/assets/images/fire_orb.svg",
-        element:"fire",
-        description: "Explore Lumaria's eternal flames. Solve this puzzle to align the Fire Lumia's orbs to restore a Fire Lumia. Ignite orbs to awaken Lumian power. Can you solve the Luminous Blaze's enigma? Your Lumian journey begins."
+        element:"Fire",
+        description: "Alaric has captured the Fire Lumina to harness the power of fire! Crack Alaric's puzzle to free the Lumina. To help you crack his tricky puzzle, you have 3 hints, but you only have 2 mins and 30s to solve it."
     };
     startingModalForCurrentLevel(levelInfo);
-
 
     // Set the starting lights for level 1
     gridSize === 3;
@@ -26,18 +23,17 @@ export function loadLevel() {
     updateNumberOfHints(startingHints);
 
     // Add the "fire" class to all the lights
-    var allLights = document.querySelectorAll('.light');
+    let allLights = document.querySelectorAll('.light');
     allLights.forEach(function(light) {
         light.classList.add('fire');
     });
 
+    // Set Countdown time for the level
     countDownTime = 150;
-    //startCountdownTimer();
 
-    // Set up winning modal
+    // Add info for winning modal
     winningInfo = {
         type: 'winning',
-        description: "Fire Lumia",
-        time: "30 seconds"
+        description: "Fire Lumia"
     };
 }
