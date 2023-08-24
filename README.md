@@ -102,8 +102,6 @@ For those who enjoy the nostalgia of the original game, Elemental Lumina also fe
 9. As a returning user, I want to relive the excitement of rescuing Lumina and progressing through the story.
 10. As a returning user, I want to experiment with different grid sizes and hint options in the free-play mode.   
 
-#### Site Owner 
-
 ## Design
 
 ### Design Choices
@@ -163,6 +161,7 @@ Roboto was the clear choice for the game's UI and text. Its modern, easy-to-read
 
 
 ### Structure
+
 
 
 ### Wireframes
@@ -271,11 +270,6 @@ The user can select the homepage link to direct them back to the home page.
 
 #### Footer
 Seen on all pages and allows the user to discover the game's social media handles.
-
-
-
-
-
 
 ## Testing
 For all testing, please refer to the [TESTING.md](TESTING.md) file.

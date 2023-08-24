@@ -196,9 +196,17 @@
           <h2 class="level-number">Level 1</h2>
         </div>
         <div class="row heads-up-display">
-          <div class="col-6 heads-up-display-items" id="move-counter">0</div>
-          <div class="col-6 heads-up-display-items" id="timer">00:00</div>
+          <div class="col-6 heads-up-display-items" id="move-counter" aria-label="move-counter">0</div>
+          <div class="col-6 heads-up-display-items" id="timer" aria-label="timer" >00:00</div>
         </div>
+        <div class="row heads-up-display">
+            <div class="col-6 heads-up-display-label">
+                <p class="m-0">Move Counter</p>
+            </div>
+            <div class="col-6 heads-up-display-label">
+                <p class="m-0">Timer</p>
+            </div>
+          </div>
         <!-- Game board-->
         <div id="game-grid" class="p-2 row"></div>
         <div class="row" id="game-controls">

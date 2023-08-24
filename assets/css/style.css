@@ -235,6 +235,13 @@
     aspect-ratio: 1/1;
     color: var(--white-color);
   }
+
+  .heads-up-display-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 125px;
+  }
   
   .game-control-buttons {
     display: flex;
@@ -525,7 +532,7 @@
   }
   
   @media (max-width: 320px) {
-    .heads-up-display-items {
+    .heads-up-display-items, .heads-up-display-label {
       max-width: 100px;
     }
     #move-counter,
