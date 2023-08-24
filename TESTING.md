@@ -43,15 +43,41 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 ## Browser Compatibility
 
 I've tested my deployed project on multiple browsers to check for compatibility issues.
+ Browser | Screenshot                                                                | Screenshot                                                                | Notes                 |
+| ------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | --------------------- |
+| Chrome  | ![screenshot]()  | ![screenshot]()  | Works as expected     |
+| Firefox | ![screenshot]() | ![screenshot]() | Minor CSS differences |
+| Edge    | ![screenshot]()    | ![screenshot]()     | Works as expected     |
+| Opera   | ![screenshot]()   | ![screenshot]()    | Works as expected     |
+
 
 ## Responsiveness
 
 I've tested my deployed project on multiple devices to check for responsiveness issues.
+ Device                   | Screenshot                                                          | Screenshot                                                          |  Notes             |
+| ------------------------ | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ---------------------------------------------------------------------- | ----------------- |
+| Mobile (DevTools)        | ![screenshot]()   | ![screenshot]()   |   Works as expected |
+| Tablet (DevTools)        | ![screenshot]()   | ![screenshot]()   |  Works as expected |
+| Desktop                  | ![screenshot]()      | ![screenshot]()      |  Works as expected |
+| Google Pixel 7          | ![screenshot]() | ![screenshot]()  | Works as expected |
+| Iphone 13        | ![screenshot]()    | ![screenshot]()    Works as expected |
+| Iphone 8       | ![screenshot]()    | ![screenshot]()    Works as expected |
+
+
 
 
 ## Lighthouse Audit
 
 I've tested my deployed project using the Lighthouse Audit tool to check for any major issues.
+
+| Page    | Size    | Screenshot                                                           | Notes               |
+| ------- | ------- | -------------------------------------------------------------------- | ------------------- |
+| Home    | Mobile  | ![screenshot]()     | |
+| Home    | Desktop | ![screenshot]()    |  |
+| Game - Play Mode   | Mobile  | ![screenshot]()     |  |
+| Game - Play Mode   | Desktop | ![screenshot]()    |  |
+| Game - Freeplay | Mobile  | ![screenshot]()  |    |
+| Game - Freeplay  | Desktop | ![screenshot]()|    |
 
 ## Defensive Programming
 
