@@ -107,20 +107,48 @@ For those who enjoy the nostalgia of the original game, Elemental Lumina also fe
 ## Design
 
 ### Design Choices
-
-
 ### Colours
+When selecting the colours for this project, I wanted to give the user an out-of-space and alien feel. I chose a dark blue to represent space over black for a softer look. I then chose green to act as the secondary colour to add a feeling of being on another planet. I chose to use white mostly for the font as it contrasted nicely against the dark blue.To make the HUD and game buttons stand out, I opted for a purple colour that pops nicely over any blue areas and contrasts nicely against the green colour.
 
+- #1C0539 Dark Blue - used as background colours.
+- #457D75; used for buttons and certain headers.
+- #FFFFFF used for text of the body.
+- #421A61 used for overlay and main hue of the game elements.
 
+<details><summary>Main Colours</summary>
+<img src="docs/design/colour_scheme_main.png">
+</details>
 
-#### Branding Colours
+Level colours:
+As I was creating levels I wanted them all to stand out visually but complement the main colours:
 
- 
+#### Level 1  
+To represent Fire I used the following colours:
 
-#### Colour Contrast Tests
+<details><summary>Level 1 Colours</summary>
+<img src="docs/design/level_1_colour_scheme.png">
+</details>
 
+#### Level 2 
+To represent water I used the following colours:
 
+<details><summary>Level 2 Colours</summary>
+<img src="docs/design/level_2_colour_scheme.png">
+</details>
 
+#### Level 3 
+To represent Earth I used the following colours:
+
+<details><summary>Level 3 Colours</summary>
+<img src="docs/design/level_3_colour_scheme.png">
+</details>
+
+#### Level 4
+To represent Air I used the following colours:
+
+<details><summary>Level 4 Colours</summary>
+<img src="docs/design/level_4_colour_scheme.png">
+</details>
 
 ### Fonts
 Google Fonts is used to import the 'Yusei Magic and Roboto' font used throughout the website:
@@ -146,6 +174,7 @@ Roboto was the clear choice for the game's UI and text. Its modern, easy-to-read
 ### Languages
 - [HTML](https://en.wikipedia.org/wiki/HTML)
 - [CSS](https://en.wikipedia.org/wiki/CSS)
+- [JavaScript](https://www.javascript.com)
 
 ### Frameworks and Tools
 - [Bootstrap v5.3](https://getbootstrap.com/)
@@ -220,7 +249,28 @@ The website was tested on the following browsers:
 
 ## Bugs
 
+## Deployment
+The website was deployed using GitHub Pages by following these steps:
+1. In the GitHub repository navigate to the Settings tab
+2. On the left-hand menu select Pages
+3. For the source select Branch: master
+4. After the webpage refreshes automatically you will see a ribbon on the top saying: Your site is live at https://hanmb17.github.io/C1_MS2_LIGHTSOUT/
+<br>
 
+You can fork the repository by following these steps:
+1. Go to the GitHub repository
+2. Locate the [GitHub Repository](https://github.com/Hanmb17/C1_MS2_LIGHTSOUT)
+3. Click on the Fork button in the upper right-hand corner
+<br>
+
+You can clone the repository by following these steps:
+1. Go to the GitHub repository
+2. Locate the Code button above the list of files and click it
+3. Select if you prefer to clone using HTTPS, SSH, or Github CLI and click the copy button to copy the URL to your clipboard
+4. Open Git Bash
+5. Change the current working directory to the one where you want the cloned directory
+6. Type git clone and paste the URL from the clipboard ($ git clone https://github.com/Hanmb17/C1_MS2_LIGHTSOUT)
+7. Press Enter to create your local clone
 
 ## Credits
 
