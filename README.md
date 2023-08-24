@@ -196,58 +196,7 @@ Roboto was the clear choice for the game's UI and text. Its modern, easy-to-read
 
 
 ## Testing
-
-### HTML Validation
-The W3C Markup Validation Service was used to validate the HTML of the website. All pages pass with no errors.
-
-
-### CSS Validation
-
-
-<details><summary>Style.css - Results</summary>
-</details>
-
-### Accessibility
-The WAVE WebAIM web accessibility evaluation tool was used to ensure the website met high accessibility standards. All pages pass with 0 errors.
-
-
-
-### Performance 
-
-#### Lighthouse
-On testing the pages Ligthouse through the Google developer tools I found all pages perfromed well for both mobile and desktop.
-
-
-
-#### PageSpeed Test
-PageSpeed Insights a tool by Google was used to test the performance of the website pages. All pages perform well overall however there is room for improvement for the mobile performance, such as serving the images in a WebP format.
-
-
-
-### Performing tests on various devices
-The website was tested on the following devices:
-- Lenovo L340
-- iPad Mini 
-- iPhone 13
-- Google Pixel 7
-
-In addition, Google Chrome Developer Tools device toggle was used to test the website for all available device options and the responsive website design tester.
-
-### Browser compatibility
-The website was tested on the following browsers:
-- Google Chrome
-- Apple Safari
-- Mozilla Firefox
-- Microsoft Edge
-
-### Testing user stories
-
-#### First-time User
-
-1. 
-
-
-## Bugs
+For all testing, please refer to the [TESTING.md](TESTING.md) file.
 
 ## Deployment
 The website was deployed using GitHub Pages by following these steps:
@@ -275,14 +224,21 @@ You can clone the repository by following these steps:
 ## Credits
 
 ### Media
-
-Images were taken from [Canva](https://www.canva.com/), [Stock Adobe](https://stock.adobe.com/uk/), [Pexels](https://www.pexels.com/) and [Pixabay](https://pixabay.com/), with credit to the below artists
+Any images not created here where created by my self. 
+Images were taken from [Stock Adobe](https://stock.adobe.com/uk/) with credit to the below artists
 
 In order of appearance 
 
 <br>
 
-
+| Image     | Page  |  Source | Artist | Edit(s) |
+|    :----:   |    :----:   |   :----:   |  :----: | :----: |
+|  [Home Page and 404 Background](assets/images/space_background.svg) |  [index.html](https://hanmb17.github.io/C1_MS2_LIGHTSOUT/index.html)  |    [Adobe Stock](https://stock.adobe.com/uk/)    |     [yusufdemirci](https://stock.adobe.com/uk/images/vector-illustration-of-space/197231712/)    | Changed colours to match background and removed rocket |
+|  [Game Page Background](assets/images/game_background.svg) |  [index.html](https://hanmb17.github.io/C1_MS2_LIGHTSOUT/game.html)  |    [Adobe Stock](https://stock.adobe.com/uk/)    |     [jongjawi](https://stock.adobe.com/uk/images/landscape-surface-of-planet-sky-space-science-fiction-fantasy-illustration/330880401)    | Changed colours to match colour scheme |
+|  [Level 1 Alien](assets/images/fire_lumia.svg) |  [index.html](https://hanmb17.github.io/C1_MS2_LIGHTSOUT/game.html)  |    [Adobe Stock](https://stock.adobe.com/uk/)    |     [Foxelle](https://stock.adobe.com/uk/images/cute-monster-cartoon-constructor-kit-with-body-parts-alien-eyes-mouths-teeth-wings-and-horns-for-kids-toys-video-games-and-halloween-designs-vector-flat-colorful-illustration/479658039)    | Changed colours to match colour scheme and created 1 alien |
+|  [Level 2 Alien](assets/images/water_lumia.svg) |  [index.html](https://hanmb17.github.io/C1_MS2_LIGHTSOUT/game.html)  |    [Adobe Stock](https://stock.adobe.com/uk/)    |     [Foxelle](https://stock.adobe.com/uk/images/cute-monster-cartoon-constructor-kit-with-body-parts-alien-eyes-mouths-teeth-wings-and-horns-for-kids-toys-video-games-and-halloween-designs-vector-flat-colorful-illustration/479658039)    | Changed colours to match colour scheme and created 1 alien |
+|  [Level 3 Alien](assets/images/earth_lumia.svg) |  [index.html](https://hanmb17.github.io/C1_MS2_LIGHTSOUT/game.html)  |    [Adobe Stock](https://stock.adobe.com/uk/)    |     [Foxelle](https://stock.adobe.com/uk/images/cute-monster-cartoon-constructor-kit-with-body-parts-alien-eyes-mouths-teeth-wings-and-horns-for-kids-toys-video-games-and-halloween-designs-vector-flat-colorful-illustration/479658039)    | Changed colours to match colour scheme and created 1 alien |
+|  [Level 4 Alien](assets/images/air_lumia.svg) |  [index.html](https://hanmb17.github.io/C1_MS2_LIGHTSOUT/game.html)  |    [Adobe Stock](https://stock.adobe.com/uk/)    |     [Foxelle](https://stock.adobe.com/uk/images/cute-monster-cartoon-constructor-kit-with-body-parts-alien-eyes-mouths-teeth-wings-and-horns-for-kids-toys-video-games-and-halloween-designs-vector-flat-colorful-illustration/479658039)    | Changed colours to match colour scheme and created 1 alien |
 
 
 ### Code 
