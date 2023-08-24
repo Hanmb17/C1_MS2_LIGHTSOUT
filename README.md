@@ -90,9 +90,8 @@ For those who enjoy the nostalgia of the original game, Elemental Lumina also fe
 
 #### First-time User 
 1. As a first-time user, I want to understand how Elemental Lumina differs from the classic Lights Out game.
-2. As a first-time user, I want a clear explanation of the goal of the game and how to progress.
-3. As a first-time user, I want to learn how the lights-out pattern is connected to collecting elemental orbs.
-4. As a first-time user, I want to be introduced to the gradual challenge increase as I progress through levels.
+2. As a first-time user, I want to learn how the lights-out pattern is connected to collecting elemental orbs.
+3. As a first-time user, I want to be introduced to the gradual challenge increase as I progress through levels.
 5. As a first-time user, I want to experience the satisfaction of completing levels and rescuing Lumina.
 6. As a first-time user, I want to explore the free-play mode and customise my gameplay experience.
 
@@ -278,7 +277,22 @@ This page will be displayed if the user tries to navigate to a page that doesn't
 The user can select the homepage link to direct them back to the home page.
 
 #### Footer
-Seen on all pages and allows the user to discover the game's social media handles.
+Seen on all pages and allows the user to discover the game's social media handles and contact them via email
+
+### Future Features
+
+#### Contact form
+I would like to add a contact form and use Email js to send the feedback to the site admin
+
+#### Level progression page 
+I would like to add a middle page between the home page and the game page which is like a path leading around the world The game is set to allow the user to pick to play a previous level they have played and then see their progression and their progression is saved.
+
+#### Leader Board
+I would like users to be able to compare their times and how quickly they solved the levels against other users by adding a leaderboard.
+I would make the introduction story into an animated scene to help users fully immerse themself in the story.
+
+#### More Levels
+I would like to add more levels
 
 ## Testing
 For all testing, please refer to the [TESTING.md](TESTING.md) file.
