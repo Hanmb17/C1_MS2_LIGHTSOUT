@@ -292,7 +292,7 @@ I would like users to be able to compare their times and how quickly they solved
 I would make the introduction story into an animated scene to help users fully immerse themself in the story.
 
 #### More Levels
-I would like to add more levels
+I would like to add more levels.
 
 ## Testing
 For all testing, please refer to the [TESTING.md](TESTING.md) file.

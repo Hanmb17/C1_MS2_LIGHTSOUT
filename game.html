@@ -91,43 +91,44 @@
             </div>
             <h2 class="win d-none">Set Up Your Game</h2>
             <div class="row">
-                <div class ="col-sm-6">
-                    <h3 class="green-font">Grid Size</h3>
-                    <div class="form-check">
-                    <input  class="form-check-input" type="radio" name="gridSize" value="3x3" id="gridSize3" checked> 
-                    <label class="form-check-label" for="gridSize3">3x3</label>
+              <div class="col-sm-6">
+                <h3 class="green-font">Grid Size</h3>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="gridSize" value="3x3" id="gridSize3" checked>
+                  <label class="form-check-label" for="gridSize3">3x3</label>
                 </div>
                 <div class="form-check">
-                    <input  class="form-check-input" type="radio" name="gridSize" value="4x4" id="gridSize4" > 
-                    <label class="form-check-label" for="gridSize4">4x4</label>
+                  <input class="form-check-input" type="radio" name="gridSize" value="4x4" id="gridSize4">
+                  <label class="form-check-label" for="gridSize4">4x4</label>
                 </div>
                 <div class="form-check">
-                    <input  class="form-check-input" type="radio" name="gridSize" value="5x5" id="gridSize5" > 
-                    <label class="form-check-label" for="gridSize5">5x5</label>
+                  <input class="form-check-input" type="radio" name="gridSize" value="5x5" id="gridSize5">
+                  <label class="form-check-label" for="gridSize5">5x5</label>
                 </div>
                 <div class="form-check">
-                    <input  class="form-check-input" type="radio" name="gridSize" value="6x6" id="gridSize6"> 
-                    <label class="form-check-label" for="gridSize6">6x6</label>
+                  <input class="form-check-input" type="radio" name="gridSize" value="6x6" id="gridSize6">
+                  <label class="form-check-label" for="gridSize6">6x6</label>
                 </div>
+              </div>
+              <div class="col-sm-6">
+                <h3 class="green-font">Number Of Hints</h3>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="hintOption" value="none" id="noHints" checked>
+                  <label class="form-check-label" for="noHints">None</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input " type="radio" name="hintOption" value="custom" id="customHintsRadio">
+                  <label class="form-check-label" for="customHintsRadio">Pick Amount</label>
+                  <input class="d-none" type="number" id="hintsRequested" name="numberOfHints" min="1" max="99" value="1">
+                  <label class="form-check-label d-none" for="hintsRequested" id="hintsRequestedLabel">Max 99</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="hintOption" value="infinite" id="infiniteHints">
+                  <label class="form-check-label" for="infiniteHints">Infinite <i class="fa-solid fa-infinity"></i>
+                  </label>
+                </div>
+              </div>
             </div>
-            <div class="col-sm-6">
-            <h3 class="green-font">Number Of Hints</h3>
-            <div class="form-check">
-                    <input  class="form-check-input" type="radio" name="hintOption" value="none" id="noHints" checked > 
-                    <label class="form-check-label" for="noHints">None</label>
-                </div>
-                <div class="form-check">
-                    <input  class="form-check-input " type="radio" name="hintOption" value="custom" id="customHintsRadio" > 
-                    <label class="form-check-label" for="customHintsRadio">Pick Amount</label>
-                    <input class="d-none" type="number" id="hintsRequested" name="numberOfHints" min="1" max="99" value="1">
-                    <label class="form-check-label d-none" for="hintsRequested" id="hintsRequestedLabel">Max 99</label>
-                </div>
-                <div class="form-check">
-                    <input  class="form-check-input" type="radio" name="hintOption" value="infinite" id="infiniteHints"> 
-                    <label class="form-check-label" for="infiniteHints">Infinite <i class="fa-solid fa-infinity"></i></label>
-                </div>
-            </div>
-        </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="freeplay-play-button">Play <i class="fa-solid fa-play ps-2"></i>
@@ -136,37 +137,37 @@
         </div>
       </div>
     </div>
-     <!-- Instructions modal -->
-     <div class="modal fade" id="instructionsModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="instructionsModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="instructionsModalLabel">Elemental Lumina - How to Play</h1>
-              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+    <!-- Instructions modal -->
+    <div class="modal fade" id="instructionsModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="instructionsModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="instructionsModalLabel">Elemental Lumina - How to Play</h1>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h2>Free the trapped Lumina by collecting all the Elemental orbs.</h2>
+            <br>
+            <h3 class="green-font">Rules:</h3>
+            <ul>
+              <li>Each level starts with Elemental orbs in a specific pattern.</li>
+              <li>Elemental orbs can only be collected when arranged in the below pattern. <br>
+                <img class="lights-out-img" src="assets/images/lights_out_pattern.svg" alt="Lights out pattern required for solving the puzzle">
+              </li>
+              <li>Clicking on an orb/space will either collect the orb(s) or create new ones, and this action will affect adjacent spaces.</li>
+              <li>You must collect all the Elemental orbs to complete each level and free the trap Lumina before the time runs out.</li>
+            </ul>
+            <h3 class="green-font">How to Play:</h3>
+            <ul>
+              <li>Click on any space/orb on the grid to either collect the orb(s) or create new one(s).</li>
+              <li>Clicking a space/orb will also trigger changes in adjacent spaces/orbs (up, right, down, and left).</li>
+              <li>If you need assistance, click the "Hint" button. The remaining number of hints is displayed next to the hint button.</li>
+            </ul>
+            <div>
+              <p class="green-font">Can you successfully free all the Lumina by collecting all the orbs?</p>
             </div>
-            <div class="modal-body">
-              <h2>Free the trapped Lumina by collecting all the Elemental orbs.</h2>
+            <div>
               <br>
-              <h3 class="green-font">Rules:</h3>
-              <ul>
-                <li>Each level starts with Elemental orbs in a specific pattern.</li>
-                <li>Elemental orbs can only be collected when arranged in the below pattern. <br>
-                  <img class="lights-out-img" src="assets/images/lights_out_pattern.svg" alt="Lights out pattern required for solving the puzzle">
-                </li>
-                <li>Clicking on an orb/space will either collect the orb(s) or create new ones, and this action will affect adjacent spaces.</li>
-                <li>You must collect all the Elemental orbs to complete each level and free the trap Lumina before the time runs out.</li>
-              </ul>
-              <h3 class="green-font">How to Play:</h3>
-              <ul>
-                <li>Click on any space/orb on the grid to either collect the orb(s) or create new one(s).</li>
-                <li>Clicking a space/orb will also trigger changes in adjacent spaces/orbs (up, right, down, and left).</li>
-                <li>If you need assistance, click the "Hint" button. The remaining number of hints is displayed next to the hint button.</li>
-              </ul>
-              <div>
-                <p class="green-font">Can you successfully free all the Lumina by collecting all the orbs?</p>
-              </div>
-              <div>
-                  <br>
               <h3 class="green-font">Freeplay Mode:</h3>
               <ul>
                 <li>Freeplay mode is like the orignal lights out game.</li>
@@ -174,14 +175,14 @@
                 <li>You then need to solve the random puzzle by turning the all lights off using the same method as above</li>
                 <li>See how many moves and how long it takes you to solve the puzzle</li>
               </ul>
-              </div>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">Close</button>
-            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">Close</button>
           </div>
         </div>
       </div>
+    </div>
     <header class="container-fluid">
       <div class="m-2">
         <a class="logo-link" href="index.html">
@@ -197,16 +198,16 @@
         </div>
         <div class="row heads-up-display">
           <div class="col-6 heads-up-display-items" id="move-counter" aria-label="move-counter">0</div>
-          <div class="col-6 heads-up-display-items" id="timer" aria-label="timer" >00:00</div>
+          <div class="col-6 heads-up-display-items" id="timer" aria-label="timer">00:00</div>
         </div>
         <div class="row heads-up-display">
-            <div class="col-6 heads-up-display-label">
-                <p class="m-0">Move Counter</p>
-            </div>
-            <div class="col-6 heads-up-display-label">
-                <p class="m-0">Timer</p>
-            </div>
+          <div class="col-6 heads-up-display-label">
+            <p class="m-0">Move Counter</p>
           </div>
+          <div class="col-6 heads-up-display-label">
+            <p class="m-0">Timer</p>
+          </div>
+        </div>
         <!-- Game board-->
         <div id="game-grid" class="p-2 row"></div>
         <div class="row" id="game-controls">
@@ -239,7 +240,7 @@
       <div class="row align-items-center justify-content-center">
         <div class="col-12 col-sm-4 col-md-3 d-flex m-2 justify-content-center">
           <p class="m-0 me-2">Contact Us</p>
-          <a class="ms-2 green-font">
+          <a class="ms-2 green-font" aria-label="email us " href="mailto:someone@example.com">
             <i class="fa-regular fa-envelope icon-link"></i>
           </a>
         </div>
