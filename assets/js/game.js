@@ -72,9 +72,11 @@ document.addEventListener('DOMContentLoaded', function() {
       initLightsOutGame();
     } else if (buttonText.includes("Home")) {
       window.location.href = 'index.html';
-    } else {
+    } else if (buttonText.includes("Replay Level")){
+        resetGame();
+    }
+    else {
       startCountdownTimer();
-      myModal.hide();
     }
   });
 
@@ -391,16 +393,23 @@ function winningModal(winningInfo) {
     .forEach(element => element.classList.remove(
       'd-none')); // Show other winning elements
   // Show the modal and update content that is changed after a delay
-  // setTimeout(() => {
-  modalBody.querySelector("#buttonLabel")
-    .textContent = "Next Level ";
-  modalBody.querySelector('#levelDescription')
-    .textContent =
+  modalBody.querySelector("#buttonLabel").textContent = "Next Level ";
+  modalBody.querySelector('#levelDescription').textContent =
     `You freed the ${winningInfo.description} in ${moveCount} moves and ${winningInfo.time}.`; // Set the updated text content after a short delay
-  //const myModal = new bootstrap.Modal(document.getElementById('staticBackdrop'));
+    modalBody.querySelectorAll('.failed').forEach((element) => 
+    element.classList.add('d-none')); // hide failed class elements
   myModal.show(); // Show the modal with updated content after a short delay
-  // }, 200);
 }
+
+function failedModal() {
+    const modalBody = staticBackdropModal.querySelector('.modal-body');
+    modalBody.querySelectorAll('.failed')
+      .forEach(element => element.classList.remove(
+        'd-none')); // Show other failed elements
+    modalBody.querySelector("#buttonLabel")
+      .textContent = "Replay Level ";
+    myModal.show(); // Show the modal with updated content after a short delay
+  }
 
 // Update modal for final message when all levels passed - level play
 function finalModal() {
@@ -509,6 +518,7 @@ function startCountdownTimer() {
   displayTime(countDownTime);
 
   function endCount() {
+    failedModal();
     countdownElement.innerHTML = "Time out";
   }
 }
