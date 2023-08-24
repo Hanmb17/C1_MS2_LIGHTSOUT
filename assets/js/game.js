@@ -43,21 +43,20 @@ const hintButton = document.getElementById('hint-button');
 // const menuButton = document.getElementById('menu-button');
 
 // Game Grid Element
-const gameGridElement = document.getElementById('game-grid');
-
-// Countdown Element
-const countdownElement = document.getElementById('timer');
+const gameGridElement = document.getElementById("game-grid");
+// Timer Element
+const countdownElement = document.getElementById("timer");
 
 // Wait for the DOM content to be fully loaded before executing JavaScript code
-document.addEventListener('DOMContentLoaded', function() {
-
+document.addEventListener('DOMContentLoaded',  function() {
+ 
+    setUpGame();
   // Get the game mode from the URL parameter
-  const queryString = window.location.search;
-  const urlParams = new URLSearchParams(queryString);
-  gameMode = urlParams.get('mode');
+  //gameMode =  setGameMode();
+
 
   // Initialise the Lights Out game when the page loads
-  initLightsOutGame();
+  //initLightsOutGame();
 
   // Add event listener to for when level mode modal closes to start timer
   // var modal = document.getElementById('staticBackdrop');
@@ -207,6 +206,21 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Game Setup Functions
+async function setUpGame() {
+        gameMode = await setGameMode();
+        initLightsOutGame();
+      }
+// Function to set game mode
+function setGameMode() {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    gameMode = urlParams.get("mode");
+    if (!gameMode) {
+      gameMode = "freeplay";
+    }
+    console.log(gameMode);
+    return gameMode;
+  }
 // Function to initialise which game maode is being played
 function initLightsOutGame() {
   moveCount = 0;
