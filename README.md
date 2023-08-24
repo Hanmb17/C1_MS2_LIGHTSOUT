@@ -161,12 +161,21 @@ Roboto was the clear choice for the game's UI and text. Its modern, easy-to-read
 
 
 ### Structure
-
-
+The site contains 3 pages, the home page, game page and 404 page
 
 ### Wireframes
-
-
+<details><summary>Home</summary>
+<img src="docs/wireframes/home_page.png">
+</details>
+<details><summary>Game Page</summary>
+<img src="docs/wireframes/game_grid.png">
+</details>
+<details><summary>Level Play Modal</summary>
+<img src="docs/wireframes/play_modal.png">
+</details>
+<details><summary>Free Play Modal</summary>
+<img src="docs/wireframes/freeplay_modal.png">
+</details>
 
 ## Technologies Used
 
