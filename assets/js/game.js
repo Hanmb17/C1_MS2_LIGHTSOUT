@@ -223,7 +223,7 @@ function initLightsOutGame() {
   }
 }
 
-// Set up the game grid dynmaically based of the gridsize variable.
+// Set up the game grid dynmaically, based of the gridsize variable.
 function setUpGrid() {
   let gameGridHtml = '';
   for (let i = 0; i < gridSize; i++) {
@@ -369,20 +369,13 @@ function checkWin() {
 // Starting level Modal - level play 
 function startingModalForCurrentLevel(levelInfo) {
   let modalBody = staticBackdropModal.querySelector('.modal-body');
-  modalBody.querySelector("#levelPic")
-    .src = levelInfo.levelPicURL;
-  modalBody.querySelector("#levelNo")
-    .textContent = levelInfo.levelNo;
-  modalBody.querySelector('#orbPic')
-    .src = levelInfo.orbPic;
-  modalBody.querySelector('#orbElement')
-    .textContent = levelInfo.element;
-  modalBody.querySelector('#levelDescription')
-    .textContent = levelInfo.description;
-  modalBody.querySelector("#buttonLabel")
-    .textContent = "Play ";
-  modalBody.querySelectorAll('.winning')
-    .forEach(element => element.classList.add('d-none'));
+  modalBody.querySelector("#levelPic").src = levelInfo.levelPicURL;
+  modalBody.querySelector("#levelNo").textContent = levelInfo.levelNo;
+  modalBody.querySelector('#orbPic').src = levelInfo.orbPic;
+  modalBody.querySelector('#orbElement').textContent = levelInfo.element;
+  modalBody.querySelector('#levelDescription').textContent = levelInfo.description;
+  modalBody.querySelector("#buttonLabel").textContent = "Play ";
+  modalBody.querySelectorAll('.winning').forEach(element => element.classList.add('d-none'));
   // Create a new Bootstrap Modal instance using the modal element
   // const myModal = new bootstrap.Modal(document.getElementById('staticBackdrop'));
   myModal.show();

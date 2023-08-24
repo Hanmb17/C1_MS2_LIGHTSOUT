@@ -9,8 +9,8 @@ export function loadLevel() {
         element:"Fire",
         description: "Alaric has captured the Fire Lumina to harness the power of fire! Crack Alaric's puzzle to free the Lumina. To help you crack his tricky puzzle, you have 3 hints, but you only have 2 mins and 30s to solve it."
     };
-    startingModalForCurrentLevel(levelInfo);
-
+    // startingModalForCurrentLevel(levelInfo);
+    myModal.show();
     // Set the starting lights for level 1
     gridSize = 3;
     setUpGrid();
