@@ -244,15 +244,13 @@ In order of appearance
 ### Code 
 Credits for code snippets used in order of appearance
 
-- The HTML code for the [Navbar with toggler](https://getbootstrap.com/docs/5.3/components/navbar/) was taken from Bootstrap v5.3 documentation snippet - Hamburger button spans modified.
-- The HTML code for the [Timeline](https://mdbootstrap.com/docs/standard/extended/timeline/) was from MD Bootstrap - altered to fit the site's responsive requirements.
-- The CSS code for the [Timeline line and timeline circles](https://www.w3schools.com/howto/howto_css_timeline.asp) was taken from W3Schools and modified as needed.
-- The HTML code for the [carousel](https://getbootstrap.com/docs/5.3/components/carousel/) was taken from Boostrap v5.3 documentation.
-- The Javascript code for the [responsive multi-item carousel](https://www.codeply.com/p/0CWffz76Q9) was taken from a Codeply by Skelly.
-- The HTML for the [cards](https://getbootstrap.com/docs/5.3/components/card/) was taken from Bootstrap v5.3 documentation.
-- The Form dump was created using the Code Institutes form dump from the Love Running project in the CSS learning module.
+- The HTML code for the [Modals](https://getbootstrap.com/docs/5.3/components/modal//) was taken from Bootstrap v5.3 documentation snippet 
+- The JS code for the [Timers](https://www.w3schools.com/howto/howto_js_countdown.asp) was from W3 Scools - altered to fit the requirements.
+- The JS for the [Random Numbers](https://www.w3schools.com/jsref/jsref_random.asp) was from W3 Scools - altered to fit the requirements.
+- The JS code for the [Modals](https://getbootstrap.com/docs/5.3/components/modal//) was taken from Bootstrap v5.3 documentation snippet 
 - 404 page was built using the description on [GitHub Docs](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site)
 - The CSS for making the webpage [stretch to min height of 100vh](https://dev.to/fenok/stretching-body-to-full-viewport-height-the-missing-way-2ghd) was from a blog post on DEV by Leonid Fenko.
+- To help with JS function stuctures i used JAVASCRIPT & JQUERY  by jon Duckett
 
 ### Acknowledgements
 
