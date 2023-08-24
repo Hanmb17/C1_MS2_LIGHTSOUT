@@ -97,6 +97,65 @@ I haven't used automated testing as the project is only a small one however I wo
 
 ## Bugs
 
+### Bug Report 1: Countdown Speed-Up Due to Uncleared Interval
+#### Summary:
+The countdown functionality in the code experiences an unexpected speed-up, leading to inaccurate countdown times. The root cause of this issue is traced to an uncleared interval, causing multiple intervals to run simultaneously.
+
+#### Expected Behavior:
+The countdown should consistently and accurately decrement at the specified interval.
+#### Observed Behavior:
+The countdown speeds up over time, resulting in incorrect and inconsistent countdown times.
+#### Impact:
+Due to this bug, the countdown functionality becomes unreliable, potentially causing confusion and incorrect time management for users relying on the countdown.
+#### Root Cause:
+The root cause of this bug is the failure to clear the interval before starting the countdown timer.
+#### Resolution:
+by adding this line if (countDown) {
+    clear interval(countDown);
+  }
+This ensures countdown interval is always reset before a new countdown is started.
+
+## Bug: Incomplete Functionality in `game.html` Page Without Mode Reset
+
+### Summary
+
+Upon testing, a bug was identified where users who directly accessed the `game.html` page without picking the mode could set up a "freeplay" grid, but not all functions worked as expected. This issue originated from the initial mode-setting mechanism, which did not handle this scenario.
+
+### Expected Behavior
+
+All game functions should work as intended regardless of whether the mode is explicitly set or not.
+
+### Observed Behavior
+
+Certain game functions do not work properly when users access the `game.html` page without a mode being set.
+
+### Root Cause
+
+The root cause of this bug was traced to the initial game mode-setting mechanism. The mode was originally set when the DOM loaded using the following code:
+
+```javascript
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+gameMode = urlParams.get("mode");
+```
+
+### Resolution
+To address this issue, a new function setGameMode() was introduced. This function properly sets the game mode, even if the mode parameter is missing from the URL. The function is designed to handle scenarios where the mode is not explicitly provided. Here's the implementation:
+
+```javascript
+function setGameMode() {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    gameMode = urlParams.get("mode");
+    if (!gameMode) {
+        gameMode = "freeplay";
+    }
+    console.log(gameMode);
+    return gameMode;
+}
+```
+By using setGameMode() once the DOM has loaded, users can now access and interact with all functions, regardless how they arrive at the page.
+
 
 ## Unfixed Bugs
 
