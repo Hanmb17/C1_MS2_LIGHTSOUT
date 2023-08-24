@@ -3,8 +3,6 @@
 export function loadLevel() {
     const levelInfo = {
         levelPicURL: "https://hanmb17.github.io/C1_MS2_LIGHTSOUT/assets/images/earth_lumia.svg",
-        type: 'level',
-        levelTitle: "Eternal Luminous Hill",
         levelNo:"3",
         orbPic:"https://hanmb17.github.io/C1_MS2_LIGHTSOUT/assets/images/earth_orb.svg",
         element:"Earth",
@@ -19,9 +17,9 @@ export function loadLevel() {
     lightsToBeTurnedOn(startingLights);
 
     // Add the "water" class to all the lights
-    var allLights = document.querySelectorAll('.light');
+    let allLights = document.querySelectorAll(".light");
     allLights.forEach(function(light) {
-        light.classList.add('earth');
+        light.classList.add("earth");
     });
 
     // Starting number of hints
@@ -30,10 +28,9 @@ export function loadLevel() {
     //Set countdown timer in secounds
     countDownTime = 210;
 
-     // Set up winning modal
+     // Add info for winning modal
      winningInfo = {
-        type: 'winning',
-        description: "Earth Lumia",
-        time: "30 seconds"
+        type: "winning",
+        description: "Earth Lumia"
     };
 }

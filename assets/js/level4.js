@@ -17,9 +17,9 @@ export function loadLevel() {
     lightsToBeTurnedOn(startingLights);
 
     // Add the "water" class to all the lights
-    var allLights = document.querySelectorAll('.light');
+    let allLights = document.querySelectorAll(".light");
     allLights.forEach(function(light) {
-        light.classList.add('air');
+        light.classList.add("air");
     });
 
     // Starting number of hints
@@ -31,7 +31,7 @@ export function loadLevel() {
 
      // Add info for winning modal
     winningInfo = {
-        type: 'winning',
+        type: "winning",
         description: "Air Lumia"
     };
 }

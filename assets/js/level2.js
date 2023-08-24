@@ -17,9 +17,9 @@ export function loadLevel() {
     lightsToBeTurnedOn(startingLights);
 
     // Add the "water" class to all the lights
-    var allLights = document.querySelectorAll('.light');
+    let allLights = document.querySelectorAll(".light");
     allLights.forEach(function(light) {
-        light.classList.add('water');
+        light.classList.add("water");
     });
 
      // Starting number of hints
@@ -30,7 +30,7 @@ export function loadLevel() {
     countDownTime = 180;
      // Add info for winning modal
     winningInfo = {
-        type: 'winning',
+        type: "winning",
         description: "Water Lumia"
     };
 }

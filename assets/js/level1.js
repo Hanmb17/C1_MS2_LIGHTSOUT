@@ -9,7 +9,7 @@ export function loadLevel() {
         element:"Fire",
         description: "Alaric has captured the Fire Lumina to harness the power of fire! Crack Alaric's puzzle to free the Lumina. To help you crack his tricky puzzle, you have 3 hints, but you only have 2 mins and 30s to solve it."
     };
-    // startingModalForCurrentLevel(levelInfo);
+    // Show starting modal
     myModal.show();
     // Set the starting lights for level 1
     gridSize = 3;
@@ -23,9 +23,9 @@ export function loadLevel() {
     updateNumberOfHints(startingHints);
 
     // Add the "fire" class to all the lights
-    let allLights = document.querySelectorAll('.light');
+    let allLights = document.querySelectorAll(".light");
     allLights.forEach(function(light) {
-        light.classList.add('fire');
+        light.classList.add("fire");
     });
 
     // Set Countdown time for the level
@@ -33,7 +33,7 @@ export function loadLevel() {
 
     // Add info for winning modal
     winningInfo = {
-        type: 'winning',
+        type: "winning",
         description: "Fire Lumia"
     };
 }
