@@ -12,7 +12,7 @@ export function loadLevel() {
     startingModalForCurrentLevel(levelInfo);
 
     // Set the starting lights for level 1
-    gridSize === 3;
+    gridSize = 3;
     setUpGrid();
     
     startingLights = [1, 3, 4, 5, 6];
