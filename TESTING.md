@@ -110,9 +110,12 @@ Due to this bug, the countdown functionality becomes unreliable, potentially cau
 #### Root Cause:
 The root cause of this bug is the failure to clear the interval before starting the countdown timer.
 #### Resolution:
-by adding this line if (countDown) {
+by adding this line if
+```javascript
+ (countDown) {
     clear interval(countDown);
   }
+```
 This ensures countdown interval is always reset before a new countdown is started.
 
 ## Bug: Incomplete Functionality in `game.html` Page Without Mode Reset
