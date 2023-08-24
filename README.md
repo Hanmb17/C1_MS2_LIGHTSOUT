@@ -193,6 +193,88 @@ Roboto was the clear choice for the game's UI and text. Its modern, easy-to-read
 - [WAVE Web Accessibility Evaluation Tool](https://wave.webaim.org/)
 
 ## Features
+The website has two main pages. The homepage and game page are easily accessible between each other by choosing a game mode from the game menu homepage and selecting the 'home' icon on the game page, the logo in the header or the home button in the modal. There is an additional page; A 404 error page, which will be loaded if the user navigates to an invalid address.
+
+### Existing Features
+
+#### Page header 
+This appears on all pages and features the game's logo and name. The user is also redirected to the home page when clicked.
+
+#### Introduction section.
+Contains the back story of the game to help the user emerge themselves in the back story of the game.
+
+#### Home page game menu
+There are three buttons for the user to choose from; play game, how to play and freeplay. Giving the user a choice a choice of how they want to play.
+- Play Button - is a level-based game which follows the main theme of the game.
+- How to Play - displays the instructions modal.
+- Freeplay - allows the user to control their game size and hints.
+
+#### How to play section
+This feature is a static background pop-up modal from Bootstrap 5.3 that gives the user detailed instructions on how to play the Elemental Lumia game.
+It can be accessed on the homepage by selecting the 'How to Play' button below the play button.
+When selected, the instructions and rules will pop up as an overlay to the page's main content.
+When the user is finished with the instructions they can easily close the modal. This can be achieved by clicking anywhere on the screen, by clicking the 'X' to close button or the button labelled closed.
+This can also be accessed on the games page when opening the game's toggle menu. It will pause the game countdown or timer depending on the play mode.
+
+#### The Game Page
+When the page first loads a modal is dysplayed depending on the mode the user selects from the home page.
+
+#### Play mode - modal
+- This modal contains all the information the user needs to know before they play this level.
+- It displays the level number so the user knows what level they are about to start.
+- They can close the modal by clicking the play button and begin to play the level.
+- Alternatively, they can navigate to the home page by clicking the home button
+
+#### The Freeplay set up a model
+- This allows the user to pick the grid size they want and the number of hints they want to pay with.
+- The play button allows the user to play the game with their options as it loads the game they have picked once clicked.
+
+- This modal is reloaded if the user completes the puzzle letting them know how many moves and time they took.
+
+#### Heads up display (HUD) Elements
+- This contains the Move counter which lets the user know how many moves they have made.
+- the timer: In the level play, this acts as a countdown to the end of the game,  in the free play mode, this acts as a timer timing how long the user has been playing
+
+#### Game Grid
+- The grid is different sizes depending on what level the user is playing or what size they have chosen to play in free-play mode. 
+
+- All grid tiles are clickable and when clicked, they either produce a new orb or remove an orb in the play mode, or light up or turn the light off in the freeplay mdoe. The status of the adjective tiles is also affected. 
+
+#### In game menu bar
+The menu contains the main game controls.
+
+Hint button 
+- Features a display section that allows the user to see how many hints they have.
+- On click it will reveal a hint to solve the current state of the board by the appearance of a flashing yellow light.
+- When activated it is deactivated until the original hint offered has been played this helps anciently pressing it twice and missing a hint.
+- It also checks how many hints the player has and updates the display accordingly.
+- If the user has no hints left or has chosen to play with no hints it will be deactivated. 
+
+Reset button
+-  This allows the user to restart the current level/game setup
+
+Sub-menu button
+This toggles open to reveal more options for the game.
+It contains a home button that directs the user home and an instructions button that opens up the instructions modal.
+
+#### Level play winning modal
+This is the starting modal that reappears congratulating the user for passing the level and letting them know how many moves and how much time the took to complete the level. 
+
+The button label is changed to next level this allows the user to continue the game or they have the option to click the home button if they want to return to the home page.
+
+#### Level play winning modal
+This is the starting modal that reappears letting the user know they have failed the puzzle but gives them the chance to replay the level.
+
+#### 404 page
+This page will be displayed if the user tries to navigate to a page that doesn't exist.
+The user can select the homepage link to direct them back to the home page.
+
+#### Footer
+Seen on all pages and allows the user to discover the game's social media handles.
+
+
+
+
 
 
 ## Testing
