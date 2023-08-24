@@ -29,6 +29,16 @@ When I ran a test on my URL errors and warnings due to Bootstrap where present. 
 
 I have used the recommended [JShint Validator](https://jshint.com) to validate all of my JS files.
 
+| File          | Screenshot                                                         | Notes                                                            |
+| ------------- | ------------------------------------------------------------------ | ---------------------------------------------------------------- |
+| game.js       | ![screenshot]()       | Pass: No Errors  |
+| level1.js | ![screenshot]() | Pass: No Errors                                                  |
+| level2.js  | ![screenshot]()  | Pass: No Errors. Warnings for read only variables - this is correct as they are used in the game.js once this sript is imported.                                                 |
+| level3.js | ![screenshot]( )| Pass: No Errors. Warnings for read only variables - this is correct as they are used in the game.js once this sript is imported.                                                   |
+| level4.js | ![screenshot]( )| Pass: No Errors. Warnings for read only variables - this is correct as they are used in the game.js once this sript is imported.                                                   |
+
+
+
 
 ## Browser Compatibility
 
