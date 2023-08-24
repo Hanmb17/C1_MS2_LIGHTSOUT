@@ -43,7 +43,7 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 ## Browser Compatibility
 
 I've tested my deployed project on multiple browsers to check for compatibility issues.
- Browser | Screenshot                                                                | Screenshot                                                                | Notes                 |
+| Browser | Screenshot                                                                | Screenshot                                                                | Notes                 |
 | ------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | --------------------- |
 | Chrome  | ![screenshot]()  | ![screenshot]()  | Works as expected     |
 | Firefox | ![screenshot]() | ![screenshot]() | Minor CSS differences |
@@ -54,7 +54,7 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 ## Responsiveness
 
 I've tested my deployed project on multiple devices to check for responsiveness issues.
- Device                   | Screenshot                                                          | Screenshot                                                          |  Notes             |
+| Device                   | Screenshot                                                          | Screenshot                                                          |  Notes             |
 | ------------------------ | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ---------------------------------------------------------------------- | ----------------- |
 | Mobile (DevTools)        | ![screenshot]()   | ![screenshot]()   |   Works as expected |
 | Tablet (DevTools)        | ![screenshot]()   | ![screenshot]()   |  Works as expected |
@@ -85,12 +85,48 @@ Defensive programming was manually tested with the below user acceptance testing
 
 | Page         | User Action                                   | Expected Result                                                                | Pass/Fail | Comments |
 | ------------ | --------------------------------------------- | ------------------------------------------------------------------------------ | --------- | -------- |
+| Home Page    |                                               |                                                                                |           |          |
+|              | Click on Play Button                          | Redirection to game page with play mode set                                          | Pass      |          |
+|              | Click on How to play button                        | instructions modal opens                                          | Pass      |          |
+|              | Click on freeplay button                        | Redirection to game page with freeplay mode set   | Pass      |          |
+|              | Click on Modal close button                  | Modal closes                                                                   | Pass      |          |
+|              | Click on Modal 'X'                            | Modal closes                                                                  | Pass      |          |
+|              | Click on Facebook logo                        | Facebook website opens in a new tab                                            | Pass      |          |
+|              | Click on Instagram logo                       | Instagram website opens in a new tab                                           | Pass      |          |
+|              | Click on Twitter logo                         | Twitter website opens in a new tab                                              | Pass      |          |
+|              | Click on Envelope Icon                        | Opens up to send an email                                             | Pass      |          |
+| Game Page    |                                               |                                                                                |           |          |
+|              | Click on game logo                            | Redirection to Home Page                                                       | Pass      |          |
+| Play Mode    | Click on Play Button on modal                 | Starts Level                                                              | Pass      |          |
+|              | Click on Hint Button                          | One grid space flashes and hint button is disabled                         | Pass      |          |
+|              | Click on Reset Button                      | Resets the Game                                                                | Pass      |          |
+|              | Click on Grid Space                         |Toggle state and adjecent grid spaces states                                | Pass      |          |
+|              | Click on flashing Light - If hint is present    | Space stops flashing and button reactivated if the user has more hints       | Pass      |          |
+|              | Click on submenu button                      | Menu opens and pasues the timer                                           | Pass      |          |
+|              | Click on question mark                       | Opens instructions modal                                          | Pass      |          |
+|              | Click on home button                       | Redirection to home page                                                  | Pass      |          |
+| Free play modal | Click on grid size radio buttons          | Selects grid size         | Pass      |          |
+|  Free play modal   | Click on hint selection buttons               | User picks hints                                        | Pass      |          |
+|  Free play modal   | Click Play button   | Loads the selected gridd size and number of hints        | Pass      |          |
+|              | Click on Facebook logo                        | Facebook website opens in a new tab                                            | Pass      |          |
+|              | Click on Instagram logo                       | Instagram website opens in a new tab                                           | Pass      |          |
+|              | Click on Twitter logo                         | Twitter website opens in a new tab                                              | Pass      |          |
+|              | Click on Envelope Icon                        | Opens up to send an email                                             | Pass      |          |
 
 ## User Story Testing
 
 | User Story                                                                                                                                                                                                                            | Screenshot                                        |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
-
+| As a first-time user, I want to understand how Elemental Lumina differs from the classic Lights Out game.                                                                              | ![screenshot]() |
+| As a first-time user, I want to learn how the lights-out pattern is connected to collecting elemental orbs.                                                                                                                    | ![screenshot]() |
+| As a new site user, I would like to have clear and intuitive controls, so that I can navigate the game effortlessly.                                                                                                                  | ![screenshot]() |
+| As a first-time user, I want to be introduced to the gradual challenge increase as I progress through levels.                                                                                                 | ![screenshot]() |
+| As a first-time user, I want to experience the satisfaction of completing levels and rescuing Lumina.                                                                                                                                         | ![screenshot]() |
+| As a first-time user, I want to explore the free-play mode and customise my gameplay experience.                                                  | ![screenshot]() |
+| As a returning user, I want to dive back into the challenging world of Elemental Lumina.                                             | ![screenshot]() |
+| As a returning user, I want to test my skills on increasingly difficult levels.                          | ![screenshot]() |
+| As a returning user, I want to relive the excitement of rescuing Lumina and progressing through the story.. | ![screenshot]() |
+| As a returning user, I want to experiment with different grid sizes and hint options in the free-play mode.                                                                          | ![screenshot]() |
 
 ## Automated Testing
 I haven't used automated testing as the project is only a small one however I would like to add it to the feature as the game grows and more features/levels are introduced. I would look a using JEST.
@@ -110,9 +146,9 @@ Due to this bug, the countdown functionality becomes unreliable, potentially cau
 #### Root Cause:
 The root cause of this bug is the failure to clear the interval before starting the countdown timer.
 #### Resolution:
-by adding this line if
+by adding this:
 ```javascript
- (countDown) {
+ if (countDown) {
     clear interval(countDown);
   }
 ```
