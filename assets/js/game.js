@@ -198,6 +198,9 @@ function initLightsOutGame() {
 			finalModal();
 		}
 	} else {
+        // Update the level number on game page
+	    const levelNumberElement = document.querySelector(".level-number");
+	    levelNumberElement.textContent = "Freeplay Mode";
 		let freePlayModal = new bootstrap.Modal(freeplaySetUpModal);
 		freePlayModal.show();
 	}
@@ -341,7 +344,7 @@ function checkWin() {
 // Modal functions
 // Starting level Modal - level play 
 function startingModalForCurrentLevel(levelInfo) {
-	// Update ithe level number on game page
+	// Update the level number on game page
 	const levelNumberElement = document.querySelector(".level-number");
 	levelNumberElement.textContent = `Level ${levelInfo.levelNo}`;
 	// populate the level modal and load/
