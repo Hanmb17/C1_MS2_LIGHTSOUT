@@ -11,7 +11,7 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 | Page         | W3C URL                                                                                                 | Screenshot                                                             | Notes                               |
 | ------------ | ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------- | ----------------------------------- |
 | Home         | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fhanmb17.github.io%2FC1_MS2_LIGHTSOUT%2Findex.html)        | ![screenshot](docs/vaildation/index_html_checker.png)         | 1 warning. I have left the aria-label in as this div opens the instructions modal and increases accessibility for users.                     |
-| Game         | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fhanmb17.github.io%2FC1_MS2_LIGHTSOUT%2Fgame.html)         | ![screenshot](docs/vaildation/game_html _page.png)         | 4 warnings. I have left the aria-labels increases accessibility for users.   |
+| Game         | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fhanmb17.github.io%2FC1_MS2_LIGHTSOUT%2Fgame.html)         | ![screenshot](docs/vaildation/game_html_page.png)         | 4 warnings. I have left the aria-labels increases accessibility for users.   |
 | 404          | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fhanmb17.github.io%2FC1_MS2_LIGHTSOUT%2F404.html)          | ![screenshot](docs/vaildation/404_page.png)          | 1 warning section lacks heading |                  |
 
 
@@ -198,4 +198,6 @@ By using setGameMode() once the DOM has loaded, users can now access and interac
 
 ## Unfixed Bugs
 
-There are no remaining bugs that I am aware of.
+Currently, there is a bug where the timer stops when the sub-menu is opened in the game. However, the player can continue to press the lights, hints, and reset buttons without the menu closing and restarting.
+
+This bug would be easy to fix - by simply adding a script to ensure the sub-menu closes if the user clicks any of the elements. Unfortunately, I have run out of time, so I was unable to fix this issue.

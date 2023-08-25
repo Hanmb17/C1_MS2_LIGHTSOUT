@@ -9,7 +9,7 @@ export function loadLevel() {
 		orbPic: "https://hanmb17.github.io/C1_MS2_LIGHTSOUT/assets/images/earth_orb.svg",
 		element: "Earth",
 		description: "Alaric has captured the Earth Lumina to harness the power of earth!Crack the Alarics puzzle to free the Lumina. To help you crack his tricky puzzle, here is 3 more hints,  but you only have 3 mins and 30s to solve it."
-	}
+	};
 	startingModalForCurrentLevel(levelInfo);
 
 	// Set the grid size and starting lights for level 3
