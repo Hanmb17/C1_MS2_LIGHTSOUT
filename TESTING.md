@@ -44,11 +44,11 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 
 I've tested my deployed project on multiple browsers to check for compatibility issues.
 | Browser | Screenshot                                                                | Screenshot                                                                | Notes                 |
-| ------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | ---------------------------------------------------------------------------- | --------------------- |
-| Chrome  | ![screenshot]()  | ![screenshot]()  | Works as expected     |
-| Firefox | ![screenshot]() | ![screenshot]() | Minor CSS differences |
-| Edge    | ![screenshot]()    | ![screenshot]()     | Works as expected     |
-| Opera   | ![screenshot]()   | ![screenshot]()    | Works as expected     |
+| ------- | ------------------------------------------------------------------------- | ------------------------------------------------------------------------- | --------------------- |
+| Chrome  | ![screenshot](docs/testing/chrome_home_test.png)  | ![screenshot](docs/testing/chrome_game_test.png)  | Works as expected     |
+| Firefox | ![screenshot](docs/testing/edge_home_test.png) | ![screenshot](docs/testing/firefox_game_test.png) | Works as expected   |
+| Edge    | ![screenshot](docs/testing/edge_home_test.png)    | ![screenshot](docs/testing/edge_game_test.png)     | Works as expected     |
+| Opera   | ![screenshot](docs/testing/oprea_home_test.png)   | ![screenshot](docs/testing/oprea_game_test.png)    | Works as expected     |
 
 
 ## Responsiveness
