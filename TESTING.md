@@ -38,6 +38,15 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 | level4.js | ![screenshot]( docs/vaildation/level4_jshint.png| Pass: No Errors. Warnings for read only variables - this is correct as they are used in the game.js once this sript is imported.                                                   |
 
 
+### Accessibility
+
+I have used the recommended [WAVE](https://wave.webaim.org/) to check my pages
+
+| Page          | Screenshot                                                         | Notes                                                            |
+| ------------- | ------------------------------------------------------------------ | ---------------------------------------------------------------- |
+| Home     | ![screenshot](docs/accessibility/wave_test_404_page.PNG)       | Pass: No Errors  |
+| Gsme| ![screenshot](docs/accessibility/wave_test_play_mode.PNG) | Pass: No Errors.  3 Warnings that I would look to fix in the future.
+| 404  | ![screenshot](docs/accessibility/wave_test_404_page.PNG)  | Pass: No Errors.  1 Warning that I would look to fix in the future.                                                |                                                   
 
 
 ## Browser Compatibility
@@ -60,7 +69,7 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 | Tablet (DevTools)        | ![screenshot](docs/reponsive/tablet_home_page.png)   | ![screenshot](docs/reponsive/table_game_page.png)   |  Works as expected |
 | Desktop                  | ![screenshot](docs/reponsive/desktop_home_page.png)      | ![screenshot](docs/reponsive/desktop_game_page.png)      |  Works as expected |
 | Google Pixel 7          | ![screenshot]() | ![screenshot]()  | Works as expected |
-| Iphone 13        | ![screenshot](docs/reponsive/iphone13_home_page.PNG)    | ![screenshot](docs/reponsive/iphone13_game_page.PNG)    Works as expected |
+| Iphone 13        | ![screenshot](docs/reponsive/iphone8_home_page.PNG)    | ![screenshot](docs/reponsive/iphone13_game_page.PNG)    Works as expected |
 | Iphone 8       | ![screenshot](/workspaces/C1_MS2_LIGHTSOUT/docs/reponsive/iphone8_home-page.PNG)    | ![screenshot](docs/reponsive/iphone8_game_page.PNG)    Works as expected |
 
 
