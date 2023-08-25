@@ -126,7 +126,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | As a returning user, I want to dive back into the challenging world of Elemental Lumina.                                             | ![screenshot](docs/user/starting_modal.png) |
 | As a returning user, I want to test my skills on increasingly difficult levels.                          | ![screenshot](docs/user/level4_grid.png) |
 | As a returning user, I want to relive the excitement of rescuing Lumina and progressing through the story.. | ![screenshot](docs/user/wining_modal.png) ![screenshot](docs/user/final_modal.png)  |
-| As a returning user, I want to experiment with different grid sizes and hint options in the free-play mode.                                                                          | ![screenshot]() |
+| As a returning user, I want to experiment with different grid sizes and hint options in the free-play mode.                                                                          | ![screenshot](docs/user/freeplay_mode.png) ![screenshot](docs/user/freeplay_6grid.png) |
 
 ## Automated Testing
 I haven't used automated testing as the project is only a small one however I would like to add it to the feature as the game grows and more features/levels are introduced. I would look a using JEST.
