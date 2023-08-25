@@ -22,6 +22,7 @@ let timerStartTime;
 let countDown;
 let availableHints = 0;
 let isModalShowing = false;
+let isSubMenuOpen = false;
 
 // Bootstrap Modal
 let myModal = new bootstrap.Modal(document.getElementById("staticBackdrop"));
@@ -71,18 +72,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	// Add an event listener to respond to button clicks on the game page targeting the lights
 	document.addEventListener("click", function(event) {
-		let target = event.target;
-		if (target.classList.contains("light")) {
-			toggleLights(target);
-			let lightNumber = parseInt(target.getAttribute("id"));
-			clickedLights.push(lightNumber);
-			if (target.classList.contains("flashing")) {
-				stopFlashing(target);
-			}
-			moveCount++;
-			document.getElementById("move-counter").textContent = moveCount;
-			checkWin();
-		}
+        if (!isSubMenuOpen) {
+            let target = event.target;
+		    if (target.classList.contains("light")) {
+			    toggleLights(target);
+			    let lightNumber = parseInt(target.getAttribute("id"));
+			    clickedLights.push(lightNumber);
+			    if (target.classList.contains("flashing")) {
+				    stopFlashing(target);
+			    }
+			    moveCount++;
+			    document.getElementById("move-counter").textContent = moveCount;
+			    checkWin();
+		    }
+        }
 	});
 
 	// Add event listener to customhints radio to handle button state change
@@ -117,10 +120,12 @@ document.addEventListener("DOMContentLoaded", function() {
 			document.getElementById("toggle-menu").classList.toggle("expanded");
 			if (this.classList.contains("expanded")) {
 				if (!isModalShowing) {
+                    isSubMenuOpen = true;
 					pauseCountdownTimer();
 				}
 			} else {
 				if (!isModalShowing) {
+                    isSubMenuOpen = false;
 					resumeCountdownTimer();
 				}
 			}
@@ -140,6 +145,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	// Add event listener for when the instructions modal is hidden
 	instructionsModal.addEventListener("hidden.bs.modal", function() {
 		isModalShowing = false;
+        isSubMenuOpen = false;
 		resumeCountdownTimer();
 	});
 
@@ -147,26 +153,28 @@ document.addEventListener("DOMContentLoaded", function() {
 	document.getElementById("reset-button").addEventListener("click", resetGame);
 	// Add event listener to the hint button
 	hintButton.addEventListener("click", function() {
-		if (!this.classList.contains("deactivated-button")) {
-			if (availableHints > 0 || availableHints === "infinite") {
-				if (availableHints !== "infinite") {
-					// Decrement the available hints count
-					availableHints--;
-					document.getElementById("hints-count").textContent = availableHints;
-				}
-				let currentSolution = solution();
-				// Check if the currentSolution is not empty
-				if (currentSolution.length > 0) {
-					// Randomly select a number from the currentSolution
-					let randomIndex = Math.floor(Math.random() * currentSolution.length);
-					let selectedNumber = currentSolution[randomIndex];
-					let light = document.getElementById(selectedNumber.toString());
-					// Add the flashing class to the selected light
-					light.classList.add("flashing");
-					// Disable the hint button to prevent the user cicking it again
-					hintButton.classList.add("deactivated-button");
-				}
-			}
+        if (!isSubMenuOpen) {
+		    if (!this.classList.contains("deactivated-button")) {
+			    if (availableHints > 0 || availableHints === "infinite") {
+				    if (availableHints !== "infinite") {
+					    // Decrement the available hints count
+					    availableHints--;
+					    document.getElementById("hints-count").textContent = availableHints;
+				    }
+				    let currentSolution = solution();
+				    // Check if the currentSolution is not empty
+				    if (currentSolution.length > 0) {
+					    // Randomly select a number from the currentSolution
+					    let randomIndex = Math.floor(Math.random() * currentSolution.length);
+					    let selectedNumber = currentSolution[randomIndex];
+					    let light = document.getElementById(selectedNumber.toString());
+					    // Add the flashing class to the selected light
+					    light.classList.add("flashing");
+					    // Disable the hint button to prevent the user cicking it again
+					    hintButton.classList.add("deactivated-button");
+				    }
+			    }
+            }
 		}
 	});
 });
@@ -370,6 +378,7 @@ function winningModal(winningInfo) {
 	myModal.show();
 }
 
+// Display failed modal
 function failedModal() {
 	const modalBody = staticBackdropModal.querySelector(".modal-body");
 	modalBody.querySelectorAll(".failed").forEach((element) => element.classList.remove("d-none"));
@@ -591,21 +600,22 @@ function updateNumberOfHints(startingHints) {
 
 // reset game function
 function resetGame() {
-	var allLights = document.querySelectorAll(".light");
-	allLights.forEach(function(light) {
-		light.classList.remove("on");
-		stopFlashing(light); // Pass the light element to stopFlashing()
-	});
-	// Reset move counter
-	moveCount = 0;
-	document.getElementById("move-counter").textContent = moveCount;
-	// Use startingArray to reset the lights to their initial pattern
-	lightsToBeTurnedOn(startingLights);
-	// Reset clicked buttons
-	clickedLights = [];
-	resetCountDownTimer();
-	resetHints();
-
+    if (!isSubMenuOpen) {
+	    var allLights = document.querySelectorAll(".light");
+	    allLights.forEach(function(light) {
+		    light.classList.remove("on");
+		    stopFlashing(light); // Pass the light element to stopFlashing()
+	    });
+	    // Reset move counter
+	    moveCount = 0;
+	    document.getElementById("move-counter").textContent = moveCount;
+	    // Use startingArray to reset the lights to their initial pattern
+	    lightsToBeTurnedOn(startingLights);
+	    // Reset clicked buttons
+	    clickedLights = [];
+	    resetCountDownTimer();
+	    resetHints();
+    }
 }
 
 function resetHints() {
