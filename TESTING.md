@@ -154,7 +154,7 @@ by adding this:
 ```
 This ensures countdown interval is always reset before a new countdown is started.
 
-## Bug: Incomplete Functionality in `game.html` Page Without Mode Reset
+## Bug Report 2: Incomplete Functionality in `game.html` Page Without Mode Reset
 
 ### Summary
 
@@ -195,9 +195,39 @@ function setGameMode() {
 ```
 By using setGameMode() once the DOM has loaded, users can now access and interact with all functions, regardless how they arrive at the page.
 
+## Bug Report 3: User can interact with the game when sub-menu is displayed
+
+**Summary:**  
+During testing and usage of the game.html page, it was discovered that users could still play the game when the sub-menu was displayed even witht the timer stopped. The root cause of this issue was traced to the handling of the submenu, which was not accounted for in various event listeners.
+
+**Expected Behavior:**  
+All game functions should not operate when sub menu is displayed.
+
+**Observed Behavior:**  
+When users where able to play the game when the sub menu was displayed snd click all game functions.
+
+**Root Cause:**  
+The sub menu display had not been taken into consideration when running the game event handlers
+
+### Resolution
+To address this issue, a new variable is isSubMenuOpen is checked before firing the event hander codes for the game functions was introduced. Here's the implementation:
+
+```javascript
+
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    gameMode = urlParams.get("mode");
+    if (!gameMode) {
+        gameMode = "freeplay";
+    }
+    console.log(gameMode);
+    return gameMode;
+}
+```
+By using setGameMode() once the DOM has loaded, users can now access and interact with all functions, regardless how they arrive at the page.
+
+
 
 ## Unfixed Bugs
 
-Currently, there is a bug where the timer stops when the sub-menu is opened in the game. However, the player can continue to press the lights, hints, and reset buttons without the menu closing and restarting.
-
-This bug would be easy to fix - by simply adding a script to ensure the sub-menu closes if the user clicks any of the elements. Unfortunately, I have run out of time, so I was unable to fix this issue.
+Currently, I have been through the game and fixed all the bugs I have found.
