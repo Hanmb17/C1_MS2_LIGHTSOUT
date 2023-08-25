@@ -207,8 +207,12 @@ The website has two main pages. The homepage and game page are easily accessible
 #### Page header 
 This appears on all pages and features the game's logo and name. The user is also redirected to the home page when clicked.
 
+![screenshot](docs/features/header.png)
+
 #### Introduction section.
 Contains the back story of the game to help the user emerge themselves in the back story of the game.
+
+![screenshot](docs/features/intro_section.png)
 
 #### Home page game menu
 There are three buttons for the user to choose from; play game, how to play and freeplay. Giving the user a choice a choice of how they want to play.
@@ -216,12 +220,17 @@ There are three buttons for the user to choose from; play game, how to play and 
 - How to Play - displays the instructions modal.
 - Freeplay - allows the user to control their game size and hints.
 
+![screenshot](docs/features/game_menu.png)
+
 #### How to play section
 This feature is a static background pop-up modal from Bootstrap 5.3 that gives the user detailed instructions on how to play the Elemental Lumia game.
 It can be accessed on the homepage by selecting the 'How to Play' button below the play button.
 When selected, the instructions and rules will pop up as an overlay to the page's main content.
 When the user is finished with the instructions they can easily close the modal. This can be achieved by clicking anywhere on the screen, by clicking the 'X' to close button or the button labelled closed.
 This can also be accessed on the games page when opening the game's toggle menu. It will pause the game countdown or timer depending on the play mode.
+
+![screenshot](docs/features/instructions_modal.png)
+
 
 #### The Game Page
 When the page first loads a modal is dysplayed depending on the mode the user selects from the home page.
@@ -232,23 +241,34 @@ When the page first loads a modal is dysplayed depending on the mode the user se
 - They can close the modal by clicking the play button and begin to play the level.
 - Alternatively, they can navigate to the home page by clicking the home button
 
+![screenshot](docs/features/starting_modal.png)
+
+
 #### The Freeplay set up a model
 - This allows the user to pick the grid size they want and the number of hints they want to pay with.
 - The play button allows the user to play the game with their options as it loads the game they have picked once clicked.
 
 - This modal is reloaded if the user completes the puzzle letting them know how many moves and time they took.
 
+![screenshot](docs/features/freeplay_mode.png)
+
 #### Heads up display (HUD) Elements
 - This contains the Move counter which lets the user know how many moves they have made.
 - the timer: In the level play, this acts as a countdown to the end of the game,  in the free play mode, this acts as a timer timing how long the user has been playing
+
+![screenshot](docs/features/hud.png)
 
 #### Game Grid
 - The grid is different sizes depending on what level the user is playing or what size they have chosen to play in free-play mode. 
 
 - All grid tiles are clickable and when clicked, they either produce a new orb or remove an orb in the play mode, or light up or turn the light off in the freeplay mdoe. The status of the adjective tiles is also affected. 
 
+![screenshot](docs/features/game_grid.png)
+
 #### In game menu bar
 The menu contains the main game controls.
+
+![screenshot](docs/features/in_game_menu.png)
 
 Hint button 
 - Features a display section that allows the user to see how many hints they have.
@@ -264,20 +284,32 @@ Sub-menu button
 This toggles open to reveal more options for the game.
 It contains a home button that directs the user home and an instructions button that opens up the instructions modal.
 
+![screenshot](docs/features/sub_menu.png)
+
 #### Level play winning modal
 This is the starting modal that reappears congratulating the user for passing the level and letting them know how many moves and how much time the took to complete the level. 
 
+![screenshot](docs/features/wining_modal.png)
+
 The button label is changed to next level this allows the user to continue the game or they have the option to click the home button if they want to return to the home page.
+
+![screenshot](docs/features/new_level_modal.png)
 
 #### Level play winning modal
 This is the starting modal that reappears letting the user know they have failed the puzzle but gives them the chance to replay the level.
+
+![screenshot](docs/features/failed_modal.png)
 
 #### 404 page
 This page will be displayed if the user tries to navigate to a page that doesn't exist.
 The user can select the homepage link to direct them back to the home page.
 
+![screenshot](docs/features/404_page.png)
+
 #### Footer
 Seen on all pages and allows the user to discover the game's social media handles and contact them via email
+
+![screenshot](docs/features/footer.png)
 
 ### Future Features
 
@@ -359,3 +391,4 @@ I would like to take the opportunity to thank;
 - Iris Smok from Code Institute, my Cohort facilitator, for her wonderful advice during our weekly stand-ups.
 - My partner, Pete Williams, who kept me fed and watered and helped with testing.
 - My work colleagues at EWE Building Plastics, who tested the site and offered great feedback
+- Doug for my cohort for helping me with the testing md layout
