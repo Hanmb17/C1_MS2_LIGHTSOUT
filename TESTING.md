@@ -35,7 +35,7 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 | level1.js | ![screenshot](docs/vaildation/level1_jshint.png) | Pass: No Errors.  Warnings for read only variables - this is correct as they are used in the game.js                                                  |
 | level2.js  | ![screenshot](docs/vaildation/level2_jshint.png)  | Pass: No Errors. Warnings for read only variables - this is correct as they are used in the game.js once this sript is imported.                                                 |
 | level3.js | ![screenshot](docs/vaildation/level3_jshint.png)| Pass: No Errors. Warnings for read only variables - this is correct as they are used in the game.js once this sript is imported.                                                   |
-| level4.js | ![screenshot]( docs/vaildation/level4_jshint.png| Pass: No Errors. Warnings for read only variables - this is correct as they are used in the game.js once this sript is imported.                                                   |
+| level4.js | ![screenshot](docs/vaildation/level4_jshint.png)| Pass: No Errors. Warnings for read only variables - this is correct as they are used in the game.js once this sript is imported.                                                   |
 
 
 ### Accessibility
