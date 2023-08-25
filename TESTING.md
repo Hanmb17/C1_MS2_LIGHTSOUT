@@ -72,12 +72,12 @@ I've tested my deployed project using the Lighthouse Audit tool to check for any
 
 | Page    | Size    | Screenshot                                                           | Notes               |
 | ------- | ------- | -------------------------------------------------------------------- | ------------------- |
-| Home    | Mobile  | ![screenshot]()     | |
-| Home    | Desktop | ![screenshot]()    |  |
-| Game - Play Mode   | Mobile  | ![screenshot]()     |  |
-| Game - Play Mode   | Desktop | ![screenshot]()    |  |
-| Game - Freeplay | Mobile  | ![screenshot]()  |    |
-| Game - Freeplay  | Desktop | ![screenshot]()|    |
+| Home    | Mobile  | ![screenshot](docs/lighthouse/home_page_mobile.png)     | |
+| Home    | Desktop | ![screenshot](docs/lighthouse/home_page_desktop.png)    |  |
+| Game - Play Mode   | Mobile  | ![screenshot](docs/lighthouse/play_mobile.png)     |  |
+| Game - Play Mode   | Desktop | ![screenshot](docs/lighthouse/play_desktop.png)    |  |
+| Game - Freeplay | Mobile  | ![screenshot](docs/lighthouse/freeplay_mobile.png)  |    |
+| Game - Freeplay  | Desktop | ![screenshot](docs/lighthouse/freeplay_desktop.png)|    |
 
 ## Defensive Programming
 
