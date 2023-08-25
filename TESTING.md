@@ -117,15 +117,15 @@ Defensive programming was manually tested with the below user acceptance testing
 
 | User Story                                                                                                                                                                                                                            | Screenshot                                        |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------- |
-| As a first-time user, I want to understand how Elemental Lumina differs from the classic Lights Out game.                                                                              | ![screenshot]() |
-| As a first-time user, I want to learn how the lights-out pattern is connected to collecting elemental orbs.                                                                                                                    | ![screenshot]() |
-| As a new site user, I would like to have clear and intuitive controls, so that I can navigate the game effortlessly.                                                                                                                  | ![screenshot]() |
-| As a first-time user, I want to be introduced to the gradual challenge increase as I progress through levels.                                                                                                 | ![screenshot]() |
-| As a first-time user, I want to experience the satisfaction of completing levels and rescuing Lumina.                                                                                                                                         | ![screenshot]() |
-| As a first-time user, I want to explore the free-play mode and customise my gameplay experience.                                                  | ![screenshot]() |
-| As a returning user, I want to dive back into the challenging world of Elemental Lumina.                                             | ![screenshot]() |
-| As a returning user, I want to test my skills on increasingly difficult levels.                          | ![screenshot]() |
-| As a returning user, I want to relive the excitement of rescuing Lumina and progressing through the story.. | ![screenshot]() |
+| As a first-time user, I want to understand how Elemental Lumina differs from the classic Lights Out game.                                                                              | ![screenshot](docs/user/intro_section.png) |
+| As a first-time user, I want to learn how the lights-out pattern is connected to collecting elemental orbs.                                                                                                                    | ![screenshot](docs/user/instructions_modal.png) |
+| As a new site user, I would like to have clear and intuitive controls, so that I can navigate the game effortlessly.                                                                                                                  | ![screenshot](docs/user/game_grid.png) |
+| As a first-time user, I want to be introduced to the gradual challenge increase as I progress through levels.                                                                                                 | ![screenshot](docs/user/game_grid.png)  ![screenshot](docs/user/level2_game.png) |
+| As a first-time user, I want to experience the satisfaction of completing levels and rescuing Lumina.                                                                                                                                         | ![screenshot](docs/user/wining_modal.png) |
+| As a first-time user, I want to explore the free-play mode and customise my gameplay experience.                                                  | ![screenshot](docs/user/freeplay_mode.png) |
+| As a returning user, I want to dive back into the challenging world of Elemental Lumina.                                             | ![screenshot](docs/user/starting_modal.png) |
+| As a returning user, I want to test my skills on increasingly difficult levels.                          | ![screenshot](docs/user/level4_grid.png) |
+| As a returning user, I want to relive the excitement of rescuing Lumina and progressing through the story.. | ![screenshot](docs/user/wining_modal.png) ![screenshot](docs/user/final_modal.png)  |
 | As a returning user, I want to experiment with different grid sizes and hint options in the free-play mode.                                                                          | ![screenshot]() |
 
 ## Automated Testing
