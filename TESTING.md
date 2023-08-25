@@ -33,9 +33,9 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 | ------------- | ------------------------------------------------------------------ | ---------------------------------------------------------------- |
 | game.js       | ![screenshot](docs/vaildation/game_jshint.PNG)       | Pass: No Errors  |
 | level1.js | ![screenshot](docs/vaildation/level1_jshint.png) | Pass: No Errors.  Warnings for read only variables - this is correct as they are used in the game.js                                                  |
-| level2.js  | ![screenshot](docs/vaildation/level2_jshint.png)  | Pass: No Errors. Warnings for read only variables - this is correct as they are used in the game.js once this sript is imported.                                                 |
-| level3.js | ![screenshot](docs/vaildation/level3_jshint.png)| Pass: No Errors. Warnings for read only variables - this is correct as they are used in the game.js once this sript is imported.                                                   |
-| level4.js | ![screenshot](docs/vaildation/level4_jshint.png)| Pass: No Errors. Warnings for read only variables - this is correct as they are used in the game.js once this sript is imported.                                                   |
+| level2.js  | ![screenshot](docs/vaildation/level2_jshint.png)  | Pass: No Errors. Warnings for read only variables - this is correct as they are used in the game.js once this script is imported.                                                 |
+| level3.js | ![screenshot](docs/vaildation/level3_jshint.png)| Pass: No Errors. Warnings for read only variables - this is correct as they are used in the game.js once this script is imported.                                                   |
+| level4.js | ![screenshot](docs/vaildation/level4_jshint.png)| Pass: No Errors. Warnings for read only variables - this is correct as they are used in the game.js once this script is imported.                                                   |
 
 
 ### Accessibility
@@ -44,7 +44,7 @@ I have used the recommended [WAVE](https://wave.webaim.org/) to check my pages
 
 | Page          | Screenshot                                                         | Notes                                                            |
 | ------------- | ------------------------------------------------------------------ | ---------------------------------------------------------------- |
-| Home     | ![screenshot](docs/accessibility/wave_test_404_page.PNG)       | Pass: No Errors  |
+| Home     | ![screenshot](ddocs/accessibility/wave_test_home_page.PNG)       | Pass: No Errors  |
 | Gsme| ![screenshot](docs/accessibility/wave_test_play_mode.PNG) | Pass: No Errors.  3 Warnings that I would look to fix in the future.
 | 404  | ![screenshot](docs/accessibility/wave_test_404_page.PNG)  | Pass: No Errors.  1 Warning that I would look to fix in the future.                                                |                                                   
 
@@ -138,7 +138,7 @@ Defensive programming was manually tested with the below user acceptance testing
 | As a returning user, I want to experiment with different grid sizes and hint options in the free-play mode.                                                                          | ![screenshot](docs/user/freeplay_mode.png) ![screenshot](docs/user/freeplay_6grid.png) |
 
 ## Automated Testing
-I haven't used automated testing as the project is only a small one however I would like to add it to the feature as the game grows and more features/levels are introduced. I would look a using JEST.
+I haven't used automated testing as the project is only a small one however I would like to add it to the feature as the game grows and more features/levels are introduced. I would look at using JEST.
 
 ## Bugs
 
@@ -207,31 +207,26 @@ By using setGameMode() once the DOM has loaded, users can now access and interac
 ## Bug Report 3: User can interact with the game when sub-menu is displayed
 
 **Summary:**  
-During testing and usage of the game.html page, it was discovered that users could still play the game when the sub-menu was displayed even witht the timer stopped. The root cause of this issue was traced to the handling of the submenu, which was not accounted for in various event listeners.
+During testing and usage of the game.html page, it was discovered that users could still play the game when the sub-menu was displayed even with the timer stopped. The root cause of this issue was traced to the handling of the submenu, which was not accounted for in various event listeners.
 
 **Expected Behavior:**  
 All game functions should not operate when sub menu is displayed.
 
 **Observed Behavior:**  
-When users where able to play the game when the sub menu was displayed snd click all game functions.
+When users were able to play the game when the sub menu was displayed and click all game functions.
 
 **Root Cause:**  
-The sub menu display had not been taken into consideration when running the game event handlers
+The sub menu display had not been taken into consideration when running the game event handlers.
 
 ### Resolution
 To address this issue, a new variable is isSubMenuOpen is checked before firing the event hander codes for the game functions was introduced. Here's the implementation:
 
 ```javascript
-
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    gameMode = urlParams.get("mode");
     if (!gameMode) {
         gameMode = "freeplay";
     }
     console.log(gameMode);
     return gameMode;
-}
 ```
 By using setGameMode() once the DOM has loaded, users can now access and interact with all functions, regardless how they arrive at the page.
 

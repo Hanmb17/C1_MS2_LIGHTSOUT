@@ -186,7 +186,7 @@ The site contains 3 pages, the home page, game page and 404 page
 ### Frameworks and Tools
 - [Bootstrap v5.3](https://getbootstrap.com/)
 - [Git](https://git-scm.com/)
-- [Codeanyware](https://codeanywhere.com/)
+- [Codeanywhere](https://codeanywhere.com/)
 - [GitPod](https://www.gitpod.io/)
 - [Tiny PNG](https://tinypng.com/)
 - [Balsamiq](https://balsamiq.com/wireframes/)
@@ -233,7 +233,7 @@ This can also be accessed on the games page when opening the game's toggle menu.
 
 
 #### The Game Page
-When the page first loads a modal is dysplayed depending on the mode the user selects from the home page.
+When the page first loads a modal is displayed depending on the mode the user selects from the home page.
 
 #### Play mode - modal
 - This modal contains all the information the user needs to know before they play this level.
@@ -287,7 +287,7 @@ It contains a home button that directs the user home and an instructions button 
 ![screenshot](docs/features/sub_menu.png)
 
 #### Level play winning modal
-This is the starting modal that reappears congratulating the user for passing the level and letting them know how many moves and how much time the took to complete the level. 
+This is the starting modal that reappears congratulating the user for passing the level, letting them know how many moves and how much time they took to complete the level. 
 
 ![screenshot](docs/features/wining_modal.png)
 
@@ -355,7 +355,7 @@ You can clone the repository by following these steps:
 ## Credits
 
 ### Media
-Any images not created here where created by my self. 
+Any images not created here were created by my self. 
 Images were taken from [Stock Adobe](https://stock.adobe.com/uk/) with credit to the below artists
 
 In order of appearance 
@@ -381,7 +381,7 @@ Credits for code snippets used in order of appearance
 - The JS code for the [Modals](https://getbootstrap.com/docs/5.3/components/modal//) was taken from Bootstrap v5.3 documentation snippet 
 - 404 page was built using the description on [GitHub Docs](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site)
 - The CSS for making the webpage [stretch to min height of 100vh](https://dev.to/fenok/stretching-body-to-full-viewport-height-the-missing-way-2ghd) was from a blog post on DEV by Leonid Fenko.
-- To help with JS function stuctures i used JAVASCRIPT & JQUERY  by jon Duckett
+- To help with JS function stuctures I used JAVASCRIPT & JQUERY  by jon Duckett
 
 ### Acknowledgements
 
