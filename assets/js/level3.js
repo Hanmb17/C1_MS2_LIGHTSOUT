@@ -1,4 +1,6 @@
 // level3.js
+/* jshint esversion: 11 */
+/* globals startingModalForCurrentLevel, gridSize, setUpGrid, startingLights, lightsToBeTurnedOn, updateNumberOfHints, countDownTime, winningInfo */
 // Export function to add level 3 detail to the game
 export function loadLevel() {
 	const levelInfo = {

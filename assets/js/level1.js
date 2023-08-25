@@ -1,4 +1,6 @@
 // level1.js
+/* jshint esversion: 11 */
+/* globals myModal, gridSize, setUpGrid, startingLights, lightsToBeTurnedOn, updateNumberOfHints, countDownTime, winningInfo */
 // Export function to add level 1 detail to the game
 export function loadLevel() {
 	// Show starting modal
