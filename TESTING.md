@@ -61,7 +61,7 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 | Desktop                  | ![screenshot](docs/reponsive/desktop_home_page.png)      | ![screenshot](docs/reponsive/desktop_game_page.png)      |  Works as expected |
 | Google Pixel 7          | ![screenshot]() | ![screenshot]()  | Works as expected |
 | Iphone 13        | ![screenshot](docs/reponsive/iphone13_home_page.PNG)    | ![screenshot](docs/reponsive/iphone13_game_page.PNG)    Works as expected |
-| Iphone 8       | ![screenshot]()    | ![screenshot]()    Works as expected |
+| Iphone 8       | ![screenshot](/workspaces/C1_MS2_LIGHTSOUT/docs/reponsive/iphone8_home-page.PNG)    | ![screenshot](docs/reponsive/iphone8_game_page.PNG)    Works as expected |
 
 
 
