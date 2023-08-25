@@ -55,12 +55,12 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 
 I've tested my deployed project on multiple devices to check for responsiveness issues.
 | Device                   | Screenshot                                                          | Screenshot                                                          |  Notes             |
-| ------------------------ | ------------------------------------------------------------------- | ------------------------------------------------------------------- | ---------------------------------------------------------------------- | ----------------- |
-| Mobile (DevTools)        | ![screenshot]()   | ![screenshot]()   |   Works as expected |
-| Tablet (DevTools)        | ![screenshot]()   | ![screenshot]()   |  Works as expected |
-| Desktop                  | ![screenshot]()      | ![screenshot]()      |  Works as expected |
+| ------------------------ | ------------------------------------------------------------------- | ---------------------------------------------------------------------- | ----------------- |
+| Mobile (DevTools)        | ![screenshot](docs/reponsive/mobile_home_page.png)   | ![screenshot](docs/reponsive/mobile_game_page.png)   |   Works as expected |
+| Tablet (DevTools)        | ![screenshot](docs/reponsive/tablet_home_page.png)   | ![screenshot](docs/reponsive/table_game_page.png)   |  Works as expected |
+| Desktop                  | ![screenshot](docs/reponsive/desktop_home_page.png)      | ![screenshot](docs/reponsive/desktop_game_page.png)      |  Works as expected |
 | Google Pixel 7          | ![screenshot]() | ![screenshot]()  | Works as expected |
-| Iphone 13        | ![screenshot]()    | ![screenshot]()    Works as expected |
+| Iphone 13        | ![screenshot](docs/reponsive/iphone13_home_page.PNG)    | ![screenshot](docs/reponsive/iphone13_game_page.PNG)    Works as expected |
 | Iphone 8       | ![screenshot]()    | ![screenshot]()    Works as expected |
 
 
