@@ -31,7 +31,7 @@ I have used the recommended [JShint Validator](https://jshint.com) to validate a
 
 | File          | Screenshot                                                         | Notes                                                            |
 | ------------- | ------------------------------------------------------------------ | ---------------------------------------------------------------- |
-| game.js       | ![screenshot](docs/vaildation/game_jshint.png)       | Pass: No Errors  |
+| game.js       | ![screenshot](docs/vaildation/game_jshint.PNG)       | Pass: No Errors  |
 | level1.js | ![screenshot](docs/vaildation/level1_jshint.png) | Pass: No Errors.  Warnings for read only variables - this is correct as they are used in the game.js                                                  |
 | level2.js  | ![screenshot](docs/vaildation/level2_jshint.png)  | Pass: No Errors. Warnings for read only variables - this is correct as they are used in the game.js once this sript is imported.                                                 |
 | level3.js | ![screenshot](docs/vaildation/level3_jshint.png)| Pass: No Errors. Warnings for read only variables - this is correct as they are used in the game.js once this sript is imported.                                                   |
@@ -67,8 +67,8 @@ I've tested my deployed project on multiple devices to check for responsiveness 
 | ------------------------ | ------------------------------------------------------------------- | ---------------------------------------------------------------------- | ----------------- |
 | Mobile (DevTools)        | ![screenshot](docs/reponsive/mobile_home_page.png)   | ![screenshot](docs/reponsive/mobile_game_page.png)   |   Works as expected |
 | Tablet (DevTools)        | ![screenshot](docs/reponsive/tablet_home_page.png)   | ![screenshot](docs/reponsive/table_game_page.png)   |  Works as expected |
-| Desktop                  | ![screenshot](docs/reponsive/desktop_home_page.png)      | ![screenshot](docs/reponsive/desktop_game_page.png)      |  Works as expected |
-| Google Pixel 7          | ![screenshot]() | ![screenshot]()  | Works as expected |
+| Desktop                  | ![screenshot](docs/reponsive/desktop_home_page.png)      | ![screenshot](docs/reponsive/desktop_game_page.png) |  Works as expected |
+| Google Pixel 7          | ![screenshot](docs/reponsive/pixel7_home_png.jpg) | ![screenshot](docs/reponsive/pixel7_game_page.jpg)  | Works as expected |
 | Iphone 13        | ![screenshot](docs/reponsive/iphone8_home_page.PNG)    | ![screenshot](docs/reponsive/iphone13_game_page.PNG)    Works as expected |
 | Iphone 8       | ![screenshot](/workspaces/C1_MS2_LIGHTSOUT/docs/reponsive/iphone8_home-page.PNG)    | ![screenshot](docs/reponsive/iphone8_game_page.PNG)    Works as expected |
 
